@@ -6,7 +6,6 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 
 public class ModelProvider extends FabricModelProvider {
-
     public ModelProvider(FabricDataOutput output) {
         super(output);
     }

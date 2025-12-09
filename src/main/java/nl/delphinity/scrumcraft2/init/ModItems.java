@@ -6,6 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import nl.delphinity.scrumcraft2.common.item.RubberDucky;
+import nl.delphinity.scrumcraft2.common.item.ScrumBall;
 
 import java.util.function.Function;
 
@@ -15,6 +16,12 @@ public class ModItems {
     public static final RubberDucky RUBBER_DUCKY = (RubberDucky) register(
             "rubber_ducky",
             RubberDucky::new,
+            new Item.Properties()
+    );
+
+    public static final Item SCRUM_BALL = register(
+            "scrum_ball",
+            ScrumBall::new,
             new Item.Properties()
     );
 
