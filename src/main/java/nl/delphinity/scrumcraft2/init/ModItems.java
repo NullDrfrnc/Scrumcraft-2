@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.DispenserBlock;
 import nl.delphinity.scrumcraft2.common.item.RubberDucky;
+import nl.delphinity.scrumcraft2.common.item.ScrumBall;
 
 import java.util.function.Function;
 
@@ -19,10 +20,16 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final Item SCRUM_BALL = register(
+            "scrum_ball",
+            ScrumBall::new,
+            new Item.Properties()
+    );
+
     public static void init() {
+        DispenserBlock.registerProjectileBehavior(SCRUM_BALL);
         DispenserBlock.registerProjectileBehavior(RUBBER_DUCKY);
     }
-
 
     public static Item register(String name, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item key.

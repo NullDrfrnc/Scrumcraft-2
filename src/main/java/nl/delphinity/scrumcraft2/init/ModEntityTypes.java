@@ -8,6 +8,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import nl.delphinity.scrumcraft2.common.entity.RubberDuckyEntity;
+import nl.delphinity.scrumcraft2.common.entity.ScrumBallEntity;
 
 import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
@@ -16,6 +17,11 @@ public class ModEntityTypes {
     public static final EntityType<RubberDuckyEntity> RUBBER_DUCKY_ENTITY = register(
             "rubber_ducky_entity",
             EntityType.Builder.of(RubberDuckyEntity::new, MobCategory.MISC)
+    );
+
+    public static final EntityType<ScrumBallEntity> SCRUM_BALL_ENTITY = register(
+            "scrum_ball_entity",
+            EntityType.Builder.of(ScrumBallEntity::new, MobCategory.MISC)
     );
 
 
