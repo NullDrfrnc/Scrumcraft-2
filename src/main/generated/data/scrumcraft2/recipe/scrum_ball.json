@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:gold_ingot",
+    "minecraft:lapis_lazuli",
+    "minecraft:redstone",
+    "minecraft:emerald"
+  ],
+  "result": {
+    "count": 1,
+    "id": "scrumcraft2:scrum_ball"
+  }
+}
