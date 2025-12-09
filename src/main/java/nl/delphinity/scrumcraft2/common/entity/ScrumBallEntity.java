@@ -27,6 +27,10 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
         super(ModEntityTypes.SCRUM_BALL_ENTITY, livingEntity, level, stack);
     }
 
+    public ScrumBallEntity(Level level, double d, double e, double f, ItemStack itemStack) {
+        super(ModEntityTypes.SCRUM_BALL_ENTITY, d, e, f, level, itemStack);
+    }
+
     @Override
     protected void onHitEntity(net.minecraft.world.phys.EntityHitResult hitResult) {
         super.onHitEntity(hitResult);

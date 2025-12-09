@@ -5,6 +5,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SnowballItem;
+import net.minecraft.world.level.block.DispenserBlock;
 import nl.delphinity.scrumcraft2.common.item.RubberDucky;
 import nl.delphinity.scrumcraft2.common.item.ScrumBall;
 
@@ -26,8 +28,8 @@ public class ModItems {
     );
 
     public static void init() {
+        DispenserBlock.registerProjectileBehavior(SCRUM_BALL);
     }
-
 
     public static Item register(String name, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item key.

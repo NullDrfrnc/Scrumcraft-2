@@ -1,5 +1,7 @@
 package nl.delphinity.scrumcraft2.common.item;
 
+import net.minecraft.core.Direction;
+import net.minecraft.core.Position;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -8,13 +10,15 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ProjectileItem;
 import net.minecraft.world.level.Level;
 import nl.delphinity.scrumcraft2.common.entity.ScrumBallEntity;
 import org.jetbrains.annotations.NotNull;
 
-public class ScrumBall extends Item {
+public class ScrumBall extends Item implements ProjectileItem {
     public ScrumBall(Properties properties) {
         super(properties);
     }
@@ -49,4 +53,13 @@ public class ScrumBall extends Item {
                 divergence
         );
     }
+
+    @Override
+    public Projectile asProjectile(Level level, Position pos, ItemStack stack, Direction direction) {
+        ScrumBallEntity entity = new ScrumBallEntity(level, pos.x(), pos.y(), pos.z(), stack);
+        entity.setItem(stack);
+        entity.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.5F, 1.0F);
+        return entity;
+    }
+
 }
