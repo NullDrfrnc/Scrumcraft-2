@@ -16,6 +16,9 @@ import org.jetbrains.annotations.NotNull;
 
 public class RubberDuckyEntity extends ThrowableItemProjectile {
 
+    public RubberDuckyEntity(Level level, double d, double e, double f, ItemStack itemStack) {
+        super(ModEntityTypes.RUBBER_DUCKY_ENTITY, d, e, f, level, itemStack);
+    }
 
     public RubberDuckyEntity(EntityType<? extends RubberDuckyEntity> entityType, Level level) {
         super(entityType, level);
