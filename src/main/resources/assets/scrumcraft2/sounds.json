@@ -1,0 +1,16 @@
+{
+  "rubber_ducky_squeak": {
+    "subtitle": "sound.scrumcraft2.rubber_ducky_squeak",
+    "sounds": [
+      "scrumcraft2:random/rubber_ducky_squeak_1",
+      "scrumcraft2:random/rubber_ducky_squeak_2",
+      "scrumcraft2:random/rubber_ducky_squeak_3"
+    ]
+  },
+  "rubber_ducky_throw": {
+    "subtitle": "sound.scrumcraft2.rubber_ducky_throw",
+    "sounds": [
+      "scrumcraft2:rubber_ducky_throw"
+    ]
+  }
+}
