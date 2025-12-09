@@ -5,6 +5,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.DispenserBlock;
 import nl.delphinity.scrumcraft2.common.item.RubberDucky;
 
 import java.util.function.Function;
@@ -19,6 +20,7 @@ public class ModItems {
     );
 
     public static void init() {
+        DispenserBlock.registerProjectileBehavior(RUBBER_DUCKY);
     }
 
 
