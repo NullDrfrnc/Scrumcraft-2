@@ -44,6 +44,7 @@ public class ModItems {
     public static void init() {
         DispenserBlock.registerProjectileBehavior(SCRUM_BALL);
         DispenserBlock.registerProjectileBehavior(ULTIMATE_SCRUM_BALL);
+        DispenserBlock.registerProjectileBehavior(SCRUM_MASTER_BALL);
         DispenserBlock.registerProjectileBehavior(RUBBER_DUCKY);
     }
 
