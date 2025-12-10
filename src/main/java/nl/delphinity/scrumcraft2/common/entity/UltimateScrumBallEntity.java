@@ -16,19 +16,19 @@ import nl.delphinity.scrumcraft2.init.ModItems;
 import nl.delphinity.scrumcraft2.init.ModSounds;
 import org.jetbrains.annotations.NotNull;
 
-public class ScrumBallEntity extends ThrowableItemProjectile {
+public class UltimateScrumBallEntity extends ThrowableItemProjectile {
 
 
-    public ScrumBallEntity(EntityType<? extends ScrumBallEntity> entityType, Level level) {
+    public UltimateScrumBallEntity(EntityType<? extends UltimateScrumBallEntity> entityType, Level level) {
         super(entityType, level);
     }
 
-    public ScrumBallEntity(ServerLevel level, LivingEntity livingEntity, ItemStack stack) {
-        super(ModEntityTypes.SCRUM_BALL_ENTITY, livingEntity, level, stack);
+    public UltimateScrumBallEntity(ServerLevel level, LivingEntity livingEntity, ItemStack stack) {
+        super(ModEntityTypes.ULTIMATE_SCRUM_BALL_ENTITY, livingEntity, level, stack);
     }
 
-    public ScrumBallEntity(Level level, double d, double e, double f, ItemStack itemStack) {
-        super(ModEntityTypes.SCRUM_BALL_ENTITY, d, e, f, level, itemStack);
+    public UltimateScrumBallEntity(Level level, double d, double e, double f, ItemStack itemStack) {
+        super(ModEntityTypes.ULTIMATE_SCRUM_BALL_ENTITY, d, e, f, level, itemStack);
     }
 
     @Override
@@ -38,7 +38,7 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
         var target = hitResult.getEntity();
         if (target instanceof LivingEntity living) {
             // knockback
-            double strength = 2.0D;
+            double strength = 15.0D;
             double x = this.getDeltaMovement().x;
             double y = this.getDeltaMovement().y;
             double z = this.getDeltaMovement().z;
@@ -64,16 +64,17 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
         }
     }
 
+
+    @Override
+    protected @NotNull Item getDefaultItem() {
+        return ModItems.ULTIMATE_SCRUM_BALL;
+    }
+
     protected void onHit(HitResult hitResult) {
         super.onHit(hitResult);
         if (!this.level().isClientSide()) {
             this.level().broadcastEntityEvent(this, (byte)3);
             this.discard();
         }
-    }
-
-    @Override
-    protected @NotNull Item getDefaultItem() {
-        return ModItems.SCRUM_BALL;
     }
 }

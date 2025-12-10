@@ -10,16 +10,17 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileItem;
 import net.minecraft.world.level.Level;
 import nl.delphinity.scrumcraft2.common.entity.ScrumBallEntity;
+import nl.delphinity.scrumcraft2.common.entity.ScrumMasterBallEntity;
+import nl.delphinity.scrumcraft2.common.entity.UltimateScrumBallEntity;
 import org.jetbrains.annotations.NotNull;
 
-public class ScrumBall extends Item implements ProjectileItem {
-    public ScrumBall(Properties properties) {
+public class ScrumMasterBall extends Item implements ProjectileItem {
+    public ScrumMasterBall(Properties properties) {
         super(properties);
     }
 
@@ -43,7 +44,7 @@ public class ScrumBall extends Item implements ProjectileItem {
 
     public void throwBall(ServerLevel level, Player player, ItemStack stack, float throwingPower, float divergence) {
         Projectile.spawnProjectileFromRotation(
-                ScrumBallEntity::new,
+                ScrumMasterBallEntity::new,
                 level,
                 stack,
                 player,
@@ -55,10 +56,11 @@ public class ScrumBall extends Item implements ProjectileItem {
 
     @Override
     public Projectile asProjectile(Level level, Position pos, ItemStack stack, Direction direction) {
-        ScrumBallEntity entity = new ScrumBallEntity(level, pos.x(), pos.y(), pos.z(), stack);
+        ScrumMasterBallEntity entity = new ScrumMasterBallEntity(level, pos.x(), pos.y(), pos.z(), stack);
         entity.setItem(stack);
-        entity.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.5F, 1.0F);
+        entity.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 3.0F, 1.0F);
         return entity;
     }
+
 
 }

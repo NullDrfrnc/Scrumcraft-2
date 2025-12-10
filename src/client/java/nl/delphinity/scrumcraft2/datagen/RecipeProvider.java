@@ -41,6 +41,31 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(Items.EMERALD)
                         .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(Items.GOLD_INGOT))
                         .save(exporter, "scrum_ball");
+                // recipe for ultimate scrum ball
+                shapeless(RecipeCategory.COMBAT, ModItems.ULTIMATE_SCRUM_BALL, 1)
+                        .requires(ModItems.SCRUM_BALL)
+                        .requires(ModItems.SCRUM_BALL)
+                        .requires(ModItems.SCRUM_BALL)
+                        .requires(ModItems.SCRUM_BALL)
+                        .requires(ModItems.SCRUM_BALL)
+                        .requires(ModItems.SCRUM_BALL)
+                        .requires(ModItems.SCRUM_BALL)
+                        .requires(ModItems.SCRUM_BALL)
+                        .requires(ModItems.SCRUM_BALL)
+                        .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
+                        .save(exporter, "ultimate_scrum_ball");
+                shapeless(RecipeCategory.COMBAT, ModItems.SCRUM_MASTER_BALL, 1)
+                        .requires(ModItems.ULTIMATE_SCRUM_BALL)
+                        .requires(ModItems.ULTIMATE_SCRUM_BALL)
+                        .requires(ModItems.ULTIMATE_SCRUM_BALL)
+                        .requires(ModItems.ULTIMATE_SCRUM_BALL)
+                        .requires(ModItems.ULTIMATE_SCRUM_BALL)
+                        .requires(ModItems.ULTIMATE_SCRUM_BALL)
+                        .requires(ModItems.ULTIMATE_SCRUM_BALL)
+                        .requires(ModItems.ULTIMATE_SCRUM_BALL)
+                        .requires(ModItems.ULTIMATE_SCRUM_BALL)
+                        .unlockedBy(getHasName(ModItems.ULTIMATE_SCRUM_BALL), this.has(ModItems.ULTIMATE_SCRUM_BALL))
+                        .save(exporter, "scrum_master_ball");
             };
         };
     }

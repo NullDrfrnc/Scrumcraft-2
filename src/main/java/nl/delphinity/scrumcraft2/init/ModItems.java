@@ -1,6 +1,7 @@
 package nl.delphinity.scrumcraft2.init;
 
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -26,8 +27,23 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final Item ULTIMATE_SCRUM_BALL = register(
+            "ultimate_scrum_ball",
+            ScrumBall::new,
+            new Item.Properties()
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+    );
+
+    public static final Item SCRUM_MASTER_BALL = register(
+            "scrum_master_ball",
+            ScrumBall::new,
+            new Item.Properties()
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+    );
+
     public static void init() {
         DispenserBlock.registerProjectileBehavior(SCRUM_BALL);
+        DispenserBlock.registerProjectileBehavior(ULTIMATE_SCRUM_BALL);
         DispenserBlock.registerProjectileBehavior(RUBBER_DUCKY);
     }
 

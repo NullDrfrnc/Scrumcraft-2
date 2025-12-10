@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "scrumcraft2:ultimate_scrum_ball",
+    "scrumcraft2:ultimate_scrum_ball",
+    "scrumcraft2:ultimate_scrum_ball",
+    "scrumcraft2:ultimate_scrum_ball",
+    "scrumcraft2:ultimate_scrum_ball",
+    "scrumcraft2:ultimate_scrum_ball",
+    "scrumcraft2:ultimate_scrum_ball",
+    "scrumcraft2:ultimate_scrum_ball",
+    "scrumcraft2:ultimate_scrum_ball"
+  ],
+  "result": {
+    "count": 1,
+    "id": "scrumcraft2:scrum_master_ball"
+  }
+}
