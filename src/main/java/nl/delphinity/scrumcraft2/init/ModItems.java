@@ -7,6 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.DispenserBlock;
+import nl.delphinity.scrumcraft2.common.item.Catamaran;
 import nl.delphinity.scrumcraft2.common.item.RubberDucky;
 import nl.delphinity.scrumcraft2.common.item.ScrumBall;
 
@@ -39,6 +40,12 @@ public class ModItems {
             ScrumBall::new,
             new Item.Properties()
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+    );
+
+    public static final Item CATAMARAN = register(
+            "catamaran",
+            Catamaran::new,
+            new Item.Properties()
     );
 
     public static void init() {

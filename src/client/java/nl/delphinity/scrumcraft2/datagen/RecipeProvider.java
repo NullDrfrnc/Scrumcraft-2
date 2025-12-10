@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -66,6 +67,18 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(ModItems.ULTIMATE_SCRUM_BALL)
                         .unlockedBy(getHasName(ModItems.ULTIMATE_SCRUM_BALL), this.has(ModItems.ULTIMATE_SCRUM_BALL))
                         .save(exporter, "scrum_master_ball");
+                shapeless(RecipeCategory.COMBAT, ModItems.CATAMARAN, 1)
+                        .requires(ItemTags.BOATS)
+                        .requires(ItemTags.BOATS)
+                        .requires(ItemTags.BOATS)
+                        .requires(ItemTags.BOATS)
+                        .requires(ItemTags.BOATS)
+                        .requires(ItemTags.BOATS)
+                        .requires(ItemTags.BOATS)
+                        .requires(ItemTags.BOATS)
+                        .requires(ItemTags.BOATS)
+                        .unlockedBy("has_boats", this.has(ItemTags.BOATS))
+                        .save(exporter, "catamaran");
             };
         };
     }
