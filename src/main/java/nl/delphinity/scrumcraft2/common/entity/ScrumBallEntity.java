@@ -18,6 +18,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ScrumBallEntity extends ThrowableItemProjectile {
 
+    private double knockback;
 
     public ScrumBallEntity(EntityType<? extends ScrumBallEntity> entityType, Level level) {
         super(entityType, level);
@@ -27,8 +28,17 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
         super(ModEntityTypes.SCRUM_BALL_ENTITY, livingEntity, level, stack);
     }
 
+    public ScrumBallEntity(ServerLevel level, LivingEntity livingEntity, ItemStack stack, double knockback) {
+        super(ModEntityTypes.SCRUM_BALL_ENTITY, livingEntity, level, stack);
+        setKnockback(knockback);
+    }
+
     public ScrumBallEntity(Level level, double d, double e, double f, ItemStack itemStack) {
         super(ModEntityTypes.SCRUM_BALL_ENTITY, d, e, f, level, itemStack);
+    }
+
+    public void setKnockback(double knockback) {
+        this.knockback = knockback;
     }
 
     @Override
@@ -38,7 +48,7 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
         var target = hitResult.getEntity();
         if (target instanceof LivingEntity living) {
             // knockback
-            double strength = 2.0D;
+            double strength = knockback;
             double x = this.getDeltaMovement().x;
             double y = this.getDeltaMovement().y;
             double z = this.getDeltaMovement().z;
