@@ -10,7 +10,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import nl.delphinity.scrumcraft2.common.entity.RubberDuckyEntity;
 import nl.delphinity.scrumcraft2.common.entity.ScrumBallEntity;
-import nl.delphinity.scrumcraft2.common.entity.UltimateScrumBallEntity;
 
 import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
@@ -25,12 +24,6 @@ public class ModEntityTypes {
             "scrum_ball_entity",
             EntityType.Builder.of(ScrumBallEntity::new, MobCategory.MISC)
     );
-
-    public static final EntityType<UltimateScrumBallEntity> ULTIMATE_SCRUM_BALL_ENTITY = register(
-            "ultimate_scrum_ball_entity",
-            EntityType.Builder.of(UltimateScrumBallEntity::new, MobCategory.MISC)
-    );
-
 
     public static void init() {
     }
