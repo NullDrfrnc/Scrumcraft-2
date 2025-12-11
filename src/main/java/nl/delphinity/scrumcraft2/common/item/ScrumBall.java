@@ -10,7 +10,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileItem;
@@ -52,8 +51,7 @@ public class ScrumBall extends Item implements ProjectileItem {
         return InteractionResult.CONSUME;
     }
 
-    public void throwBall(ServerLevel level, Player player, ItemStack stack,
-                          float throwingPower, float divergence, double knockback) {
+    public void throwBall(ServerLevel level, Player player, ItemStack stack, float throwingPower, float divergence, double knockback) {
         ScrumBallEntity entity = new ScrumBallEntity(level, player, stack, knockback);
         entity.setItem(stack);
         entity.shootFromRotation(player,
@@ -63,7 +61,6 @@ public class ScrumBall extends Item implements ProjectileItem {
                 throwingPower,    // speed
                 divergence        // inaccuracy
         );
-
         level.addFreshEntity(entity);
     }
 
