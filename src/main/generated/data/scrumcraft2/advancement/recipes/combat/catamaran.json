@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_boats": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:boats"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "scrumcraft2:catamaran"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_boats"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "scrumcraft2:catamaran"
+    ]
+  }
+}
