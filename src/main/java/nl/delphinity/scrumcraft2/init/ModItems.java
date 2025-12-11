@@ -24,20 +24,19 @@ public class ModItems {
 
     public static final Item SCRUM_BALL = register(
             "scrum_ball",
-            ScrumBall::new,
+            props -> new ScrumBall(props, 1.0D),
             new Item.Properties()
     );
 
     public static final Item ULTIMATE_SCRUM_BALL = register(
             "ultimate_scrum_ball",
-            ScrumBall::new,
+            props -> new ScrumBall(props, 5.0D),
             new Item.Properties()
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
     );
-
     public static final Item SCRUM_MASTER_BALL = register(
             "scrum_master_ball",
-            ScrumBall::new,
+            props -> new ScrumBall(props, 14.0D),
             new Item.Properties()
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
     );

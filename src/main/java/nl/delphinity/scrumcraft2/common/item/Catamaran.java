@@ -4,7 +4,8 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.vehicle.Boat;
+
+import net.minecraft.world.entity.vehicle.boat.Boat;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import nl.delphinity.scrumcraft2.init.ModItems;

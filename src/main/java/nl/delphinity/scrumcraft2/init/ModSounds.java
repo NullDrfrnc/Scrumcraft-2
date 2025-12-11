@@ -2,7 +2,7 @@ package nl.delphinity.scrumcraft2.init;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 
 import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
@@ -15,7 +15,7 @@ public class ModSounds {
     public static void init() {}
     
     private static SoundEvent registerSound(String id) {
-        ResourceLocation identifier = identifierOf(id);
+        Identifier identifier = identifierOf(id);
         return Registry.register(BuiltInRegistries.SOUND_EVENT, identifier, SoundEvent.createVariableRangeEvent(identifier));
     }
 }

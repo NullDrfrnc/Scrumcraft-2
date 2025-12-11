@@ -1,7 +1,7 @@
 package nl.delphinity.scrumcraft2;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 import nl.delphinity.scrumcraft2.init.ModItems;
@@ -26,7 +26,7 @@ public class Scrumcraft2 implements ModInitializer {
         LOGGER.info("Scrumcraft2 successfully Scrummed");
     }
 
-    public static ResourceLocation identifierOf(String path) {
-        return ResourceLocation.fromNamespaceAndPath(Scrumcraft2.MOD_ID, path);
+    public static Identifier identifierOf(String path) {
+        return Identifier.fromNamespaceAndPath(Scrumcraft2.MOD_ID, path);
     }
 }

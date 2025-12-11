@@ -10,7 +10,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileItem;
@@ -19,8 +18,19 @@ import nl.delphinity.scrumcraft2.common.entity.ScrumBallEntity;
 import org.jetbrains.annotations.NotNull;
 
 public class ScrumBall extends Item implements ProjectileItem {
-    public ScrumBall(Properties properties) {
+    public ScrumBall(Properties properties, double knockback) {
         super(properties);
+        this.knockback = knockback;
+    }
+
+    private double knockback;
+
+    public void setKnockback(double knockback) {
+        this.knockback = knockback;
+    }
+
+    public double getKnockback() {
+        return knockback;
     }
 
     @Override
@@ -29,7 +39,7 @@ public class ScrumBall extends Item implements ProjectileItem {
         level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.EGG_THROW, SoundSource.PLAYERS, 0.5F, 1F);
 
         if (!level.isClientSide()) {
-            this.throwBall((ServerLevel) level, player, stack, 1F, 1F);
+            this.throwBall((ServerLevel) level, player, stack, 1F, 1F, knockback);
         }
 
         player.awardStat(Stats.ITEM_USED.get(this));
@@ -41,17 +51,19 @@ public class ScrumBall extends Item implements ProjectileItem {
         return InteractionResult.CONSUME;
     }
 
-    public void throwBall(ServerLevel level, Player player, ItemStack stack, float throwingPower, float divergence) {
-        Projectile.spawnProjectileFromRotation(
-                ScrumBallEntity::new,
-                level,
-                stack,
-                player,
-                0.0F,
-                throwingPower,
-                divergence
+    public void throwBall(ServerLevel level, Player player, ItemStack stack, float throwingPower, float divergence, double knockback) {
+        ScrumBallEntity entity = new ScrumBallEntity(level, player, stack, knockback);
+        entity.setItem(stack);
+        entity.shootFromRotation(player,
+                player.getXRot(), // pitch
+                player.getYRot(), // yaw
+                0.0F,             // roll
+                throwingPower,    // speed
+                divergence        // inaccuracy
         );
+        level.addFreshEntity(entity);
     }
+
 
     @Override
     public Projectile asProjectile(Level level, Position pos, ItemStack stack, Direction direction) {

@@ -3,21 +3,20 @@ package nl.delphinity.scrumcraft2.common.entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 import nl.delphinity.scrumcraft2.init.ModItems;
-import nl.delphinity.scrumcraft2.init.ModSounds;
 import org.jetbrains.annotations.NotNull;
 
 public class ScrumBallEntity extends ThrowableItemProjectile {
 
+    private double knockback;
 
     public ScrumBallEntity(EntityType<? extends ScrumBallEntity> entityType, Level level) {
         super(entityType, level);
@@ -27,8 +26,17 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
         super(ModEntityTypes.SCRUM_BALL_ENTITY, livingEntity, level, stack);
     }
 
+    public ScrumBallEntity(ServerLevel level, LivingEntity livingEntity, ItemStack stack, double knockback) {
+        super(ModEntityTypes.SCRUM_BALL_ENTITY, livingEntity, level, stack);
+        setKnockback(knockback);
+    }
+
     public ScrumBallEntity(Level level, double d, double e, double f, ItemStack itemStack) {
         super(ModEntityTypes.SCRUM_BALL_ENTITY, d, e, f, level, itemStack);
+    }
+
+    public void setKnockback(double knockback) {
+        this.knockback = knockback;
     }
 
     @Override
@@ -38,7 +46,7 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
         var target = hitResult.getEntity();
         if (target instanceof LivingEntity living) {
             // knockback
-            double strength = 2.0D;
+            double strength = knockback;
             double x = this.getDeltaMovement().x;
             double y = this.getDeltaMovement().y;
             double z = this.getDeltaMovement().z;
