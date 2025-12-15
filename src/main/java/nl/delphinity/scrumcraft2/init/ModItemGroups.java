@@ -1,7 +1,10 @@
 package nl.delphinity.scrumcraft2.init;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.mixin.registry.sync.RegistriesMixin;
 import net.minecraft.core.Registry;
+import net.minecraft.core.RegistryCodecs;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -11,9 +14,8 @@ import nl.delphinity.scrumcraft2.Scrumcraft2;
 import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
 public class ModItemGroups {
-    private static Component displayName = Component.translatable("itemgroup.scrumcraft2");
-
-    public static final CreativeModeTab SCRUMMING_DEM = Registry.register(Registries.CREATIVE_MODE_TAB.registry().,
+    private static Component displayName = Component.translatable("Scrumcraft2");
+    public static final CreativeModeTab SCRUMMING_DEM = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             identifierOf("scrumcraft2"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.SCRUM_BALL))
                     .title(displayName)
