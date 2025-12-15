@@ -13,6 +13,7 @@ import net.minecraft.world.entity.vehicle.minecart.Minecart;
 import net.minecraft.world.entity.vehicle.minecart.MinecartSpawner;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BaseSpawner;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
@@ -44,7 +45,6 @@ public class NsTrain extends Item {
                     cart.setPos(targetPos.x, targetPos.y, targetPos.z);
                     level.addFreshEntity(cart);
                 }
-
             }
             if (!player.isCreative()) {
                 player.getItemInHand(interactionHand).shrink(1);

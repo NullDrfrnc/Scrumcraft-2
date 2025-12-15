@@ -66,7 +66,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(ModItems.ULTIMATE_SCRUM_BALL)
                         .unlockedBy(getHasName(ModItems.ULTIMATE_SCRUM_BALL), this.has(ModItems.ULTIMATE_SCRUM_BALL))
                         .save(exporter, "scrum_master_ball");
-                shapeless(RecipeCategory.COMBAT, ModItems.CATAMARAN, 1)
+                shapeless(RecipeCategory.MISC, ModItems.CATAMARAN, 1)
                         .requires(ItemTags.BOATS)
                         .requires(ItemTags.BOATS)
                         .requires(ItemTags.BOATS)
@@ -78,6 +78,18 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(ItemTags.BOATS)
                         .unlockedBy("has_boats", this.has(ItemTags.BOATS))
                         .save(exporter, "catamaran");
+                shapeless(RecipeCategory.MISC, ModItems.NS_TRAIN, 1)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .unlockedBy("has_minecarts", this.has(Items.MINECART))
+                        .save(exporter, "ns_train");
             };
         };
     }
