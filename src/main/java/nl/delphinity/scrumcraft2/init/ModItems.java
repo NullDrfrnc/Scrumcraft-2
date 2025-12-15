@@ -11,6 +11,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.DispenserBlock;
 import nl.delphinity.scrumcraft2.common.item.Ayran;
 import nl.delphinity.scrumcraft2.common.item.Catamaran;
+import nl.delphinity.scrumcraft2.common.item.NsTrain;
 import nl.delphinity.scrumcraft2.common.item.RubberDucky;
 import nl.delphinity.scrumcraft2.common.item.ScrumBall;
 
@@ -65,6 +66,12 @@ public class ModItems {
     public static final Item CATAMARAN = register(
             "catamaran",
             Catamaran::new,
+            new Item.Properties()
+    );
+
+    public static final Item NS_TRAIN = register(
+            "ns_train",
+            NsTrain::new,
             new Item.Properties()
     );
 
