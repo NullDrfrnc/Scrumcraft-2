@@ -1,10 +1,6 @@
 {
   "item.scrumcraft2.rubber_ducky": "Badeend",
+  "item.scrumcraft2.weed_ducky": "Wieteend",
   "sound.scrumcraft2.rubber_ducky_squeak": "Badeend kwaakt",
-  "sound.scrumcraft2.rubber_ducky_throw": "Badeend vliegt",
-  "item.scrumcraft2.scrum_ball": "Scrum Bal",
-  "item.scrumcraft2.catamaran": "Catamaran, Gave Boot Van Scrum",
-  "item.scrumcraft2.ns_train": "NS Trein",
-  "item.scrumcraft2.ultimate_scrum_ball": "Ultieme Scrum Bal",
-  "item.scrumcraft2.scrum_master_ball": "Scrum Meester Bal"
+  "sound.scrumcraft2.rubber_ducky_throw": "Badeend vliegt"
 }

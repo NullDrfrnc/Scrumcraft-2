@@ -17,6 +17,7 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         
         // Items
         translationBuilder.add(ModItems.RUBBER_DUCKY, "Badeend");
+        translationBuilder.add(ModItems.WEED_DUCKY, "Wieteend");
         
         // ItemGroups
         
