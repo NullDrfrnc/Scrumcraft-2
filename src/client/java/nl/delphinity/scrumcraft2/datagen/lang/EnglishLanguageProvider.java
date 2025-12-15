@@ -20,6 +20,11 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         // Items
         translationBuilder.add(ModItems.RUBBER_DUCKY, "Rubber ducky");
         translationBuilder.add(ModItems.SCRUM_BALL, "Scrum Ball");
+        translationBuilder.add(ModItems.WEAK_HEART, "Weak Heart");
+        translationBuilder.add(ModItems.NS_TRAIN, "NS Train");
+        translationBuilder.add(ModItems.ULTIMATE_SCRUM_BALL, "Ultimate Scrum Ball");
+        translationBuilder.add(ModItems.SCRUM_MASTER_BALL, "Scrum Master Ball");
+        translationBuilder.add(ModItems.CATAMARAN, "Catamaran");
         // ItemGroups
         
         // ItemTags
