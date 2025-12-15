@@ -5,8 +5,11 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.DispenserBlock;
+import nl.delphinity.scrumcraft2.common.item.Ayran;
 import nl.delphinity.scrumcraft2.common.item.Catamaran;
 import nl.delphinity.scrumcraft2.common.item.RubberDucky;
 import nl.delphinity.scrumcraft2.common.item.ScrumBall;
@@ -20,6 +23,24 @@ public class ModItems {
             "rubber_ducky",
             RubberDucky::new,
             new Item.Properties()
+    );
+
+    public static final Item AYRAN = register(
+            "ayran",
+            Ayran::new,
+            new Item.Properties().food(ModFoods.AYRAN, ModConsumables.AYRAN)
+    );
+
+    public static final Item POTION_OF_TERRORISM = register(
+            "potion_of_terrorism",
+            Ayran::new,
+            new Item.Properties().food(ModFoods.POTION_OF_TERRORISM, ModConsumables.POTION_OF_TERRORISM)
+    );
+
+    public static final Item AGARTHA_POTION = register(
+            "agartha_potion",
+            Ayran::new,
+            new Item.Properties().food(ModFoods.AGARTHA_POTION, ModConsumables.AGARTHA_POTION)
     );
 
     public static final Item SCRUM_BALL = register(
