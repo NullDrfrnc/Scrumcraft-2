@@ -23,6 +23,24 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final Item AYRAN = register(
+            "ayran",
+            Item::new,
+            new Item.Properties().food(ModFoods.AYRAN, ModConsumables.AYRAN)
+    );
+
+    public static final Item POTION_OF_TERRORISM = register(
+            "potion_of_terrorism",
+            Item::new,
+            new Item.Properties().food(ModFoods.POTION_OF_TERRORISM, ModConsumables.POTION_OF_TERRORISM)
+    );
+
+    public static final Item AGARTHA_POTION = register(
+            "agartha_potion",
+            Item::new,
+            new Item.Properties().food(ModFoods.AGARTHA_POTION, ModConsumables.AGARTHA_POTION)
+    );
+
     public static final Item SCRUM_BALL = register(
             "scrum_ball",
             props -> new ScrumBall(props, 1.0D),
