@@ -32,5 +32,6 @@ public class ModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.createFlatItemModel(ModItems.ULTIMATE_SCRUM_BALL, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.createFlatItemModel(ModItems.SCRUM_MASTER_BALL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.createFlatItemModel(ModItems.NS_TRAIN, ModelTemplates.FLAT_ITEM);
     }
 }
