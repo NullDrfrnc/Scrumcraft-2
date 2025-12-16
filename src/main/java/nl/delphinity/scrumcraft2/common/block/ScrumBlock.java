@@ -84,7 +84,7 @@ public class ScrumBlock extends Block {
                 serverPlayer.connection.send(new net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket(
                         Component.literal("67").withStyle(net.minecraft.ChatFormatting.RED)
                 ));
-                level.playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.SICK_SEVEN, SoundSource.PLAYERS, 0.5F, 1F);
+                level.playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.SICK_SEVEN, SoundSource.MASTER, 1F, 1F);
             }
         }
     }

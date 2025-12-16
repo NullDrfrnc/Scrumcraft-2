@@ -37,6 +37,7 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         // ItemTags
         
         // SoundEvents
+        translationBuilder.add("sound.scrumcraft2.sickseven", "ZES ZEVEEEEN");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Badeend kwaakt");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Badeend vliegt");
     }

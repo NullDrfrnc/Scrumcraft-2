@@ -37,6 +37,7 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         // ItemTags
         
         // Sounds (For subtitles)
+        translationBuilder.add("sound.scrumcraft2.sickseven", "SIIIX SEVEEEEN");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Rubber ducky squeaks");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Rubber ducky flies");
 
