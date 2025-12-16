@@ -1,0 +1,11 @@
+{
+  "type": "scrumcraft2:agartha_dim_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "scrumcraft2:agartha_noise_settings",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "scrumcraft2:agartha_biome"
+    }
+  }
+}
