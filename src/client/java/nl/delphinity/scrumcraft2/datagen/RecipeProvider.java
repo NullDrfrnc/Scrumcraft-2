@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModItems;
 import org.jetbrains.annotations.NotNull;
 
@@ -114,6 +115,15 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("TTT")
                         .unlockedBy(getHasName(Items.GUNPOWDER), this.has(Items.GUNPOWDER))
                         .save(exporter, "potion_of_terrorism");
+                shaped(RecipeCategory.MISC, ModItems.WEAK_HEART, 1)
+                        .define('G', Items.GOLDEN_APPLE)
+                        .define('H', Items.HEART_OF_THE_SEA)
+                        .define('S', Items.SPIDER_EYE)
+                        .pattern("SSS")
+                        .pattern("SHS")
+                        .pattern("SGS")
+                        .unlockedBy(getHasName(Items.HEART_OF_THE_SEA), this.has(Items.HEART_OF_THE_SEA))
+                        .save(exporter, "weak_heart");
                 shaped(RecipeCategory.MISC, ModItems.GOLDEN_FISH, 1)
                         .define('F', ItemTags.FISHES)
                         .define('G', Items.GOLD_INGOT)
@@ -122,6 +132,14 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("GGG")
                         .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(ItemTags.FISHES))
                         .save(exporter, "golden_fish");
+                shaped(RecipeCategory.MISC, ModBlocks.SCRUM_BLOCK, 1)
+                        .define('#', Items.GOLD_INGOT)
+                        .define('S', ModItems.SCRUM_BALL)
+                        .pattern("###")
+                        .pattern("#S#")
+                        .pattern("###")
+                        .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
+                        .save(exporter, "scrum_block");
             };
         };
     }
