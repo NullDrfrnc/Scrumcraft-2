@@ -32,6 +32,7 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Potion");
         translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Block");
         translationBuilder.add(ModItems.GOLDEN_FISH, "Golden Fish");
+        translationBuilder.add(ModItems.VERY_WHITE_BREW, "Very White Brew");
         // ItemGroups
         
         // ItemTags

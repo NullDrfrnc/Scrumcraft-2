@@ -30,6 +30,7 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Brouwsel Van Terrorisme");
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Brouwsel");
         translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Blok");
+        translationBuilder.add(ModItems.VERY_WHITE_BREW, "Zeer Wit Brouwsel");
 
         // ItemGroups
         // don't have to do anythink here :)

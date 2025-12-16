@@ -20,6 +20,13 @@ import java.util.function.Function;
 import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
 public class ModItems {
+
+    public static final VeryWhiteBrew VERY_WHITE_BREW = (VeryWhiteBrew) register(
+            "very_white_brew",
+            VeryWhiteBrew::new,
+            new Item.Properties()
+    );
+
     public static final RubberDucky RUBBER_DUCKY = (RubberDucky) register(
             "rubber_ducky",
             RubberDucky::new,
