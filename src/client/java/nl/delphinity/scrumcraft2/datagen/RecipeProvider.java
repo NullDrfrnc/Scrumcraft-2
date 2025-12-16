@@ -90,6 +90,30 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(Items.MINECART)
                         .unlockedBy("has_minecarts", this.has(Items.MINECART))
                         .save(exporter, "ns_train");
+                shaped(RecipeCategory.MISC, ModItems.AGARTHA_POTION, 1)
+                        .define('#', Items.GOLD_INGOT)
+                        .define('D', Items.DIAMOND_BLOCK)
+                        .pattern("###")
+                        .pattern("#D#")
+                        .pattern("###")
+                        .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(Items.GOLD_INGOT))
+                        .save(exporter, "agarta_potion");
+                shaped(RecipeCategory.MISC, ModItems.AYRAN, 1)
+                        .define('#', Items.GLASS_BOTTLE)
+                        .define('S', Items.SPIDER_EYE)
+                        .pattern("SSS")
+                        .pattern("S#S")
+                        .pattern("SSS")
+                        .unlockedBy(getHasName(Items.SPIDER_EYE), this.has(Items.SPIDER_EYE))
+                        .save(exporter, "ayran");
+                shaped(RecipeCategory.MISC, ModItems.POTION_OF_TERRORISM, 1)
+                        .define('T', Items.GUNPOWDER)
+                        .define('B', Items.GLASS_BOTTLE)
+                        .pattern("TTT")
+                        .pattern("TBT")
+                        .pattern("TTT")
+                        .unlockedBy(getHasName(Items.GUNPOWDER), this.has(Items.GUNPOWDER))
+                        .save(exporter, "potion_of_terrorism");
             };
         };
     }
