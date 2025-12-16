@@ -77,6 +77,9 @@ public class WeakHeart extends Item {
                         .getOrThrow(ModDamageTypes.WEAK_HEART_OUCHIE)
         );
         player.hurtServer((ServerLevel) world, damageSource, 6.0f);
-        stack.shrink(1);
+        if (!player.isCreative()) {
+            stack.shrink(1);
+        }
     }
 }
+
