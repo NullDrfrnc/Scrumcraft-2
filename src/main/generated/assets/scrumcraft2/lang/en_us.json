@@ -1,12 +1,16 @@
 {
   "death.attack.weak_heart": "%1$s died from deception...",
+  "item.scrumcraft2.agartha_potion": "Agartha Potion",
+  "item.scrumcraft2.ayran": "Ayran",
   "item.scrumcraft2.catamaran": "Catamaran",
   "item.scrumcraft2.ns_train": "NS Train",
+  "item.scrumcraft2.potion_of_terrorism": "Potion of Terrorism",
   "item.scrumcraft2.rubber_ducky": "Rubber ducky",
   "item.scrumcraft2.scrum_ball": "Scrum Ball",
   "item.scrumcraft2.scrum_master_ball": "Scrum Master Ball",
   "item.scrumcraft2.ultimate_scrum_ball": "Ultimate Scrum Ball",
   "item.scrumcraft2.weak_heart": "Weak Heart",
+  "item.scrumcraft2.weed_ducky": "Weed ducky",
   "sound.scrumcraft2.rubber_ducky_squeak": "Rubber ducky squeaks",
   "sound.scrumcraft2.rubber_ducky_throw": "Rubber ducky flies"
 }
