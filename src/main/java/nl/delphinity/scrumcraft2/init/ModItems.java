@@ -7,6 +7,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.DispenserBlock;
+
+import nl.delphinity.scrumcraft2.common.item.*;
 import nl.delphinity.scrumcraft2.common.item.Catamaran;
 import nl.delphinity.scrumcraft2.common.item.NsTrain;
 import nl.delphinity.scrumcraft2.common.item.RubberDucky;
@@ -21,6 +23,12 @@ public class ModItems {
     public static final RubberDucky RUBBER_DUCKY = (RubberDucky) register(
             "rubber_ducky",
             RubberDucky::new,
+            new Item.Properties()
+    );
+
+    public static final Item WEAK_HEART = register(
+            "weak_heart",
+            WeakHeart::new,
             new Item.Properties()
     );
 

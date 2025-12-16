@@ -25,6 +25,12 @@ public class ModItemGroups {
                     output.accept(ModItems.SCRUM_MASTER_BALL);
                     output.accept(ModItems.RUBBER_DUCKY);
                     output.accept(ModItems.CATAMARAN);
+                    output.accept(ModItems.NS_TRAIN);
+                    output.accept(ModItems.WEAK_HEART);
+                    output.accept(ModItems.WEED_DUCKY);
+                    output.accept(ModItems.AYRAN);
+                    output.accept(ModItems.POTION_OF_TERRORISM);
+                    output.accept(ModItems.AGARTHA_POTION);
             }).build());
 
     public static void registerItemGroups() {

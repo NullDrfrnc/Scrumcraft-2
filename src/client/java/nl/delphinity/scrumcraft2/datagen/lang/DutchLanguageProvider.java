@@ -17,17 +17,28 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         
         // Items
         translationBuilder.add(ModItems.RUBBER_DUCKY, "Badeend");
+        translationBuilder.add(ModItems.WEAK_HEART, "Verzwakt Hart");
+        translationBuilder.add(ModItems.NS_TRAIN, "NS Trein");
+        translationBuilder.add(ModItems.SCRUM_BALL, "Scrum Bal");
+        translationBuilder.add(ModItems.ULTIMATE_SCRUM_BALL, "Ultieme Scrum Bal");
+        translationBuilder.add(ModItems.SCRUM_MASTER_BALL, "Scrum Meester Bal");
+        translationBuilder.add(ModItems.CATAMARAN, "Catamaran, het super agile bootje van Scrum");
         translationBuilder.add(ModItems.WEED_DUCKY, "Wieteend");
-        translationBuilder.add(ModItems.AYRAN, "Ayran");
-        translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Potion of Terrorism");
-        translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Potion");
-        
+        translationBuilder.add(ModItems.AYRAN, "Heerlijke Zoute Kwark");
+        translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Brouwsel Van Terrorisme");
+        translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Brouwsel");
+
         // ItemGroups
+        // don't have to do anythink here :)
         
         // ItemTags
         
         // SoundEvents
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Badeend kwaakt");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Badeend vliegt");
+
+        // death messages
+        translationBuilder.add("death.attack.weak_heart", "%1$s is overleden door deceptie...");
+
     }
 }

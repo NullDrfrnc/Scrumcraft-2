@@ -21,6 +21,11 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.RUBBER_DUCKY, "Rubber ducky");
         translationBuilder.add(ModItems.WEED_DUCKY, "Weed ducky");
         translationBuilder.add(ModItems.SCRUM_BALL, "Scrum Ball");
+        translationBuilder.add(ModItems.WEAK_HEART, "Weak Heart");
+        translationBuilder.add(ModItems.NS_TRAIN, "NS Train");
+        translationBuilder.add(ModItems.ULTIMATE_SCRUM_BALL, "Ultimate Scrum Ball");
+        translationBuilder.add(ModItems.SCRUM_MASTER_BALL, "Scrum Master Ball");
+        translationBuilder.add(ModItems.CATAMARAN, "Catamaran");
         translationBuilder.add(ModItems.AYRAN, "Ayran");
         translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Potion of Terrorism");
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Potion");
@@ -31,5 +36,8 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         // Sounds (For subtitles)
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Rubber ducky squeaks");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Rubber ducky flies");
+
+        // death messages
+        translationBuilder.add("death.attack.weak_heart", "%1$s died from deception...");
     }
 }
