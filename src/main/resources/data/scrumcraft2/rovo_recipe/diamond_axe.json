@@ -1,0 +1,11 @@
+{
+  "key": {
+    "#": "minecraft:stick",
+    "X": "#minecraft:diamond_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ]
+}

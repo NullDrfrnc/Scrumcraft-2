@@ -4,6 +4,8 @@
   "package": "nl.delphinity.scrumcraft2.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "CraftingMenuMixin",
+    "ResultSlotMixin"
   ],
   "injectors": {
     "defaultRequire": 1

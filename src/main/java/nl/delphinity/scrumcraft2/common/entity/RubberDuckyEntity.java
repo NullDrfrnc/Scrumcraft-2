@@ -1,5 +1,6 @@
 package nl.delphinity.scrumcraft2.common.entity;
 
+import com.llamalad7.mixinextras.expression.impl.ast.expressions.ThisExpression;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;
@@ -27,7 +28,7 @@ public class RubberDuckyEntity extends ThrowableItemProjectile {
     public RubberDuckyEntity(ServerLevel level, LivingEntity livingEntity, ItemStack stack) {
         super(ModEntityTypes.RUBBER_DUCKY_ENTITY, livingEntity, level, stack);
     }
-
+    
     @Override
     protected void onHit(HitResult hitResult) {
         Level level = level();
