@@ -5,5 +5,7 @@
   "item.scrumcraft2.scrum_master_ball": "Scrum Master Ball",
   "item.scrumcraft2.catamaran": "Catamaran",
   "sound.scrumcraft2.rubber_ducky_squeak": "Rubber ducky squeaks",
-  "sound.scrumcraft2.rubber_ducky_throw": "Rubber ducky flies"
+  "sound.scrumcraft2.rubber_ducky_throw": "Rubber ducky flies",
+  "entity.scrumcraft2.snow_golem_entity": "Evil Snow Golem",
+  "entity.scrumcraft2.scrum_ball_entity": "Scrum Bal"
 }

@@ -19,7 +19,7 @@ import nl.delphinity.scrumcraft2.Scrumcraft2;
 
 @Environment(EnvType.CLIENT)
 public class SnowGolemRenderer extends MobRenderer<SnowGolem, SnowGolemRenderState, SnowGolemModel> {
-    private static final Identifier SNOW_GOLEM_LOCATION = Scrumcraft2.identifierOf("textures/entity/snowmantexture.png");
+    private static final Identifier SNOW_GOLEM_LOCATION = Scrumcraft2.identifierOf("textures/entity/snowgolemtexture.png");
 
     public SnowGolemRenderer(EntityRendererProvider.Context context) {
         super(context, new SnowGolemModel(context.bakeLayer(ModelLayers.SNOW_GOLEM)), 0.5F);
