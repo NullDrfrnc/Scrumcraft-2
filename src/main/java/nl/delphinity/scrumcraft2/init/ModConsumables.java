@@ -68,6 +68,19 @@ public class ModConsumables {
             )
             .build();
 
+    public static final Consumable GOLDEN_FISH = defaultFood()
+            .onConsume(
+                    new ApplyStatusEffectsConsumeEffect(
+                            List.of(
+                                    new MobEffectInstance(MobEffects.CONDUIT_POWER, 1000, 4),
+                                    new MobEffectInstance(MobEffects.WATER_BREATHING, 1000, 4),
+                                    new MobEffectInstance(MobEffects.BREATH_OF_THE_NAUTILUS, 1000, 4),
+                                    new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 1000, 4)
+                            )
+                    )
+            )
+            .build();
+
     public static Consumable.Builder defaultFood() {
         return Consumable.builder().consumeSeconds(1.6F).animation(ItemUseAnimation.EAT).sound(SoundEvents.GENERIC_EAT).hasConsumeParticles(true);
     }
