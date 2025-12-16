@@ -31,8 +31,8 @@ public class ModEntityTypes {
             EntityType.Builder.of(ScrumBallEntity::new, MobCategory.MISC)
     );
 
-    public static final EntityType<EvilSnowGolemEntity> SNOW_GOLEM = register(
-            "snow_golem_entity",
+    public static final EntityType<EvilSnowGolemEntity> EVIL_SNOW_GOLEM = register(
+            "evil_snow_golem_entity",
             EntityType.Builder.of(EvilSnowGolemEntity::new, MobCategory.MONSTER)
     );
 

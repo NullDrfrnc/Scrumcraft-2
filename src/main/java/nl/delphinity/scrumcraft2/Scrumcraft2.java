@@ -25,7 +25,7 @@ public class Scrumcraft2 implements ModInitializer {
         ModItems.init();
         ModEntityTypes.init();
         ModBlocks.init();
-        FabricDefaultAttributeRegistry.register(ModEntityTypes.SNOW_GOLEM, EvilSnowGolemEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntityTypes.EVIL_SNOW_GOLEM, EvilSnowGolemEntity.createAttributes());
         ModItemGroups.registerItemGroups();
 
         LOGGER.info("Scrumcraft2 successfully Scrummed");
