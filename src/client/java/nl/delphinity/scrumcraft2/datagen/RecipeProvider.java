@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModItems;
 import org.jetbrains.annotations.NotNull;
 
@@ -131,6 +132,14 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("GGG")
                         .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(ItemTags.FISHES))
                         .save(exporter, "golden_fish");
+                shaped(RecipeCategory.MISC, ModBlocks.SCRUM_BLOCK, 1)
+                        .define('#', Items.GOLD_INGOT)
+                        .define('S', ModItems.SCRUM_BALL)
+                        .pattern("###")
+                        .pattern("#S#")
+                        .pattern("###")
+                        .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
+                        .save(exporter, "scrum_block");
             };
         };
     }
