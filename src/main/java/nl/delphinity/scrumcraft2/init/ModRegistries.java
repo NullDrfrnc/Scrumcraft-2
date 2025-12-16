@@ -9,7 +9,7 @@ import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
 public class ModRegistries {
 
-    public static final ResourceKey<Registry<RovoRecipe>> ROVO_RECIPE_REGISTRY = createRegistryKey("rovo_recipe");
+    public static final ResourceKey<Registry<RovoRecipe>> ROVO_RECIPE_REGISTRY = createRegistryKey("rovo");
 
     public static void init() {
     }

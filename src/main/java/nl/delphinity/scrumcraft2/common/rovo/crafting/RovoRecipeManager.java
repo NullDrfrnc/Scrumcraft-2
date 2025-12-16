@@ -1,5 +1,6 @@
 package nl.delphinity.scrumcraft2.common.rovo.crafting;
 
+import com.google.gson.JsonParser;
 import com.mojang.serialization.JsonOps;
 import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
 import net.minecraft.core.HolderLookup;
@@ -12,6 +13,7 @@ import nl.delphinity.scrumcraft2.Scrumcraft2;
 import nl.delphinity.scrumcraft2.init.ModRegistries;
 import org.jspecify.annotations.NonNull;
 
+import java.io.IOException;
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -33,6 +35,10 @@ public class RovoRecipeManager extends SimplePreparableReloadListener<Map<Identi
     @Override
     protected Map<Identifier, RovoRecipe> prepare(ResourceManager resourceManager, ProfilerFiller profilerFiller) {
         SortedMap<Identifier, RovoRecipe> patterns = new TreeMap<>();
+
+        resourceManager.listResources("scrumcraft2/rovo", identifier -> identifier.getPath().endsWith(".json"))
+                        .forEach((identifier, resource) -> Scrumcraft2.LOGGER.info("Found resource: {}", identifier));
+
         SimpleJsonResourceReloadListener.scanDirectory(
                 resourceManager,
                 ModRegistries.ROVO_RECIPE_REGISTRY,
