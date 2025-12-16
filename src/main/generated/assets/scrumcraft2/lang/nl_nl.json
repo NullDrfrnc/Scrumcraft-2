@@ -1,9 +1,20 @@
 {
+  "death.attack.weak_heart": "%1$s is overleden door deceptie...",
+  "item.scrumcraft2.agartha_potion": "Agartha Brouwsel",
+  "item.scrumcraft2.ayran": "Heerlijke Zoute Kwark",
+  "item.scrumcraft2.catamaran": "Catamaran, het super agile bootje van Scrum",
+  "item.scrumcraft2.ns_train": "NS Trein",
+  "item.scrumcraft2.potion_of_terrorism": "Brouwsel Van Terrorisme",
+  "item.scrumcraft2.agartha_potion": "Agartha Potion",
+  "item.scrumcraft2.ayran": "Ayran",
+  "item.scrumcraft2.golden_fish": "Gouden Vis",
+  "item.scrumcraft2.potion_of_terrorism": "Potion of Terrorism",
   "item.scrumcraft2.rubber_ducky": "Badeend",
-  "sound.scrumcraft2.rubber_ducky_squeak": "Badeend kwaakt",
-  "sound.scrumcraft2.rubber_ducky_throw": "Badeend vliegt",
   "item.scrumcraft2.scrum_ball": "Scrum Bal",
-  "item.scrumcraft2.catamaran": "Catamaran, Gave Boot Van Scrum",
+  "item.scrumcraft2.scrum_master_ball": "Scrum Meester Bal",
   "item.scrumcraft2.ultimate_scrum_ball": "Ultieme Scrum Bal",
-  "item.scrumcraft2.scrum_master_ball": "Scrum Meester Bal"
+  "item.scrumcraft2.weak_heart": "Verzwakt Hart",
+  "item.scrumcraft2.weed_ducky": "Wieteend",
+  "sound.scrumcraft2.rubber_ducky_squeak": "Badeend kwaakt",
+  "sound.scrumcraft2.rubber_ducky_throw": "Badeend vliegt"
 }

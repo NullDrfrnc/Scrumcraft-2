@@ -8,6 +8,7 @@ import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 import nl.delphinity.scrumcraft2.init.ModItems;
 import nl.delphinity.scrumcraft2.init.ModSounds;
+import nl.delphinity.scrumcraft2.init.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -25,6 +26,8 @@ public class Scrumcraft2 implements ModInitializer {
         ModEntityTypes.init();
         ModBlocks.init();
         FabricDefaultAttributeRegistry.register(ModEntityTypes.SNOW_GOLEM, EvilSnowGolemEntity.createAttributes());
+        ModItemGroups.registerItemGroups();
+
         LOGGER.info("Scrumcraft2 successfully Scrummed");
     }
 

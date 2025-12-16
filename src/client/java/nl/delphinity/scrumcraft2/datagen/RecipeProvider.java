@@ -66,7 +66,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(ModItems.ULTIMATE_SCRUM_BALL)
                         .unlockedBy(getHasName(ModItems.ULTIMATE_SCRUM_BALL), this.has(ModItems.ULTIMATE_SCRUM_BALL))
                         .save(exporter, "scrum_master_ball");
-                shapeless(RecipeCategory.COMBAT, ModItems.CATAMARAN, 1)
+                shapeless(RecipeCategory.MISC, ModItems.CATAMARAN, 1)
                         .requires(ItemTags.BOATS)
                         .requires(ItemTags.BOATS)
                         .requires(ItemTags.BOATS)
@@ -78,6 +78,50 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(ItemTags.BOATS)
                         .unlockedBy("has_boats", this.has(ItemTags.BOATS))
                         .save(exporter, "catamaran");
+                shapeless(RecipeCategory.MISC, ModItems.NS_TRAIN, 1)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .requires(Items.MINECART)
+                        .unlockedBy("has_minecarts", this.has(Items.MINECART))
+                        .save(exporter, "ns_train");
+                shaped(RecipeCategory.MISC, ModItems.AGARTHA_POTION, 1)
+                        .define('#', Items.GOLD_INGOT)
+                        .define('D', Items.DIAMOND_BLOCK)
+                        .pattern("###")
+                        .pattern("#D#")
+                        .pattern("###")
+                        .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(Items.GOLD_INGOT))
+                        .save(exporter, "agarta_potion");
+                shaped(RecipeCategory.MISC, ModItems.AYRAN, 1)
+                        .define('#', Items.GLASS_BOTTLE)
+                        .define('S', Items.SPIDER_EYE)
+                        .pattern("SSS")
+                        .pattern("S#S")
+                        .pattern("SSS")
+                        .unlockedBy(getHasName(Items.SPIDER_EYE), this.has(Items.SPIDER_EYE))
+                        .save(exporter, "ayran");
+                shaped(RecipeCategory.MISC, ModItems.POTION_OF_TERRORISM, 1)
+                        .define('T', Items.GUNPOWDER)
+                        .define('B', Items.GLASS_BOTTLE)
+                        .pattern("TTT")
+                        .pattern("TBT")
+                        .pattern("TTT")
+                        .unlockedBy(getHasName(Items.GUNPOWDER), this.has(Items.GUNPOWDER))
+                        .save(exporter, "potion_of_terrorism");
+                shaped(RecipeCategory.MISC, ModItems.GOLDEN_FISH, 1)
+                        .define('F', ItemTags.FISHES)
+                        .define('G', Items.GOLD_INGOT)
+                        .pattern("GGG")
+                        .pattern("GFG")
+                        .pattern("GGG")
+                        .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(ItemTags.FISHES))
+                        .save(exporter, "golden_fish");
             };
         };
     }

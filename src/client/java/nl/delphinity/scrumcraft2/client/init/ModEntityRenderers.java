@@ -11,6 +11,6 @@ public class ModEntityRenderers {
         EntityRenderers.register(ModEntityTypes.SCRUM_BALL_ENTITY, ThrownItemRenderer::new);
         EntityRenderers.register(ModEntityTypes.RUBBER_DUCKY_ENTITY, RubberDuckyThrownItemRenderer::new);
         EntityRenderers.register(ModEntityTypes.SNOW_GOLEM, ctx -> new SnowGolemRenderer(ctx));
-
+        EntityRenderers.register(ModEntityTypes.WEED_DUCKY_ENTITY, RubberDuckyThrownItemRenderer::new);
     }
 }
