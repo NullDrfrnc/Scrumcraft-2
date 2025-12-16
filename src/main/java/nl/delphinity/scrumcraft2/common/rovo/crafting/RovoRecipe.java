@@ -8,6 +8,7 @@ import net.minecraft.world.item.crafting.ShapedRecipePattern;
 
 public class RovoRecipe {
     private ShapedRecipePattern pattern;
+    //TODO: FIx deze klote codec
     public static final Codec<RovoRecipe> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     ShapedRecipePattern.MAP_CODEC.fieldOf("pattern").forGetter(RovoRecipe::getPattern)
