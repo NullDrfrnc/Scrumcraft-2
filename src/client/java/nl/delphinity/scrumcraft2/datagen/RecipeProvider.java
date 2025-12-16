@@ -114,6 +114,15 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("TTT")
                         .unlockedBy(getHasName(Items.GUNPOWDER), this.has(Items.GUNPOWDER))
                         .save(exporter, "potion_of_terrorism");
+                shaped(RecipeCategory.MISC, ModItems.WEAK_HEART, 1)
+                        .define('G', Items.GOLDEN_APPLE)
+                        .define('H', Items.HEART_OF_THE_SEA)
+                        .define('S', Items.SPIDER_EYE)
+                        .pattern("SSS")
+                        .pattern("SHS")
+                        .pattern("SGS")
+                        .unlockedBy(getHasName(Items.HEART_OF_THE_SEA), this.has(Items.HEART_OF_THE_SEA))
+                        .save(exporter, "weak_heart");
             };
         };
     }

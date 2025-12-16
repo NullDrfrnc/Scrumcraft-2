@@ -8,6 +8,7 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModItems;
 
 public class ModelProvider extends FabricModelProvider {
@@ -21,7 +22,7 @@ public class ModelProvider extends FabricModelProvider {
      */
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-        
+        blockModelGenerators.createTrivialCube(ModBlocks.SCRUM_BLOCK);
     }
 
     /**
