@@ -56,6 +56,12 @@ public class ModItems {
             new Item.Properties().food(ModFoods.AGARTHA_POTION, ModConsumables.AGARTHA_POTION)
     );
 
+    public static final Item GOLDEN_FISH = register(
+            "golden_fish",
+            Item::new,
+            new Item.Properties().food(ModFoods.GOLDEN_FISH, ModConsumables.GOLDEN_FISH)
+    );
+
     public static final Item SCRUM_BALL = register(
             "scrum_ball",
             props -> new ScrumBall(props, 1.0D),

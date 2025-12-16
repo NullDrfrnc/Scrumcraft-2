@@ -123,6 +123,14 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("SGS")
                         .unlockedBy(getHasName(Items.HEART_OF_THE_SEA), this.has(Items.HEART_OF_THE_SEA))
                         .save(exporter, "weak_heart");
+                shaped(RecipeCategory.MISC, ModItems.GOLDEN_FISH, 1)
+                        .define('F', ItemTags.FISHES)
+                        .define('G', Items.GOLD_INGOT)
+                        .pattern("GGG")
+                        .pattern("GFG")
+                        .pattern("GGG")
+                        .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(ItemTags.FISHES))
+                        .save(exporter, "golden_fish");
             };
         };
     }

@@ -20,5 +20,11 @@ public class ModFoods {
             .saturationModifier(0.3F)
             .alwaysEdible()
             .build();
+
+    public static final net.minecraft.world.food.FoodProperties GOLDEN_FISH = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationModifier(0.3F)
+            .alwaysEdible()
+            .build();
 }
 

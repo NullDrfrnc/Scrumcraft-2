@@ -25,6 +25,7 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.SCRUM_MASTER_BALL, "Scrum Meester Bal");
         translationBuilder.add(ModItems.CATAMARAN, "Catamaran, het super agile bootje van Scrum");
         translationBuilder.add(ModItems.WEED_DUCKY, "Wieteend");
+        translationBuilder.add(ModItems.GOLDEN_FISH, "Gouden Vis");
         translationBuilder.add(ModItems.AYRAN, "Heerlijke Zoute Kwark");
         translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Brouwsel Van Terrorisme");
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Brouwsel");
@@ -38,9 +39,5 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         // SoundEvents
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Badeend kwaakt");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Badeend vliegt");
-
-        // death messages
-        translationBuilder.add("death.attack.weak_heart", "%1$s is overleden door deceptie...");
-
     }
 }
