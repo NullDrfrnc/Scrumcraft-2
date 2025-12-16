@@ -11,6 +11,7 @@ import nl.delphinity.scrumcraft2.common.item.Catamaran;
 import nl.delphinity.scrumcraft2.common.item.NsTrain;
 import nl.delphinity.scrumcraft2.common.item.RubberDucky;
 import nl.delphinity.scrumcraft2.common.item.ScrumBall;
+import nl.delphinity.scrumcraft2.common.item.WeedDucky;
 
 import java.util.function.Function;
 
@@ -20,6 +21,12 @@ public class ModItems {
     public static final RubberDucky RUBBER_DUCKY = (RubberDucky) register(
             "rubber_ducky",
             RubberDucky::new,
+            new Item.Properties()
+    );
+
+    public static final WeedDucky WEED_DUCKY = (WeedDucky) register(
+            "weed_ducky",
+            WeedDucky::new,
             new Item.Properties()
     );
 
@@ -77,6 +84,7 @@ public class ModItems {
         DispenserBlock.registerProjectileBehavior(ULTIMATE_SCRUM_BALL);
         DispenserBlock.registerProjectileBehavior(SCRUM_MASTER_BALL);
         DispenserBlock.registerProjectileBehavior(RUBBER_DUCKY);
+        DispenserBlock.registerProjectileBehavior(WEED_DUCKY);
     }
 
     public static Item register(String name, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {

@@ -19,6 +19,7 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         
         // Items
         translationBuilder.add(ModItems.RUBBER_DUCKY, "Rubber ducky");
+        translationBuilder.add(ModItems.WEED_DUCKY, "Weed ducky");
         translationBuilder.add(ModItems.SCRUM_BALL, "Scrum Ball");
         translationBuilder.add(ModItems.AYRAN, "Ayran");
         translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Potion of Terrorism");
