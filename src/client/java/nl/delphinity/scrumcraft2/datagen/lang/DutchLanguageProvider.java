@@ -3,6 +3,7 @@ package nl.delphinity.scrumcraft2.datagen.lang;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.core.HolderLookup;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
+import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -30,9 +31,11 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Brouwsel Van Terrorisme");
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Brouwsel");
         translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Slechtaardige sneeuwman");
+        translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Blok");
 
         // ItemGroups
-        
+        // don't have to do anythink here :)
+
         // ItemTags
         
         // SoundEvents

@@ -1,10 +1,11 @@
 {
+  "block.scrumcraft2.scrum_block": "Scrum Block",
   "death.attack.weak_heart": "%1$s died from deception...",
   "item.scrumcraft2.agartha_potion": "Agartha Potion",
   "item.scrumcraft2.ayran": "Ayran",
   "item.scrumcraft2.catamaran": "Catamaran",
-  "item.scrumcraft2.ns_train": "NS Train",
   "item.scrumcraft2.golden_fish": "Golden Fish",
+  "item.scrumcraft2.ns_train": "NS Train",
   "item.scrumcraft2.potion_of_terrorism": "Potion of Terrorism",
   "item.scrumcraft2.rubber_ducky": "Rubber ducky",
   "item.scrumcraft2.scrum_ball": "Scrum Ball",
