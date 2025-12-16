@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#minecraft:boats",
+    "#minecraft:boats",
+    "#minecraft:boats",
+    "#minecraft:boats",
+    "#minecraft:boats",
+    "#minecraft:boats",
+    "#minecraft:boats",
+    "#minecraft:boats",
+    "#minecraft:boats"
+  ],
+  "result": {
+    "count": 1,
+    "id": "scrumcraft2:catamaran"
+  }
+}

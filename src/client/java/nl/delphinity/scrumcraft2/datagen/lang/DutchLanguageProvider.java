@@ -17,7 +17,18 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         
         // Items
         translationBuilder.add(ModItems.RUBBER_DUCKY, "Badeend");
-        
+        translationBuilder.add(ModItems.WEAK_HEART, "Verzwakt Hart");
+        translationBuilder.add(ModItems.NS_TRAIN, "NS Trein");
+        translationBuilder.add(ModItems.SCRUM_BALL, "Scrum Bal");
+        translationBuilder.add(ModItems.ULTIMATE_SCRUM_BALL, "Ultieme Scrum Bal");
+        translationBuilder.add(ModItems.SCRUM_MASTER_BALL, "Scrum Meester Bal");
+        translationBuilder.add(ModItems.CATAMARAN, "Catamaran, het super agile bootje van Scrum");
+        translationBuilder.add(ModItems.WEED_DUCKY, "Wieteend");
+        translationBuilder.add(ModItems.GOLDEN_FISH, "Gouden Vis");
+        translationBuilder.add(ModItems.AYRAN, "Heerlijke Zoute Kwark");
+        translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Brouwsel Van Terrorisme");
+        translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Brouwsel");
+
         // ItemGroups
         
         // ItemTags

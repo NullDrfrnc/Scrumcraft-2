@@ -21,6 +21,7 @@ public class Scrumcraft2 implements ModInitializer {
         ModItems.init();
         ModEntityTypes.init();
         ModBlocks.init();
+        ModItemGroups.registerItemGroups();
         
         LOGGER.info("Scrumcraft2 successfully Scrummed");
     }
