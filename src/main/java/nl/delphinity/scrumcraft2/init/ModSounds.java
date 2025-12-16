@@ -11,6 +11,7 @@ import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 public class ModSounds {
     public static final SoundEvent RUBBER_DUCKY_SQUEAK = registerSound("rubber_ducky_squeak");
     public static final SoundEvent RUBBER_DUCKY_THROW = registerSound("rubber_ducky_throw");
+    public static final SoundEvent SICK_SEVEN = registerSound("SICKSEVEN");
 
     public static void init() {}
     

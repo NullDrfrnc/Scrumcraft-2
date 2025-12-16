@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EntitySpawnReason;
@@ -23,6 +24,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import nl.delphinity.scrumcraft2.init.ModItems;
+import nl.delphinity.scrumcraft2.init.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 public class ScrumBlock extends Block {
@@ -39,7 +41,7 @@ public class ScrumBlock extends Block {
 
             //This is where I made it so it calls the event trigger thingy
             if (level instanceof ServerLevel serverLevel) {
-                triggerEvent(serverLevel, pos);
+                triggerEvent(serverLevel, pos, player);
             }
             player.awardStat(Stats.BLOCK_MINED.get(this));
         } else {
@@ -48,8 +50,9 @@ public class ScrumBlock extends Block {
         }
     }
 
-    private void triggerEvent(ServerLevel level, BlockPos pos) {
-        if (level.random.nextBoolean()) {
+    private void triggerEvent(ServerLevel level, BlockPos pos, Player player) {
+        int rand = level.random.nextIntBetweenInclusive(1, 3);
+        if (rand == 1) {
             // Event A: Lightning
             LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level, EntitySpawnReason.SPAWNER);
             if (lightning != null) {
@@ -58,7 +61,7 @@ public class ScrumBlock extends Block {
             }
             BlockPos anvilPos = pos.above(10);
             FallingBlockEntity.fall(level, anvilPos, Blocks.ANVIL.defaultBlockState());
-        } else {
+        } else if (rand == 2) {
             // Event B: Mob Spawn
             Zombie zombie = EntityType.ZOMBIE.create(level, EntitySpawnReason.SPAWNER);
             if (zombie != null) {
@@ -74,6 +77,14 @@ public class ScrumBlock extends Block {
                 zombie.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.GOLDEN_LEGGINGS));
                 zombie.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.GOLDEN_BOOTS));
                 level.addFreshEntity(zombie);
+            }
+        } else if (rand == 3) {
+            // Event C: 67...
+            if (player instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+                serverPlayer.connection.send(new net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket(
+                        Component.literal("67").withStyle(net.minecraft.ChatFormatting.RED)
+                ));
+                level.playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.SICK_SEVEN, SoundSource.PLAYERS, 0.5F, 1F);
             }
         }
     }
