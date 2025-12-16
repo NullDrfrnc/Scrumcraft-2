@@ -1,6 +1,5 @@
 package nl.delphinity.scrumcraft2.init;
 
-import com.ibm.icu.util.ULocale;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -8,6 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import nl.delphinity.scrumcraft2.common.entity.EvilSnowGolemEntity;
 import nl.delphinity.scrumcraft2.common.entity.RubberDuckyEntity;
 import nl.delphinity.scrumcraft2.common.entity.ScrumBallEntity;
 
@@ -23,6 +23,11 @@ public class ModEntityTypes {
     public static final EntityType<ScrumBallEntity> SCRUM_BALL_ENTITY = register(
             "scrum_ball_entity",
             EntityType.Builder.of(ScrumBallEntity::new, MobCategory.MISC)
+    );
+
+    public static final EntityType<EvilSnowGolemEntity> SNOW_GOLEM = register(
+            "snow_golem_entity",
+            EntityType.Builder.of(EvilSnowGolemEntity::new, MobCategory.MONSTER)
     );
 
     public static void init() {
