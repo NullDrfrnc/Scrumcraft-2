@@ -47,7 +47,7 @@
           "xz_scale": 1.0,
           "y_scale": 0.5
         },
-        "argument2": 0.5
+        "argument2": 0.05
       }
     },
     "final_density": {
@@ -71,7 +71,7 @@
           "xz_scale": 2.0,
           "y_scale": 0.1
         },
-        "argument2": 0.4
+        "argument2": 0.05
       }
     },
     "vein_toggle": 0,
