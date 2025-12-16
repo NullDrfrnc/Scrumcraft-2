@@ -1,13 +1,17 @@
 package nl.delphinity.scrumcraft2.common.item;
 
+import net.minecraft.core.registries.Registries;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.zombie.ZombieVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import nl.delphinity.scrumcraft2.init.ModDamageTypes;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Method;
@@ -15,7 +19,6 @@ import java.util.UUID;
 
 public class WeakHeart extends Item {
     private static Method startConvertingMethod;
-
     static {
         try {
             // "startConverting" is the Mojank mapping name, thank yer
@@ -49,7 +52,7 @@ public class WeakHeart extends Item {
                 }
                 return InteractionResult.PASS;
             } else {
-                damagePlayer(player, stack);
+                damagePlayer(player, stack, player.level());
                 return InteractionResult.SUCCESS;
             }
         }
@@ -61,14 +64,19 @@ public class WeakHeart extends Item {
         ItemStack stack = player.getItemInHand(hand);
         if (!level.isClientSide()) {
             // Used on anything else than zomber vilger bc yaya -> Damage Player
-            damagePlayer(player, stack);
+            damagePlayer(player, stack, level);
         }
         return InteractionResult.SUCCESS;
     }
 
-    private void damagePlayer(Player player, ItemStack stack) {
+    private void damagePlayer(Player player, ItemStack stack, Level world) {
         // "1 damage" = 0.5 hearts. So 6 damage = 3 hearts :DDDDDDDDDDDDDDDDDD (I'm going insamne)
-        player.hurt(player.damageSources().generic(), 6.0f);
+        DamageSource damageSource = new DamageSource(
+                world.registryAccess()
+                        .lookupOrThrow(Registries.DAMAGE_TYPE)
+                        .getOrThrow(ModDamageTypes.WEAK_HEART_OUCHIE)
+        );
+        player.hurtServer((ServerLevel) world, damageSource, 6.0f);
         stack.shrink(1);
     }
 }

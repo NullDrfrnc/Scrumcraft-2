@@ -32,5 +32,8 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         // Sounds (For subtitles)
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Rubber ducky squeaks");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Rubber ducky flies");
+
+        // death messages
+        translationBuilder.add("death.attack.weak_heart", "%1$s died from deception...");
     }
 }

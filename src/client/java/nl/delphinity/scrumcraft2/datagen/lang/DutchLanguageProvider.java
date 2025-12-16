@@ -32,5 +32,9 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         // SoundEvents
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Badeend kwaakt");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Badeend vliegt");
+
+        // death messages
+        translationBuilder.add("death.attack.weak_heart", "%1$s is overleden door deceptie...");
+
     }
 }
