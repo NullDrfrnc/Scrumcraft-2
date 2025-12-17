@@ -33,17 +33,27 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Potion");
         translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Block");
         translationBuilder.add(ModItems.GOLDEN_FISH, "Golden Fish");
+        translationBuilder.add(ModItems.VERY_WHITE_BREW, "Very White Brew");
         translationBuilder.add(ModItems.WORSTE_BOLUS, "Sausage Bolus");
         translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Evil Snow Golem");
+        translationBuilder.add(ModItems.EVIL_LINKED_IN, "Evil LinkedIn");
+        translationBuilder.add(ModItems.LINKED_IN, "LinkedIn");
+        translationBuilder.add(ModItems.AGARTHA_LINKED_IN, "Agartha LinkedIn");
+
         // ItemGroups
         
         // ItemTags
         
         // Sounds (For subtitles)
+        translationBuilder.add("sound.scrumcraft2.sickseven", "SIIIX SEVEEEEN");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Rubber ducky squeaks");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Rubber ducky flies");
 
         // death messages
         translationBuilder.add("death.attack.weak_heart", "%1$s died from deception...");
+
+        // effects
+        translationBuilder.add("effect.scrumcraft2.eclipse_user", "Eclipse User");
+
     }
 }

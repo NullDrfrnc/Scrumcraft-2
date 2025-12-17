@@ -1,0 +1,21 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.2,
+  "downfall": 0.6,
+  "effects": {
+    "sky_color": 7907327,
+    "fog_color": 12638463,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "grass_color": 9470285,
+    "foliage_color": 10387789
+  },
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": [],
+  "features": [
+    [], [], [], [], [], [], [], [], [],
+    [ "scrumcraft2:agartha_trees" ],
+    []
+  ]
+}

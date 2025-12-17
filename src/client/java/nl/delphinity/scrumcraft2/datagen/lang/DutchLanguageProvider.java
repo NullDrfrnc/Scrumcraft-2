@@ -33,6 +33,13 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.WORSTE_BOLUS, "worste Bolus");
         translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Slechtaardige sneeuwman");
         translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Blok");
+        translationBuilder.add(ModItems.VERY_WHITE_BREW, "Zeer Wit Brouwsel");
+        translationBuilder.add(ModItems.EVIL_LINKED_IN, "Kwaadaardige GekoppeldIn");
+        translationBuilder.add(ModItems.LINKED_IN, "GekoppeldIn");
+        translationBuilder.add(ModItems.AGARTHA_LINKED_IN, "Agartha GekoppeldIn");
+
+
+
 
         // ItemGroups
         // don't have to do anythink here :)
@@ -40,7 +47,12 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         // ItemTags
         
         // SoundEvents
+        translationBuilder.add("sound.scrumcraft2.sickseven", "ZES ZEVEEEEN");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Badeend kwaakt");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Badeend vliegt");
+
+        // effects
+        translationBuilder.add("effect.scrumcraft2.eclipse_user", "Zonsverduistering Gebruiker");
+
     }
 }
