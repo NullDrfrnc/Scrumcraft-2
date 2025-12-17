@@ -2,6 +2,7 @@ package nl.delphinity.scrumcraft2.datagen.lang;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.core.HolderLookup;
+import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModItems;
 
@@ -32,6 +33,8 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Potion");
         translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Block");
         translationBuilder.add(ModItems.GOLDEN_FISH, "Golden Fish");
+        translationBuilder.add(ModItems.WORSTE_BOLUS, "Sausage Bolus");
+        translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Evil Snow Golem");
         // ItemGroups
         
         // ItemTags

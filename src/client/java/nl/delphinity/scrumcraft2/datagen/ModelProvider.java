@@ -49,5 +49,6 @@ public class ModelProvider extends FabricModelProvider {
         itemModelGenerators.createFlatItemModel(ModItems.NS_TRAIN, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.createFlatItemModel(ModItems.WEAK_HEART, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.createFlatItemModel(ModItems.GOLDEN_FISH, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.createFlatItemModel(ModItems.WORSTE_BOLUS, ModelTemplates.FLAT_ITEM);
     }
 }
