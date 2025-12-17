@@ -62,6 +62,12 @@ public class ModItems {
             new Item.Properties().food(ModFoods.GOLDEN_FISH, ModConsumables.GOLDEN_FISH)
     );
 
+    public static final Item WORSTE_BOLUS = register(
+            "worste_bolus",
+            Item::new,
+            new Item.Properties().food(ModFoods.WORSTE_BOLUS, ModConsumables.WORSTE_BOLUS)
+    );
+
     public static final Item SCRUM_BALL = register(
             "scrum_ball",
             props -> new ScrumBall(props, 1.0D),

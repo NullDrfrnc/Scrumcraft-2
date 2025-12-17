@@ -30,6 +30,7 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.AYRAN, "Heerlijke Zoute Kwark");
         translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Brouwsel Van Terrorisme");
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Brouwsel");
+        translationBuilder.add(ModItems.WORSTE_BOLUS, "worste Bolus");
         translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Slechtaardige sneeuwman");
         translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Blok");
 

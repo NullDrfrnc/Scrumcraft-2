@@ -132,6 +132,16 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("GGG")
                         .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(ItemTags.FISHES))
                         .save(exporter, "golden_fish");
+
+                shaped(RecipeCategory.MISC, ModItems.WORSTE_BOLUS, 1)
+                        .define('M', ItemTags.MEAT)
+                        .define('B', Items.BREAD)
+                        .pattern("BBB")
+                        .pattern("BMB")
+                        .pattern("BBB")
+                        .unlockedBy(getHasName(Items.BREAD), this.has(ItemTags.MEAT))
+                        .save(exporter, "worste_bolus");
+
                 shaped(RecipeCategory.MISC, ModBlocks.SCRUM_BLOCK, 1)
                         .define('#', Items.GOLD_INGOT)
                         .define('S', ModItems.SCRUM_BALL)
@@ -140,6 +150,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("###")
                         .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
                         .save(exporter, "scrum_block");
+
             };
         };
     }
