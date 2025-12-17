@@ -25,8 +25,8 @@ public class ModBlocks {
             true
     );
 
-    public static final Block CHRISTMAS_TREE_BLOCK = register(
-            "christmas_tree_block",
+    public static final Block CHRISTMASTREE = register(
+            "christmastree",
             ChristmasTreeBlock::new,
             BlockBehaviour.Properties.of().sound(SoundType.LEAF_LITTER),
             true

@@ -32,6 +32,7 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Potion of Terrorism");
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Potion");
         translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Block");
+        translationBuilder.add(ModBlocks.CHRISTMASTREE, "Christmas Tree");
         translationBuilder.add(ModItems.GOLDEN_FISH, "Golden Fish");
         translationBuilder.add(ModItems.WORSTE_BOLUS, "Sausage Bolus");
         translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Evil Snow Golem");
