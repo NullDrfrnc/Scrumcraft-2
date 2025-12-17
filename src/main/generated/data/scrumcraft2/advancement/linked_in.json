@@ -1,0 +1,29 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "linked_in": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:linked_in"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Get linked in",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:linked_in"
+    },
+    "title": "Linked in"
+  },
+  "requirements": [
+    [
+      "linked_in"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

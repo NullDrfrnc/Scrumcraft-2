@@ -1,0 +1,27 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "take_terrorism": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:potion_of_terrorism"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Take a Potion Of Terrorism",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:potion_of_terrorism"
+    },
+    "title": "What have you done.."
+  },
+  "requirements": [
+    [
+      "take_terrorism"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

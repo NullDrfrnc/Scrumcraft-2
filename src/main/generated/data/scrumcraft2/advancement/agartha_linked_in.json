@@ -1,0 +1,29 @@
+{
+  "parent": "scrumcraft2:linked_in",
+  "criteria": {
+    "linked_in": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:agartha_linked_in"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Get Agartha linked in",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:agartha_linked_in"
+    },
+    "title": "DESCEND to linked in"
+  },
+  "requirements": [
+    [
+      "linked_in"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

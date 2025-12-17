@@ -1,0 +1,29 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "ultimate_scrum_ball": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:ultimate_scrum_ball"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Get an Ultimate Scrum Ball",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:ultimate_scrum_ball"
+    },
+    "title": "AAAAHHHH"
+  },
+  "requirements": [
+    [
+      "ultimate_scrum_ball"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
