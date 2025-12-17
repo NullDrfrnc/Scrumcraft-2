@@ -35,6 +35,7 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.GOLDEN_FISH, "Golden Fish");
         translationBuilder.add(ModItems.WORSTE_BOLUS, "Sausage Bolus");
         translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Evil Snow Golem");
+        translationBuilder.add(ModEntityTypes.EVIL_SQUID, "Evil Squid");
         // ItemGroups
         
         // ItemTags

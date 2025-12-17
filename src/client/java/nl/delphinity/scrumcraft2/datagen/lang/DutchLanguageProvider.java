@@ -32,6 +32,7 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Brouwsel");
         translationBuilder.add(ModItems.WORSTE_BOLUS, "worste Bolus");
         translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Slechtaardige sneeuwman");
+        translationBuilder.add(ModEntityTypes.EVIL_SQUID, "Slechtaardige inktvis");
         translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Blok");
 
         // ItemGroups
