@@ -11,13 +11,9 @@ import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
 public class ModRovo {
     public static void init() {
-        ServerLifecycleEvents.SERVER_STARTING.register((MinecraftServer server) -> {
-            HolderLookup.Provider provider = server.registryAccess();
-            RovoRecipeManager manager = new RovoRecipeManager(provider);
-            ResourceLoaderImpl.get(PackType.SERVER_DATA).registerReloader(
-                    identifierOf("rovo"),
-                    manager
-            );
-        });
+        ResourceLoaderImpl.get(PackType.SERVER_DATA).registerReloader(
+                identifierOf("rovo"),
+                new RovoRecipeManager()
+        );
     }
 }
