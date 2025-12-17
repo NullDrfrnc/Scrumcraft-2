@@ -34,6 +34,7 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Slechtaardige sneeuwman");
         translationBuilder.add(ModEntityTypes.EVIL_SQUID, "Slechtaardige inktvis");
         translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Blok");
+        translationBuilder.add(ModBlocks.CHRISTMASTREE, "Kerstboom");
         translationBuilder.add(ModItems.VERY_WHITE_BREW, "Zeer Wit Brouwsel");
         translationBuilder.add(ModItems.EVIL_LINKED_IN, "Kwaadaardige GekoppeldIn");
         translationBuilder.add(ModItems.LINKED_IN, "GekoppeldIn");
