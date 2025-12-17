@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "minecraft:golden_apple",
+    "H": "minecraft:heart_of_the_sea",
+    "S": "minecraft:spider_eye"
+  },
+  "pattern": [
+    "SSS",
+    "SHS",
+    "SGS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "scrumcraft2:weak_heart"
+  }
+}
