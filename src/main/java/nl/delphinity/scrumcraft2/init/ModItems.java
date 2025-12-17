@@ -92,7 +92,11 @@ public class ModItems {
             NsTrain::new,
             new Item.Properties()
     );
-
+    public static final Item BOWL_OF_CODE = register(
+            "bowl_of_code",
+            Item::new,
+            new Item.Properties().food(ModFoods.BOWL_OF_CODE, ModConsumables.BOWL_OF_CODE)
+    );
     public static void init() {
         DispenserBlock.registerProjectileBehavior(SCRUM_BALL);
         DispenserBlock.registerProjectileBehavior(ULTIMATE_SCRUM_BALL);
