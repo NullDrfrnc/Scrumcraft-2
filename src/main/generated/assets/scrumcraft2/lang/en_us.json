@@ -13,7 +13,10 @@
   "item.scrumcraft2.ultimate_scrum_ball": "Ultimate Scrum Ball",
   "item.scrumcraft2.weak_heart": "Weak Heart",
   "item.scrumcraft2.weed_ducky": "Weed ducky",
+  "item.scrumcraft2.worste_bolus": "Sausage Bolus",
   "sound.scrumcraft2.rubber_ducky_squeak": "Rubber ducky squeaks",
   "sound.scrumcraft2.rubber_ducky_throw": "Rubber ducky flies",
-  "sound.scrumcraft2.sickseven": "SIIIX SEVEEEEN"
+  "sound.scrumcraft2.sickseven": "SIIIX SEVEEEEN",
+  "entity.scrumcraft2.snow_golem_entity": "Evil Snow Golem",
+  "entity.scrumcraft2.scrum_ball_entity": "Scrum Bal"
 }
