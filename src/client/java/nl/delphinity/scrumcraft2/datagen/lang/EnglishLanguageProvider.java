@@ -37,6 +37,7 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.VERY_WHITE_BREW, "Very White Brew");
         translationBuilder.add(ModItems.WORSTE_BOLUS, "Sausage Bolus");
         translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Evil Snow Golem");
+        translationBuilder.add(ModEntityTypes.EVIL_SQUID, "Evil Squid");
         translationBuilder.add(ModItems.EVIL_LINKED_IN, "Evil LinkedIn");
         translationBuilder.add(ModItems.LINKED_IN, "LinkedIn");
         translationBuilder.add(ModItems.AGARTHA_LINKED_IN, "Agartha LinkedIn");
