@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import nl.delphinity.scrumcraft2.Scrumcraft2;
+import nl.delphinity.scrumcraft2.common.block.ChristmasTreeBlock;
 import nl.delphinity.scrumcraft2.common.block.ScrumBlock;
 
 import java.util.function.Function;
@@ -22,6 +23,13 @@ public class ModBlocks {
             "scrum_block",
             ScrumBlock::new,
             BlockBehaviour.Properties.of().sound(SoundType.ANVIL),
+            true
+    );
+
+    public static final Block CHRISTMASTREE = register(
+            "christmastree",
+            ChristmasTreeBlock::new,
+            BlockBehaviour.Properties.of().sound(SoundType.LEAF_LITTER),
             true
     );
 
