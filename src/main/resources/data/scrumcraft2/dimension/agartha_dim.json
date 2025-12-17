@@ -1,0 +1,15 @@
+{
+  "type": "scrumcraft2:agartha_dim_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "scrumcraft2:agartha_noise_settings",
+    "biome_source": {
+      "type": "minecraft:checkerboard",
+      "scale": 4,
+      "biomes": [
+        "scrumcraft2:small_island",
+        "scrumcraft2:ice_wall"
+      ]
+    }
+  }
+}
