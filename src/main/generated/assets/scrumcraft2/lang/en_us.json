@@ -1,4 +1,5 @@
 {
+  "block.scrumcraft2.scrum_block": "Scrum Block",
   "death.attack.weak_heart": "%1$s died from deception...",
   "item.scrumcraft2.agartha_potion": "Agartha Potion",
   "item.scrumcraft2.ayran": "Ayran",
@@ -15,10 +16,10 @@
   "item.scrumcraft2.worste_bolus": "Sausage Bolus",
   "sound.scrumcraft2.rubber_ducky_squeak": "Rubber ducky squeaks",
   "sound.scrumcraft2.rubber_ducky_throw": "Rubber ducky flies",
-
   "painting.scrumcraft2.saw_them.title": "Saw Them",
   "painting.scrumcraft2.saw_them.author": "John MC Muffin",
-
   "painting.scrumcraft2.kanker_vis.title": "Kanker Vis",
   "painting.scrumcraft2.kanker_vis.author": "John MC Muffin"
+  "entity.scrumcraft2.snow_golem_entity": "Evil Snow Golem",
+  "entity.scrumcraft2.scrum_ball_entity": "Scrum Bal"
 }
