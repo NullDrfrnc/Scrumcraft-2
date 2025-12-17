@@ -30,7 +30,12 @@ public class ModFoods {
     public static final net.minecraft.world.food.FoodProperties BOWL_OF_CODE = new FoodProperties.Builder()
             .nutrition(3)
             .saturationModifier(0.4F)
+            .alwaysEdible()
+            .build();
 
+    public static final net.minecraft.world.food.FoodProperties WORSTE_BOLUS = new FoodProperties.Builder()
+            .nutrition(4)
+            .saturationModifier(0.3F)
             .alwaysEdible()
             .build();
 }

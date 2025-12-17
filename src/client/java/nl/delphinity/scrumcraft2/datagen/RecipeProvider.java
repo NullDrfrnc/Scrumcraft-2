@@ -132,6 +132,16 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("GGG")
                         .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(ItemTags.FISHES))
                         .save(exporter, "golden_fish");
+
+                shaped(RecipeCategory.MISC, ModItems.WORSTE_BOLUS, 1)
+                        .define('M', ItemTags.MEAT)
+                        .define('B', Items.BREAD)
+                        .pattern("BBB")
+                        .pattern("BMB")
+                        .pattern("BBB")
+                        .unlockedBy(getHasName(Items.BREAD), this.has(ItemTags.MEAT))
+                        .save(exporter, "worste_bolus");
+
                 shaped(RecipeCategory.MISC, ModBlocks.SCRUM_BLOCK, 1)
                         .define('#', Items.GOLD_INGOT)
                         .define('S', ModItems.SCRUM_BALL)
@@ -140,6 +150,33 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("###")
                         .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
                         .save(exporter, "scrum_block");
+
+                shaped(RecipeCategory.MISC, ModItems.LINKED_IN, 1)
+                        .define('C', ItemTags.CHAINS)
+                        .define('L', Items.LAPIS_LAZULI)
+                        .pattern("CCC")
+                        .pattern("CLC")
+                        .pattern("CCC")
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(ItemTags.CHAINS))
+                        .save(exporter, "linked_in");
+
+                shaped(RecipeCategory.MISC, ModItems.AGARTHA_LINKED_IN, 1)
+                        .define('C', Items.GOLD_INGOT)
+                        .define('L', ModItems.LINKED_IN)
+                        .pattern("CCC")
+                        .pattern("CLC")
+                        .pattern("CCC")
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(ItemTags.CHAINS))
+                        .save(exporter, "agartha_linked_in");
+
+                shaped(RecipeCategory.MISC, ModItems.EVIL_LINKED_IN, 1)
+                        .define('C', Items.REDSTONE)
+                        .define('L', ModItems.LINKED_IN)
+                        .pattern("CCC")
+                        .pattern("CLC")
+                        .pattern("CCC")
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(ItemTags.CHAINS))
+                        .save(exporter, "evil_linked_in");
             };
         };
     }

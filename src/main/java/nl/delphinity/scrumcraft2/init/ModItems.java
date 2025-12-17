@@ -20,6 +20,31 @@ import java.util.function.Function;
 import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
 public class ModItems {
+
+    public static final VeryWhiteBrew VERY_WHITE_BREW = (VeryWhiteBrew) register(
+            "very_white_brew",
+            VeryWhiteBrew::new,
+            new Item.Properties()
+    );
+
+    public static final Item LINKED_IN = register(
+            "linked_in",
+            props -> new LinkedIn(props, 1.05D),
+            new Item.Properties()
+    );
+
+    public static final Item EVIL_LINKED_IN = register(
+            "evil_linked_in",
+            props -> new LinkedIn(props, 0.01D),
+            new Item.Properties()
+    );
+
+    public static final Item AGARTHA_LINKED_IN = register(
+            "agartha_linked_in",
+            props -> new LinkedIn(props, 100D),
+            new Item.Properties()
+    );
+
     public static final RubberDucky RUBBER_DUCKY = (RubberDucky) register(
             "rubber_ducky",
             RubberDucky::new,
@@ -60,6 +85,12 @@ public class ModItems {
             "golden_fish",
             Item::new,
             new Item.Properties().food(ModFoods.GOLDEN_FISH, ModConsumables.GOLDEN_FISH)
+    );
+
+    public static final Item WORSTE_BOLUS = register(
+            "worste_bolus",
+            Item::new,
+            new Item.Properties().food(ModFoods.WORSTE_BOLUS, ModConsumables.WORSTE_BOLUS)
     );
 
     public static final Item SCRUM_BALL = register(

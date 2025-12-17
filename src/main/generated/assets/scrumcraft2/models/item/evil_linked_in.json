@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "scrumcraft2:item/evil_linked_in"
+  }
+}
