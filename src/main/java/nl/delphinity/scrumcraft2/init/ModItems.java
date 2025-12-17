@@ -27,6 +27,24 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final Item LINKED_IN = register(
+            "linked_in",
+            props -> new LinkedIn(props, 1.05D),
+            new Item.Properties()
+    );
+
+    public static final Item EVIL_LINKED_IN = register(
+            "evil_linked_in",
+            props -> new LinkedIn(props, 0.01D),
+            new Item.Properties()
+    );
+
+    public static final Item AGARTHA_LINKED_IN = register(
+            "agartha_linked_in",
+            props -> new LinkedIn(props, 100D),
+            new Item.Properties()
+    );
+
     public static final RubberDucky RUBBER_DUCKY = (RubberDucky) register(
             "rubber_ducky",
             RubberDucky::new,

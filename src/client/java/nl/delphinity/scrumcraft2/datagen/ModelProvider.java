@@ -41,5 +41,8 @@ public class ModelProvider extends FabricModelProvider {
         itemModelGenerators.createFlatItemModel(ModItems.GOLDEN_FISH, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.createFlatItemModel(ModItems.VERY_WHITE_BREW, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.createFlatItemModel(ModItems.WORSTE_BOLUS, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.createFlatItemModel(ModItems.EVIL_LINKED_IN, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.createFlatItemModel(ModItems.LINKED_IN, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.createFlatItemModel(ModItems.AGARTHA_LINKED_IN, ModelTemplates.FLAT_ITEM);
     }
 }
