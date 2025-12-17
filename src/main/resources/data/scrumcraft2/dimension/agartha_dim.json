@@ -7,7 +7,6 @@
       "type": "minecraft:checkerboard",
       "scale": 4,
       "biomes": [
-        "scrumcraft2:big_island",
         "scrumcraft2:small_island",
         "scrumcraft2:ice_wall"
       ]
