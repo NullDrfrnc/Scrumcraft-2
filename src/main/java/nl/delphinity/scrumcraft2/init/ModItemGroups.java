@@ -32,6 +32,7 @@ public class ModItemGroups {
                     output.accept(ModItems.POTION_OF_TERRORISM);
                     output.accept(ModItems.AGARTHA_POTION);
                     output.accept(ModItems.GOLDEN_FISH);
+                    output.accept(ModItems.WORSTE_BOLUS);
             }).build());
 
     public static void registerItemGroups() {
