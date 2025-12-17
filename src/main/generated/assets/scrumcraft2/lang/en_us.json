@@ -1,4 +1,5 @@
 {
+  "block.scrumcraft2.scrum_block": "Scrum Block",
   "death.attack.weak_heart": "%1$s died from deception...",
   "item.scrumcraft2.agartha_potion": "Agartha Potion",
   "item.scrumcraft2.ayran": "Ayran",
@@ -14,5 +15,7 @@
   "item.scrumcraft2.weed_ducky": "Weed ducky",
   "item.scrumcraft2.worste_bolus": "Sausage Bolus",
   "sound.scrumcraft2.rubber_ducky_squeak": "Rubber ducky squeaks",
-  "sound.scrumcraft2.rubber_ducky_throw": "Rubber ducky flies"
+  "sound.scrumcraft2.rubber_ducky_throw": "Rubber ducky flies",
+  "entity.scrumcraft2.snow_golem_entity": "Evil Snow Golem",
+  "entity.scrumcraft2.scrum_ball_entity": "Scrum Bal"
 }
