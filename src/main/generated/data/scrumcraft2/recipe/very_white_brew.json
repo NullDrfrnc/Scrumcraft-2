@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "scrumcraft2:agartha_potion",
+    "scrumcraft2:agartha_potion",
+    "scrumcraft2:agartha_potion",
+    "scrumcraft2:agartha_potion",
+    "scrumcraft2:agartha_potion",
+    "scrumcraft2:agartha_potion",
+    "scrumcraft2:agartha_potion",
+    "scrumcraft2:agartha_potion",
+    "scrumcraft2:agartha_potion"
+  ],
+  "result": {
+    "count": 1,
+    "id": "scrumcraft2:very_white_brew"
+  }
+}

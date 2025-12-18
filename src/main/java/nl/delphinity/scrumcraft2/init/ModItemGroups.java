@@ -38,6 +38,8 @@ public class ModItemGroups {
                     output.accept(ModItems.LINKED_IN);
                     output.accept(ModItems.EVIL_LINKED_IN);
                     output.accept(ModItems.AGARTHA_LINKED_IN);
+                    output.accept(ModItems.BOWL_OF_CODE);
+                    output.accept(ModItems.PULLREQUEST_DECLINED);
             }).build());
 
     public static void registerItemGroups() {

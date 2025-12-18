@@ -2,17 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:gold_ingot",
-    "B": "minecraft:gold_block",
+    "G": "minecraft:gold_ingot",
     "S": "scrumcraft2:scrum_ball"
   },
   "pattern": [
-    "#B#",
-    "BSB",
-    "#B#"
+    "GGG",
+    "GSG",
+    "GGG"
   ],
   "result": {
     "count": 1,
-    "id": "scrumcraft2:scrum_block"
+    "id": "scrumcraft2:rubber_ducky"
   }
 }

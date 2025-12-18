@@ -42,6 +42,8 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.EVIL_LINKED_IN, "Evil LinkedIn");
         translationBuilder.add(ModItems.LINKED_IN, "LinkedIn");
         translationBuilder.add(ModItems.AGARTHA_LINKED_IN, "Agartha LinkedIn");
+        translationBuilder.add(ModItems.PULLREQUEST_DECLINED, "Pull Request, DECLINED");
+
 
         // ItemGroups
         

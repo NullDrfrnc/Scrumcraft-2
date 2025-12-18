@@ -15,6 +15,7 @@
   "item.scrumcraft2.linked_in": "LinkedIn",
   "item.scrumcraft2.ns_train": "NS Train",
   "item.scrumcraft2.potion_of_terrorism": "Potion of Terrorism",
+  "item.scrumcraft2.pullrequest_declined": "Pull Request, DECLINED",
   "item.scrumcraft2.rubber_ducky": "Rubber ducky",
   "item.scrumcraft2.scrum_ball": "Scrum Ball",
   "item.scrumcraft2.scrum_master_ball": "Scrum Master Ball",
@@ -29,4 +30,5 @@
   "sound.scrumcraft2.sickseven": "SIIIX SEVEEEEN",
   "title.scrumcraft2.denied": "DENIED",
   "title.scrumcraft2.pullrequest": "Crafting recipe, "
+
 }

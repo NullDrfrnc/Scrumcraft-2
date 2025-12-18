@@ -1,0 +1,22 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "cured_vilg": {
+      "trigger": "minecraft:cured_zombie_villager"
+    }
+  },
+  "display": {
+    "description": "Decieve a Zombie villager",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:weak_heart"
+    },
+    "title": "Deception"
+  },
+  "requirements": [
+    [
+      "cured_vilg"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

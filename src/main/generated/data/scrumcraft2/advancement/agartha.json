@@ -1,0 +1,25 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "agarthian": {
+      "conditions": {
+        "to": "scrumcraft2:agartha_dim"
+      },
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "display": {
+    "description": "Enter Agartha.",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:very_white_brew"
+    },
+    "title": "DESCEND..."
+  },
+  "requirements": [
+    [
+      "agarthian"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

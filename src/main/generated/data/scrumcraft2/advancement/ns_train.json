@@ -1,0 +1,27 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "ns_train": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:ns_train"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Take the NS train",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:ns_train"
+    },
+    "title": "ChooChoo"
+  },
+  "requirements": [
+    [
+      "ns_train"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

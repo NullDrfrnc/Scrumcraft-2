@@ -1,0 +1,29 @@
+{
+  "parent": "scrumcraft2:got_ultimate_scrum_ball",
+  "criteria": {
+    "scrum_ball": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:scrum_master_ball"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Be a certified Scrum Master",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:scrum_master_ball"
+    },
+    "title": "Scrum Master"
+  },
+  "requirements": [
+    [
+      "scrum_ball"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

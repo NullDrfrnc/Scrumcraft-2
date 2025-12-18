@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "scrumcraft2:pullrequest_declined"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_very_white_brew": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:very_white_brew"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_very_white_brew"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "scrumcraft2:pullrequest_declined"
+    ]
+  }
+}

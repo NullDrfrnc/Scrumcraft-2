@@ -1,0 +1,27 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "catamaran": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:catamaran"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Use the catamaran",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:catamaran"
+    },
+    "title": "Very agile"
+  },
+  "requirements": [
+    [
+      "catamaran"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "scrum_ball": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:scrum_ball"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "scrumcraft2:gui/advancements/scrum_ground",
+    "description": "Welcome to Scrumcraft2! NOW SCRUM!",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:scrum_ball"
+    },
+    "title": "Scrumcraft2"
+  },
+  "requirements": [
+    [
+      "scrum_ball"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

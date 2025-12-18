@@ -1,0 +1,27 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "pull_request_declined": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:pullrequest_declined"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Declie someone's pull request",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:pullrequest_declined"
+    },
+    "title": "Pull request declined"
+  },
+  "requirements": [
+    [
+      "pull_request_declined"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

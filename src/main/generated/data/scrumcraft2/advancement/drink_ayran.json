@@ -1,0 +1,27 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "drink_ayran": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:ayran"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Yum..!",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:ayran"
+    },
+    "title": "Drink... Ayran"
+  },
+  "requirements": [
+    [
+      "drink_ayran"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
