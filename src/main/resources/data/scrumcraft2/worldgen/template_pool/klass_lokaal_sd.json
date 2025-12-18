@@ -1,0 +1,34 @@
+{
+
+
+
+  "name": "tutorialmod:kaupen_house/start_pool",
+
+
+  "fallback": "minecraft:empty",
+
+
+  "elements": [
+    {
+
+
+      "weight": 1,
+      "element": {
+
+
+
+
+        "location": "scrumcraft2:klass_lokaal_sd",
+
+
+        "processors": "minecraft:empty",
+
+
+        "projection": "rigid",
+
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

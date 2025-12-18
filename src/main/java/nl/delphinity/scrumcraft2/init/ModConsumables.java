@@ -80,6 +80,16 @@ public class ModConsumables {
                     )
             )
             .build();
+    public static final Consumable BOWL_OF_CODE = defaultFood()
+            .onConsume(
+                    new ApplyStatusEffectsConsumeEffect(
+                            List.of(
+                                    new MobEffectInstance(MobEffects.SLOW_FALLING, 500, 5)
+                            )
+                    )
+            )
+            .build();
+
 
     public static final Consumable WORSTE_BOLUS = defaultFood()
             .onConsume(
