@@ -12,6 +12,8 @@
     "minecraft:sunflower_plains",
     "minecraft:savanna",
     "minecraft:savanna_plateau",
-    "minecraft:windswept_savanna"
+    "minecraft:windswept_savanna",
+    "scrumcraft2:ice_wall",
+    "scrumcraft2:small_island"
   ]
 }

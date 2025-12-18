@@ -1,0 +1,27 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "eat_worste_bolus": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:worste_bolus"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Eat a Worste Bolus",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:worste_bolus"
+    },
+    "title": "ASCEND!"
+  },
+  "requirements": [
+    [
+      "eat_worste_bolus"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

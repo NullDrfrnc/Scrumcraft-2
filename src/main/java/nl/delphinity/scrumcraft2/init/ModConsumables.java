@@ -84,7 +84,7 @@ public class ModConsumables {
             .onConsume(
                     new ApplyStatusEffectsConsumeEffect(
                             List.of(
-                                    new MobEffectInstance(MobEffects.SLOW_FALLING, 500, 5)
+                                    new MobEffectInstance(ModEffects.ECLIPSE_USER, 500, 0)
                             )
                     )
             )

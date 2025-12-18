@@ -55,6 +55,6 @@ public class ModelProvider extends FabricModelProvider {
         itemModelGenerators.createFlatItemModel(ModItems.EVIL_LINKED_IN, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.createFlatItemModel(ModItems.LINKED_IN, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.createFlatItemModel(ModItems.AGARTHA_LINKED_IN, ModelTemplates.FLAT_ITEM);
-
+        itemModelGenerators.createFlatItemModel(ModItems.PULLREQUEST_DECLINED, ModelTemplates.FLAT_ITEM);
     }
 }

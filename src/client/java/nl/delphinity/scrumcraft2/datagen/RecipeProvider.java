@@ -145,9 +145,10 @@ public class RecipeProvider extends FabricRecipeProvider {
                 shaped(RecipeCategory.MISC, ModBlocks.SCRUM_BLOCK, 1)
                         .define('#', Items.GOLD_INGOT)
                         .define('S', ModItems.SCRUM_BALL)
-                        .pattern("###")
-                        .pattern("#S#")
-                        .pattern("###")
+                        .define('B', Items.GOLD_BLOCK)
+                        .pattern("#B#")
+                        .pattern("BSB")
+                        .pattern("#B#")
                         .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
                         .save(exporter, "scrum_block");
 
@@ -191,6 +192,40 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.AGARTHA_POTION), this.has(ModItems.AGARTHA_POTION))
                         .save(exporter, "very_white_brew");
 
+                shaped(RecipeCategory.MISC, ModItems.BOWL_OF_CODE, 1)
+                        .define('G', Items.GOLD_INGOT)
+                        .define('B', Items.BOWL)
+                        .pattern("G")
+                        .pattern("B")
+                        .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(Items.GOLD_INGOT))
+                        .save(exporter, "bowl_of_code");
+
+                shaped(RecipeCategory.MISC, ModItems.PULLREQUEST_DECLINED, 1)
+                        .define('R', Items.REDSTONE)
+                        .define('V', ModItems.VERY_WHITE_BREW)
+                        .pattern("RRR")
+                        .pattern("RVR")
+                        .pattern("RRR")
+                        .unlockedBy(getHasName(ModItems.VERY_WHITE_BREW), this.has(ModItems.VERY_WHITE_BREW))
+                        .save(exporter, "pullrequest_declined");
+
+                shaped(RecipeCategory.MISC, ModItems.WEED_DUCKY, 1)
+                        .define('D',ModItems.RUBBER_DUCKY)
+                        .define('S', Items.SUGAR_CANE)
+                        .pattern("SSS")
+                        .pattern("SDS")
+                        .pattern("SSS")
+                        .unlockedBy(getHasName(ModItems.RUBBER_DUCKY), this.has(ModItems.RUBBER_DUCKY))
+                        .save(exporter, "weed_ducky");
+
+                shaped(RecipeCategory.MISC, ModItems.RUBBER_DUCKY, 1)
+                        .define('G', Items.GOLD_INGOT)
+                        .define('S', ModItems.SCRUM_BALL)
+                        .pattern("GGG")
+                        .pattern("GSG")
+                        .pattern("GGG")
+                        .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
+                        .save(exporter, "rubber_ducky");
             };
         };
     }

@@ -1,0 +1,27 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "take_bowl_of_code": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:bowl_of_code"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Become an Eclipse user",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:bowl_of_code"
+    },
+    "title": "you're too slow"
+  },
+  "requirements": [
+    [
+      "take_bowl_of_code"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

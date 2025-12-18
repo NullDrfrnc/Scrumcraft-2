@@ -7,6 +7,7 @@ import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.criterion.ChangeDimensionTrigger;
 import net.minecraft.advancements.criterion.ConsumeItemTrigger;
+import net.minecraft.advancements.criterion.CuredZombieVillagerTrigger;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
@@ -178,5 +179,118 @@ public class AdvancementProvider extends FabricAdvancementProvider {
                 .addCriterion(
                         "take_terrorism", ConsumeItemTrigger.TriggerInstance.usedItem(registryLookup.lookupOrThrow(Registries.ITEM) ,ModItems.POTION_OF_TERRORISM))
                 .save(consumer, Scrumcraft2.MOD_ID + ":take_terrorism");
+
+        AdvancementHolder takeBowlOfCode = Advancement.Builder.advancement()
+                .parent(scrumcraft2BaseAdvace)
+                .display(
+                        ModItems.BOWL_OF_CODE,
+                        Component.literal("you're too slow"),
+                        Component.literal("Become an Eclipse user"),
+                        null,
+                        AdvancementType.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .addCriterion(
+                        "take_bowl_of_code", ConsumeItemTrigger.TriggerInstance.usedItem(registryLookup.lookupOrThrow(Registries.ITEM) ,ModItems.BOWL_OF_CODE))
+                .save(consumer, Scrumcraft2.MOD_ID + ":take_bowl_of_code");
+
+        AdvancementHolder takeWorsteBolus = Advancement.Builder.advancement()
+                .parent(scrumcraft2BaseAdvace)
+                .display(
+                        ModItems.WORSTE_BOLUS,
+                        Component.literal("ASCEND!"),
+                        Component.literal("Eat a Worste Bolus"),
+                        null,
+                        AdvancementType.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .addCriterion(
+                        "eat_worste_bolus", ConsumeItemTrigger.TriggerInstance.usedItem(registryLookup.lookupOrThrow(Registries.ITEM) ,ModItems.WORSTE_BOLUS))
+                .save(consumer, Scrumcraft2.MOD_ID + ":eat_worste_bolus");
+
+        AdvancementHolder eatGoldenFish = Advancement.Builder.advancement()
+                .parent(scrumcraft2BaseAdvace)
+                .display(
+                        ModItems.GOLDEN_FISH,
+                        Component.literal("Feesh"),
+                        Component.literal("Become blub"),
+                        null,
+                        AdvancementType.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .addCriterion(
+                        "eat_golden_fish", ConsumeItemTrigger.TriggerInstance.usedItem(registryLookup.lookupOrThrow(Registries.ITEM) ,ModItems.GOLDEN_FISH))
+                .save(consumer, Scrumcraft2.MOD_ID + ":eat_golden_fish");
+
+        AdvancementHolder decieveZombie = Advancement.Builder.advancement()
+                .parent(scrumcraft2BaseAdvace)
+                .display(
+                        ModItems.WEAK_HEART,
+                        Component.literal("Deception"),
+                        Component.literal("Decieve a Zombie villager"),
+                        null,
+                        AdvancementType.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .addCriterion(
+                        "cured_vilg", CuredZombieVillagerTrigger.TriggerInstance.curedZombieVillager())
+                .save(consumer, Scrumcraft2.MOD_ID + ":cured_zombi");
+
+        AdvancementHolder chooChoo = Advancement.Builder.advancement()
+                .parent(scrumcraft2BaseAdvace)
+                .display(
+                        ModItems.NS_TRAIN,
+                        Component.literal("ChooChoo"),
+                        Component.literal("Take the NS train"),
+                        null,
+                        AdvancementType.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .addCriterion(
+                        "ns_train", ConsumeItemTrigger.TriggerInstance.usedItem(registryLookup.lookupOrThrow(Registries.ITEM) ,ModItems.NS_TRAIN))
+                .save(consumer, Scrumcraft2.MOD_ID + ":ns_train");
+
+        AdvancementHolder veryAgile = Advancement.Builder.advancement()
+                .parent(scrumcraft2BaseAdvace)
+                .display(
+                        ModItems.CATAMARAN,
+                        Component.literal("Very agile"),
+                        Component.literal("Use the catamaran"),
+                        null,
+                        AdvancementType.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .addCriterion(
+                        "catamaran", ConsumeItemTrigger.TriggerInstance.usedItem(registryLookup.lookupOrThrow(Registries.ITEM) ,ModItems.CATAMARAN))
+                .save(consumer, Scrumcraft2.MOD_ID + ":catamaran");
+
+        AdvancementHolder pullRequestDeclied = Advancement.Builder.advancement()
+                .parent(scrumcraft2BaseAdvace)
+                .display(
+                        ModItems.PULLREQUEST_DECLINED,
+                        Component.literal("Pull request declined"),
+                        Component.literal("Declie someone's pull request"),
+                        null,
+                        AdvancementType.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .addCriterion(
+                        "pull_request_declined", ConsumeItemTrigger.TriggerInstance.usedItem(registryLookup.lookupOrThrow(Registries.ITEM) ,ModItems.PULLREQUEST_DECLINED))
+                .save(consumer, Scrumcraft2.MOD_ID + ":pull_request_declined");
+
     }
 }

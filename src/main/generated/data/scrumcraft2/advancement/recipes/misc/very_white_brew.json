@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_agartha_potion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:agartha_potion"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "scrumcraft2:very_white_brew"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_agartha_potion"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "scrumcraft2:very_white_brew"
+    ]
+  }
+}

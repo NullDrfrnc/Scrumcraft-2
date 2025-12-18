@@ -21,6 +21,12 @@ import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
 public class ModItems {
 
+    public static final Item PULLREQUEST_DECLINED = register(
+            "pullrequest_declined",
+            PullrequestDeclined::new,
+            new Item.Properties()
+    );
+
     public static final VeryWhiteBrew VERY_WHITE_BREW = (VeryWhiteBrew) register(
             "very_white_brew",
             VeryWhiteBrew::new,
@@ -29,19 +35,19 @@ public class ModItems {
 
     public static final Item LINKED_IN = register(
             "linked_in",
-            props -> new LinkedIn(props, 1.05D),
+            props -> new LinkedIn(props, 1.05D, 0.6D, 0.42F),
             new Item.Properties()
     );
 
     public static final Item EVIL_LINKED_IN = register(
             "evil_linked_in",
-            props -> new LinkedIn(props, 0.01D),
+            props -> new LinkedIn(props, 0.01D, 0D, 0.21F),
             new Item.Properties()
     );
 
     public static final Item AGARTHA_LINKED_IN = register(
             "agartha_linked_in",
-            props -> new LinkedIn(props, 100D),
+            props -> new LinkedIn(props, 100D, 5D, 2.1F),
             new Item.Properties()
     );
 

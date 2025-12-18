@@ -1,0 +1,27 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "eat_golden_fish": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:golden_fish"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Become blub",
+    "icon": {
+      "count": 1,
+      "id": "scrumcraft2:golden_fish"
+    },
+    "title": "Feesh"
+  },
+  "requirements": [
+    [
+      "eat_golden_fish"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

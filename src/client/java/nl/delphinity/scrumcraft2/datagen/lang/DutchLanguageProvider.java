@@ -39,6 +39,8 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.EVIL_LINKED_IN, "Kwaadaardige GekoppeldIn");
         translationBuilder.add(ModItems.LINKED_IN, "GekoppeldIn");
         translationBuilder.add(ModItems.AGARTHA_LINKED_IN, "Agartha GekoppeldIn");
+        translationBuilder.add(ModItems.BOWL_OF_CODE, "Kom van Code");
+        translationBuilder.add(ModItems.PULLREQUEST_DECLINED, "Trekverzoek, Afgekeurd");
 
 
 

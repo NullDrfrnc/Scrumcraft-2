@@ -1,6 +1,7 @@
 package nl.delphinity.scrumcraft2.common.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -11,6 +12,7 @@ import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.animal.squid.Squid;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.monster.zombie.Zombie;
 import net.minecraft.world.entity.player.Player;
@@ -23,6 +25,10 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import nl.delphinity.scrumcraft2.common.entity.EvilSnowGolemEntity;
+import nl.delphinity.scrumcraft2.common.entity.EvilSquidEntity;
+import nl.delphinity.scrumcraft2.init.ModBlocks;
+import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 import nl.delphinity.scrumcraft2.init.ModItems;
 import nl.delphinity.scrumcraft2.init.ModSounds;
 import org.jetbrains.annotations.Nullable;
@@ -51,7 +57,7 @@ public class ScrumBlock extends Block {
     }
 
     private void triggerEvent(ServerLevel level, BlockPos pos, Player player) {
-        int rand = level.random.nextIntBetweenInclusive(1, 3);
+        int rand = 6;//level.random.nextIntBetweenInclusive(1, 5);
         if (rand == 1) {
             // Event A: Lightning
             LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level, EntitySpawnReason.SPAWNER);
@@ -86,6 +92,27 @@ public class ScrumBlock extends Block {
                 ));
                 level.playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.SICK_SEVEN, SoundSource.MASTER, 1F, 1F);
             }
+        } else if (rand == 4) {
+            // Event spawn EVIL snow golem
+            EvilSnowGolemEntity snowGol = ModEntityTypes.EVIL_SNOW_GOLEM.create(level, EntitySpawnReason.SPAWNER);
+            if (snowGol != null) {
+                snowGol.setPos(Vec3.atBottomCenterOf(pos));
+                snowGol.setCustomName(Component.translatable("Frostussy"));
+                level.addFreshEntity(snowGol);
+            }
+        } else if (rand == 5) {
+            // Event spawn EVIL aquid
+            EvilSquidEntity squid = ModEntityTypes.EVIL_SQUID.create(level, EntitySpawnReason.SPAWNER);
+            BlockState water = Blocks.WATER.defaultBlockState();
+            level.setBlockAndUpdate(pos, water);
+            if (squid != null) {
+                squid.setPos(Vec3.atBottomCenterOf(pos));
+                squid.setCustomName(Component.translatable("Octopussy"));
+                level.addFreshEntity(squid);
+            }
+        } else if (rand == 6) {
+            BlockState kerseboom = ModBlocks.CHRISTMASTREE.defaultBlockState();
+            level.setBlockAndUpdate(pos.offset(0, 1, 0), kerseboom);
         }
     }
 }
