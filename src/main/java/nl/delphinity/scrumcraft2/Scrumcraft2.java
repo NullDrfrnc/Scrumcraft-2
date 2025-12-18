@@ -21,7 +21,9 @@ public class Scrumcraft2 implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Scrumming Scrumcraft2");
-
+        
+        ModRegistries.init();
+        ModRovo.init();
         ModSounds.init();
         ModItems.init();
         ModEntityTypes.init();

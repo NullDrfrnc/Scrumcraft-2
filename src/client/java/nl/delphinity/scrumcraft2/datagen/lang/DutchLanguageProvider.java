@@ -49,11 +49,15 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         // don't have to do anythink here :)
 
         // ItemTags
-        
+
         // SoundEvents
         translationBuilder.add("sound.scrumcraft2.sickseven", "ZES ZEVEEEEN");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Badeend kwaakt");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Badeend vliegt");
+        translationBuilder.add("sound.scrumcraft2.pullrequest", "De almachtige verspreidt zijn wijsheid onder zijn onderdanen");
+
+        translationBuilder.add("title.scrumcraft2.pullrequest", "Bouwrecept, ");
+        translationBuilder.add("title.scrumcraft2.denied", "AFGEWEZEN");
 
         // effects
         translationBuilder.add("effect.scrumcraft2.eclipse_user", "Zonsverduistering Gebruiker");

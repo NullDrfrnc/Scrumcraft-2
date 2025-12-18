@@ -1,0 +1,11 @@
+{
+  "pattern": [
+    "X X",
+    "   ",
+    "# X"
+  ],
+  "key": {
+    "X": "minecraft:paper",
+    "#": "minecraft:leather"
+  }
+}
