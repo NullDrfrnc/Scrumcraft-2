@@ -4,6 +4,8 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import nl.delphinity.scrumcraft2.client.renderer.RubberDuckyThrownItemRenderer;
 import nl.delphinity.scrumcraft2.client.renderer.SnowGolemRenderer;
+import nl.delphinity.scrumcraft2.client.renderer.SquidRenderer;
+import nl.delphinity.scrumcraft2.common.entity.EvilSquidEntity;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 
 public class ModEntityRenderers {
@@ -12,5 +14,6 @@ public class ModEntityRenderers {
         EntityRenderers.register(ModEntityTypes.RUBBER_DUCKY_ENTITY, RubberDuckyThrownItemRenderer::new);
         EntityRenderers.register(ModEntityTypes.EVIL_SNOW_GOLEM, ctx -> new SnowGolemRenderer(ctx));
         EntityRenderers.register(ModEntityTypes.WEED_DUCKY_ENTITY, RubberDuckyThrownItemRenderer::new);
+        EntityRenderers.register(ModEntityTypes.EVIL_SQUID, SquidRenderer::new);
     }
 }

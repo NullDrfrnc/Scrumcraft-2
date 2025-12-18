@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.resources.Identifier;
 import nl.delphinity.scrumcraft2.common.entity.EvilSnowGolemEntity;
+import nl.delphinity.scrumcraft2.common.entity.EvilSquidEntity;
 import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 import nl.delphinity.scrumcraft2.init.ModItems;
@@ -26,6 +27,7 @@ public class Scrumcraft2 implements ModInitializer {
         ModEntityTypes.init();
         ModBlocks.init();
         FabricDefaultAttributeRegistry.register(ModEntityTypes.EVIL_SNOW_GOLEM, EvilSnowGolemEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntityTypes.EVIL_SQUID, EvilSquidEntity.createAttributes());
         ModItemGroups.registerItemGroups();
         ModEffects.registerEffects();
 
