@@ -12,5 +12,11 @@
     "sounds": [
       "scrumcraft2:rubber_ducky_throw"
     ]
+  },
+  "sickseven": {
+    "subtitle": "sound.scrumcraft2.sickseven",
+    "sounds": [
+      "scrumcraft2:sickseven"
+    ]
   }
 }

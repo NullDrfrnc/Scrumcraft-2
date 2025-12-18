@@ -2,6 +2,8 @@ package nl.delphinity.scrumcraft2.datagen.lang;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.core.HolderLookup;
+import nl.delphinity.scrumcraft2.init.ModEntityTypes;
+import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -28,13 +30,31 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.AYRAN, "Heerlijke Zoute Kwark");
         translationBuilder.add(ModItems.POTION_OF_TERRORISM, "Brouwsel Van Terrorisme");
         translationBuilder.add(ModItems.AGARTHA_POTION, "Agartha Brouwsel");
+        translationBuilder.add(ModItems.WORSTE_BOLUS, "worste Bolus");
+        translationBuilder.add(ModEntityTypes.EVIL_SNOW_GOLEM, "Slechtaardige sneeuwman");
+        translationBuilder.add(ModEntityTypes.EVIL_SQUID, "Slechtaardige inktvis");
+        translationBuilder.add(ModBlocks.SCRUM_BLOCK, "Scrum Blok");
+        translationBuilder.add(ModBlocks.CHRISTMASTREE, "Kerstboom");
+        translationBuilder.add(ModItems.VERY_WHITE_BREW, "Zeer Wit Brouwsel");
+        translationBuilder.add(ModItems.EVIL_LINKED_IN, "Kwaadaardige GekoppeldIn");
+        translationBuilder.add(ModItems.LINKED_IN, "GekoppeldIn");
+        translationBuilder.add(ModItems.AGARTHA_LINKED_IN, "Agartha GekoppeldIn");
+
+
+
 
         // ItemGroups
-        
+        // don't have to do anythink here :)
+
         // ItemTags
         
         // SoundEvents
+        translationBuilder.add("sound.scrumcraft2.sickseven", "ZES ZEVEEEEN");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Badeend kwaakt");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Badeend vliegt");
+
+        // effects
+        translationBuilder.add("effect.scrumcraft2.eclipse_user", "Zonsverduistering Gebruiker");
+
     }
 }

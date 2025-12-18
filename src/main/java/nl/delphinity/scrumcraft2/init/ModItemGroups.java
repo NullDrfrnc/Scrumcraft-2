@@ -20,6 +20,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.SCRUM_BALL))
                     .title(displayName)
                     .displayItems((itemDisplayParameters, output) -> {
+                    output.accept(ModBlocks.SCRUM_BLOCK.asItem());
                     output.accept(ModItems.SCRUM_BALL);
                     output.accept(ModItems.ULTIMATE_SCRUM_BALL);
                     output.accept(ModItems.SCRUM_MASTER_BALL);
@@ -32,6 +33,11 @@ public class ModItemGroups {
                     output.accept(ModItems.POTION_OF_TERRORISM);
                     output.accept(ModItems.AGARTHA_POTION);
                     output.accept(ModItems.GOLDEN_FISH);
+                    output.accept(ModItems.WORSTE_BOLUS);
+                    output.accept(ModItems.VERY_WHITE_BREW);
+                    output.accept(ModItems.LINKED_IN);
+                    output.accept(ModItems.EVIL_LINKED_IN);
+                    output.accept(ModItems.AGARTHA_LINKED_IN);
             }).build());
 
     public static void registerItemGroups() {

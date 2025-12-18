@@ -1,0 +1,59 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.8,
+  "downfall": 0.3,
+  "effects": {
+    "sky_color": 12000000,
+    "fog_color": 12638463,
+    "water_color": 4445678,
+    "water_fog_color": 329011,
+    "grass_color": 10387789,
+    "foliage_color": 9470285
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:evoker",
+        "weight": 8,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:blaze",
+        "weight": 8,
+        "minCount": 2,
+        "maxCount": 4
+      }
+    ],
+    "creature": [
+      {
+        "type": "minecraft:bee",
+        "weight": 10,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:goat",
+        "weight": 8,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ],
+    "underground_water_creature": []
+  },
+  "spawn_costs": {},
+  "carvers": [],
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}
