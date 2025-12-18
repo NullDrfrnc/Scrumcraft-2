@@ -177,6 +177,20 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("CCC")
                         .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(ItemTags.CHAINS))
                         .save(exporter, "evil_linked_in");
+
+                shapeless(RecipeCategory.MISC, ModItems.VERY_WHITE_BREW, 1)
+                        .requires(ModItems.AGARTHA_POTION)
+                        .requires(ModItems.AGARTHA_POTION)
+                        .requires(ModItems.AGARTHA_POTION)
+                        .requires(ModItems.AGARTHA_POTION)
+                        .requires(ModItems.AGARTHA_POTION)
+                        .requires(ModItems.AGARTHA_POTION)
+                        .requires(ModItems.AGARTHA_POTION)
+                        .requires(ModItems.AGARTHA_POTION)
+                        .requires(ModItems.AGARTHA_POTION)
+                        .unlockedBy(getHasName(ModItems.AGARTHA_POTION), this.has(ModItems.AGARTHA_POTION))
+                        .save(exporter, "very_white_brew");
+
             };
         };
     }
