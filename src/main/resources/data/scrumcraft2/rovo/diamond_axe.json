@@ -1,13 +1,11 @@
 {
-  "pattern": {
-    "pattern": [
-      "XX",
-      "X#",
-      " #"
-    ],
-    "key": {
-      "X": { "tag": "minecraft:diamond_tool_materials" },
-      "#": { "item": "minecraft:stick" }
-    }
+  "pattern": [
+    "XX",
+    "#X",
+    "# "
+  ],
+  "key": {
+    "X": "minecraft:diamond",
+    "#": "minecraft:stick"
   }
 }

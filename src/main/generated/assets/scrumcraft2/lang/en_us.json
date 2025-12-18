@@ -1,8 +1,10 @@
 {
+  "block.scrumcraft2.christmastree": "Christmas Tree",
   "block.scrumcraft2.scrum_block": "Scrum Block",
   "death.attack.weak_heart": "%1$s died from deception...",
   "effect.scrumcraft2.eclipse_user": "Eclipse User",
   "entity.scrumcraft2.evil_snow_golem_entity": "Evil Snow Golem",
+  "entity.scrumcraft2.evil_squid_entity": "Evil Squid",
   "item.scrumcraft2.agartha_linked_in": "Agartha LinkedIn",
   "item.scrumcraft2.agartha_potion": "Agartha Potion",
   "item.scrumcraft2.ayran": "Ayran",
@@ -21,13 +23,10 @@
   "item.scrumcraft2.weak_heart": "Weak Heart",
   "item.scrumcraft2.weed_ducky": "Weed ducky",
   "item.scrumcraft2.worste_bolus": "Sausage Bolus",
+  "sound.scrumcraft2.pullrequest": "Pullrequest, declined!",
   "sound.scrumcraft2.rubber_ducky_squeak": "Rubber ducky squeaks",
   "sound.scrumcraft2.rubber_ducky_throw": "Rubber ducky flies",
   "sound.scrumcraft2.sickseven": "SIIIX SEVEEEEN",
-  "painting.scrumcraft2.saw_them.title": "Saw Them",
-  "painting.scrumcraft2.saw_them.author": "John MC Muffin",
-  "painting.scrumcraft2.kanker_vis.title": "Kanker Vis",
-  "painting.scrumcraft2.kanker_vis.author": "John MC Muffin",
-  "entity.scrumcraft2.snow_golem_entity": "Evil Snow Golem",
-  "entity.scrumcraft2.scrum_ball_entity": "Scrum Bal"
+  "title.scrumcraft2.denied": "DENIED",
+  "title.scrumcraft2.pullrequest": "Crafting recipe, "
 }
