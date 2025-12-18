@@ -38,6 +38,12 @@ public class ModEntityTypes {
             EntityType.Builder.of(EvilSquidEntity::new, MobCategory.CREATURE)
     );
 
+    public static final EntityType<ChristmasWardenEntity> CHRISTMAS_WARDEN = register(
+            "christmas_warden_entity",
+            EntityType.Builder.of(ChristmasWardenEntity::new, MobCategory.MONSTER)
+    );
+
+
     public static void init() {
     }
 

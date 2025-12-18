@@ -3,6 +3,7 @@ package nl.delphinity.scrumcraft2;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.resources.Identifier;
+import nl.delphinity.scrumcraft2.common.entity.ChristmasWardenEntity;
 import nl.delphinity.scrumcraft2.common.entity.EvilSnowGolemEntity;
 import nl.delphinity.scrumcraft2.common.entity.EvilSquidEntity;
 import nl.delphinity.scrumcraft2.init.ModBlocks;
@@ -28,6 +29,7 @@ public class Scrumcraft2 implements ModInitializer {
         ModBlocks.init();
         FabricDefaultAttributeRegistry.register(ModEntityTypes.EVIL_SNOW_GOLEM, EvilSnowGolemEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(ModEntityTypes.EVIL_SQUID, EvilSquidEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntityTypes.CHRISTMAS_WARDEN, ChristmasWardenEntity.createAttributes());
         ModItemGroups.registerItemGroups();
         ModEffects.registerEffects();
 
