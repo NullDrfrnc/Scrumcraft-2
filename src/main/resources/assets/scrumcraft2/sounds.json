@@ -18,5 +18,11 @@
     "sounds": [
       "scrumcraft2:sickseven"
     ]
+  },
+  "pullrequest": {
+    "subtitle": "sound.scrumcraft2.pullrequest",
+    "sounds": [
+      "scrumcraft2:pullrequest"
+    ]
   }
 }

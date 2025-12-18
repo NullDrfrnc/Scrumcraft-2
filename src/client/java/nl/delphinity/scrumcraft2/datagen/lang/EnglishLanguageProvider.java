@@ -51,6 +51,8 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add("sound.scrumcraft2.sickseven", "SIIIX SEVEEEEN");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_squeak", "Rubber ducky squeaks");
         translationBuilder.add("sound.scrumcraft2.rubber_ducky_throw", "Rubber ducky flies");
+        translationBuilder.add("sound.scrumcraft2.pullrequest", "Pullrequest, declined!");
+
 
         // death messages
         translationBuilder.add("death.attack.weak_heart", "%1$s died from deception...");
@@ -58,5 +60,8 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         // effects
         translationBuilder.add("effect.scrumcraft2.eclipse_user", "Eclipse User");
 
+
+        translationBuilder.add("title.scrumcraft2.pullrequest", "Crafting recipe, ");
+        translationBuilder.add("title.scrumcraft2.denied", "DENIED");
     }
 }
