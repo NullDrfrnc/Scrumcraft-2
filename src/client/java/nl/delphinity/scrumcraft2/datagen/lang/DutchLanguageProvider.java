@@ -42,9 +42,6 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.BOWL_OF_CODE, "Kom van Code");
         translationBuilder.add(ModItems.PULLREQUEST_DECLINED, "Trekverzoek, Afgekeurd");
 
-
-
-
         // ItemGroups
         // don't have to do anythink here :)
 

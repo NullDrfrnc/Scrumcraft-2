@@ -9,9 +9,7 @@ import nl.delphinity.scrumcraft2.init.ModItems;
 import java.util.concurrent.CompletableFuture;
 
 public class EnglishLanguageProvider extends AbstractLanguageProvider {
-
-
-    public EnglishLanguageProvider(FabricPackOutput dataOutput,CompletableFuture<HolderLookup.Provider> registryLookup) {
+    public EnglishLanguageProvider(FabricPackOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, "en_us", registryLookup);
     }
 

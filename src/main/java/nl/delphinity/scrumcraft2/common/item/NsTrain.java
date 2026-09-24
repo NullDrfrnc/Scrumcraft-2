@@ -1,71 +1,31 @@
 package nl.delphinity.scrumcraft2.common.item;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.util.Util;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityTypes;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.minecart.Minecart;
-import net.minecraft.world.entity.vehicle.minecart.MinecartSpawner;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.BaseSpawner;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.phys.Vec3;
-import nl.delphinity.scrumcraft2.init.ModEntityTypes;
-import nl.delphinity.scrumcraft2.init.ModItems;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.Random;
+import java.util.List;
 
-public class NsTrain extends Item {
-    private static final Random RANDOM = new Random();
+public class NsTrain extends VehicleSpawnerItem {
+    private static final List<EntityType<?>> CARTS = List.of(
+            EntityTypes.MINECART,
+            EntityTypes.TNT_MINECART,
+            EntityTypes.HOPPER_MINECART,
+            EntityTypes.CHEST_MINECART,
+            EntityTypes.FURNACE_MINECART,
+            EntityTypes.COMMAND_BLOCK_MINECART,
+            EntityTypes.SPAWNER_MINECART
+    );
 
     public NsTrain(Properties properties) {
         super(properties);
     }
 
     @Override
-    public @NotNull InteractionResult use(Level level, Player player, InteractionHand interactionHand) {
-        if (!level.isClientSide()) {
-            HitResult hitResult = player.pick(20.0D, 0.0F, true);
-            Vec3 targetPos = hitResult.getLocation();
-            for (int i = 0; i < 10; i++) {
-                if (!level.isClientSide()) {
-                    Minecart cart = new Minecart(
-                            getRandomCart(),
-                            level
-                    );
-                    cart.setPos(targetPos.x, targetPos.y, targetPos.z);
-                    level.addFreshEntity(cart);
-                }
-            }
-            if (!player.isCreative()) {
-                player.getItemInHand(interactionHand).shrink(1);
-            }
-        }
-        return InteractionResult.SUCCESS;
-    }
-
-    private EntityType<? extends Minecart> getRandomCart() {
-        EntityType<? extends Minecart>[] types = new EntityType[]{
-                EntityTypes.MINECART,
-                EntityTypes.TNT_MINECART,
-                EntityTypes.HOPPER_MINECART,
-                EntityTypes.CHEST_MINECART,
-                EntityTypes.FURNACE_MINECART,
-                EntityTypes.COMMAND_BLOCK_MINECART,
-                EntityTypes.SPAWNER_MINECART
-        };
-
-        return types[RANDOM.nextInt(types.length)];
+    protected Entity createVehicle(Level level) {
+        return new Minecart(Util.getRandom(CARTS, level.getRandom()), level);
     }
 }
-

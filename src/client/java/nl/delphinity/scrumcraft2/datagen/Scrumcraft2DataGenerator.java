@@ -5,9 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import nl.delphinity.scrumcraft2.datagen.lang.DutchLanguageProvider;
 import nl.delphinity.scrumcraft2.datagen.lang.EnglishLanguageProvider;
 import nl.delphinity.scrumcraft2.datagen.loottables.BlockLootTableProvider;
-import nl.delphinity.scrumcraft2.datagen.loottables.ChestLootTableProvider;
-import nl.delphinity.scrumcraft2.datagen.tagproviders.BlockTagProvider;
-import nl.delphinity.scrumcraft2.datagen.tagproviders.ItemTagProvider;
 
 public class Scrumcraft2DataGenerator implements DataGeneratorEntrypoint {
 
@@ -21,11 +18,6 @@ public class Scrumcraft2DataGenerator implements DataGeneratorEntrypoint {
         
         // Loottables
         pack.addProvider(BlockLootTableProvider::new);
-        pack.addProvider(ChestLootTableProvider::new);
-    
-        // Tags
-        pack.addProvider(BlockTagProvider::new);
-        pack.addProvider(ItemTagProvider::new);
         
         // Advancements
         pack.addProvider(AdvancementProvider::new);

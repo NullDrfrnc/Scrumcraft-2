@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "D": "scrumcraft2:rubber_ducky",
-    "S": "minecraft:sugar_cane"
+    "#": "minecraft:sugar_cane",
+    "X": "scrumcraft2:rubber_ducky"
   },
   "pattern": [
-    "SSS",
-    "SDS",
-    "SSS"
+    "###",
+    "#X#",
+    "###"
   ],
   "result": {
     "id": "scrumcraft2:weed_ducky"

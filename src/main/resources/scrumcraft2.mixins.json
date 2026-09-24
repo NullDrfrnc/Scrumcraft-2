@@ -4,7 +4,8 @@
   "package": "nl.delphinity.scrumcraft2.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "CraftingMenuMixin"
+    "CraftingMenuMixin",
+    "ZombieVillagerInvoker"
   ],
   "injectors": {
     "defaultRequire": 1

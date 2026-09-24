@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "B": "minecraft:bread",
-    "M": "#minecraft:meat"
+    "#": "minecraft:bread",
+    "X": "#minecraft:meat"
   },
   "pattern": [
-    "BBB",
-    "BMB",
-    "BBB"
+    "###",
+    "#X#",
+    "###"
   ],
   "result": {
     "id": "scrumcraft2:worste_bolus"

@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "B": "minecraft:glass_bottle",
-    "T": "minecraft:gunpowder"
+    "#": "minecraft:gunpowder",
+    "X": "minecraft:glass_bottle"
   },
   "pattern": [
-    "TTT",
-    "TBT",
-    "TTT"
+    "###",
+    "#X#",
+    "###"
   ],
   "result": {
     "id": "scrumcraft2:potion_of_terrorism"

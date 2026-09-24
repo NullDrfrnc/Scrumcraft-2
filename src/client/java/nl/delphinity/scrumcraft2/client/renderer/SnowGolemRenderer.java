@@ -1,10 +1,5 @@
 package nl.delphinity.scrumcraft2.client.renderer;
 
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.animal.golem.SnowGolemModel;

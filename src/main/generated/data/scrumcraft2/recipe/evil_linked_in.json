@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "C": "minecraft:redstone",
-    "L": "scrumcraft2:linked_in"
+    "#": "minecraft:redstone",
+    "X": "scrumcraft2:linked_in"
   },
   "pattern": [
-    "CCC",
-    "CLC",
-    "CCC"
+    "###",
+    "#X#",
+    "###"
   ],
   "result": {
     "id": "scrumcraft2:evil_linked_in"

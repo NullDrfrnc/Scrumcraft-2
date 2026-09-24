@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": "minecraft:gold_ingot",
-    "D": "minecraft:diamond_block"
+    "X": "minecraft:diamond_block"
   },
   "pattern": [
     "###",
-    "#D#",
+    "#X#",
     "###"
   ],
   "result": {

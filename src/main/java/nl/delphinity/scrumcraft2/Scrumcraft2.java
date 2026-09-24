@@ -1,14 +1,7 @@
 package nl.delphinity.scrumcraft2;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.resources.Identifier;
-import nl.delphinity.scrumcraft2.common.entity.EvilSnowGolemEntity;
-import nl.delphinity.scrumcraft2.common.entity.EvilSquidEntity;
-import nl.delphinity.scrumcraft2.init.ModBlocks;
-import nl.delphinity.scrumcraft2.init.ModEntityTypes;
-import nl.delphinity.scrumcraft2.init.ModItems;
-import nl.delphinity.scrumcraft2.init.ModSounds;
 import nl.delphinity.scrumcraft2.init.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,16 +15,13 @@ public class Scrumcraft2 implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Scrumming Scrumcraft2");
         
-        ModRegistries.init();
         ModRovo.init();
         ModSounds.init();
         ModItems.init();
         ModEntityTypes.init();
         ModBlocks.init();
-        FabricDefaultAttributeRegistry.register(ModEntityTypes.EVIL_SNOW_GOLEM, EvilSnowGolemEntity.createAttributes());
-        FabricDefaultAttributeRegistry.register(ModEntityTypes.EVIL_SQUID, EvilSquidEntity.createAttributes());
-        ModItemGroups.registerItemGroups();
-        ModEffects.registerEffects();
+        ModItemGroups.init();
+        ModEffects.init();
 
         LOGGER.info("Scrumcraft2 successfully Scrummed");
     }

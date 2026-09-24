@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "C": "#minecraft:chains",
-    "L": "minecraft:lapis_lazuli"
+    "#": "#minecraft:chains",
+    "X": "minecraft:lapis_lazuli"
   },
   "pattern": [
-    "CCC",
-    "CLC",
-    "CCC"
+    "###",
+    "#X#",
+    "###"
   ],
   "result": {
     "id": "scrumcraft2:linked_in"

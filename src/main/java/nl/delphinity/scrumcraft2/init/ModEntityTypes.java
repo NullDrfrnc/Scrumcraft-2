@@ -1,5 +1,6 @@
 package nl.delphinity.scrumcraft2.init;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -39,17 +40,12 @@ public class ModEntityTypes {
     );
 
     public static void init() {
+        FabricDefaultAttributeRegistry.register(EVIL_SNOW_GOLEM, EvilSnowGolemEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(EVIL_SQUID, EvilSquidEntity.createAttributes());
     }
 
-    private static <T extends Entity> EntityType<T> register(String string, EntityType.Builder<T> builder) {
-        return register(moddedEntityId(string), builder);
-    }
-
-    private static <T extends Entity> EntityType<T> register(ResourceKey<EntityType<?>> resourceKey, EntityType.Builder<T> builder) {
-        return Registry.register(BuiltInRegistries.ENTITY_TYPE, resourceKey, builder.build(resourceKey));
-    }
-
-    private static ResourceKey<EntityType<?>> moddedEntityId(String string) {
-        return ResourceKey.create(Registries.ENTITY_TYPE, identifierOf(string));
+    private static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> builder) {
+        ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, identifierOf(name));
+        return Registry.register(BuiltInRegistries.ENTITY_TYPE, key, builder.build(key));
     }
 }

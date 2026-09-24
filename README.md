@@ -10,9 +10,9 @@ Je kan hier ook komen door op `open settings` te klikken in de error log.
 Zet vervolgens je project zn SDK naar java 25 onder `Project Structure`.
 
 ## Server
-De mod draait op Minecraft 26.3 (Fabric). Bouw de jar met `./gradlew build`, die komt in `build/libs/`.  
-Op de server (Java 25): installeer Fabric loader 0.19.5+ via de [Fabric server launcher](https://fabricmc.net/use/server/) en zet `Scrumcraft2-<versie>.jar` en [Fabric API](https://modrinth.com/mod/fabric-api) voor 26.3 in de `mods` map.  
-Spelers hebben dezelfde mod en Fabric API ook in hun client nodig.
+Jar bouwen: `./gradlew build`, de jar staat dan in `build/libs/`.  
+Zet de jar samen met [Fabric API](https://modrinth.com/mod/fabric-api) in de `mods` map van een [Fabric](https://fabricmc.net/use/server/) 26.3 server (Java 25).  
+Spelers moeten de mod en Fabric API zelf ook installeren.
 
 ## Items toevoegen
 [test](https://docs.fabricmc.net/develop/items/first-item)

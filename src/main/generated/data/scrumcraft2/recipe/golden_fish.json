@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "F": "#minecraft:fishes",
-    "G": "minecraft:gold_ingot"
+    "#": "minecraft:gold_ingot",
+    "X": "#minecraft:fishes"
   },
   "pattern": [
-    "GGG",
-    "GFG",
-    "GGG"
+    "###",
+    "#X#",
+    "###"
   ],
   "result": {
     "id": "scrumcraft2:golden_fish"

@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "C": "minecraft:gold_ingot",
-    "L": "scrumcraft2:linked_in"
+    "#": "minecraft:gold_ingot",
+    "X": "scrumcraft2:linked_in"
   },
   "pattern": [
-    "CCC",
-    "CLC",
-    "CCC"
+    "###",
+    "#X#",
+    "###"
   ],
   "result": {
     "id": "scrumcraft2:agartha_linked_in"
