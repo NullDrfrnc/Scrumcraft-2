@@ -10,38 +10,48 @@
     "grass_color": 10387789,
     "foliage_color": 9470285
   },
-  "spawners": {
-    "monster": [
-      {
-        "type": "minecraft:evoker",
-        "weight": 8,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:blaze",
-        "weight": 8,
-        "minCount": 2,
-        "maxCount": 4
+  "attributes": {
+    "minecraft:gameplay/natural_mob_spawns": {
+      "modifier": "overlay",
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "monster": [
+            {
+              "type": "minecraft:evoker",
+              "weight": 8,
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 2,
+                "max_inclusive": 4
+              }
+            },
+            {
+              "type": "minecraft:blaze",
+              "weight": 8,
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 2,
+                "max_inclusive": 4
+              }
+            }
+          ],
+          "creature": [
+            {
+              "type": "minecraft:bee",
+              "weight": 10,
+              "count": 4
+            },
+            {
+              "type": "minecraft:goat",
+              "weight": 8,
+              "count": 4
+            }
+          ]
+        }
       }
-    ],
-    "creature": [
-      {
-        "type": "minecraft:bee",
-        "weight": 10,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:goat",
-        "weight": 8,
-        "minCount": 4,
-        "maxCount": 4
-      }
-    ],
-    "underground_water_creature": []
+    }
   },
-  "spawn_costs": {},
   "carvers": [],
   "features": [
     [],

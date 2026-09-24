@@ -1,7 +1,7 @@
 package nl.delphinity.scrumcraft2.init;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
-import net.fabricmc.fabric.impl.resource.ResourceLoaderImpl;
+import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.packs.PackType;
@@ -11,7 +11,7 @@ import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
 public class ModRovo {
     public static void init() {
-        ResourceLoaderImpl.get(PackType.SERVER_DATA).registerReloader(
+        ResourceLoader.get(PackType.SERVER_DATA).registerReloadListener(
                 identifierOf("rovo"),
                 new RovoRecipeManager()
         );

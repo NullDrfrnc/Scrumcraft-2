@@ -15,7 +15,6 @@
   "display": {
     "description": "Get Agartha linked in",
     "icon": {
-      "count": 1,
       "id": "scrumcraft2:agartha_linked_in"
     },
     "title": "DESCEND to linked in"

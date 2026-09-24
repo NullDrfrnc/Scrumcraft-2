@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "R": "minecraft:redstone",
     "V": "scrumcraft2:very_white_brew"
@@ -11,7 +10,6 @@
     "RRR"
   ],
   "result": {
-    "count": 1,
     "id": "scrumcraft2:pullrequest_declined"
   }
 }

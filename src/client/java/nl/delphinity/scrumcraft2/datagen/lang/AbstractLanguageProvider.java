@@ -1,6 +1,6 @@
 package nl.delphinity.scrumcraft2.datagen.lang;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
 import nl.delphinity.scrumcraft2.Scrumcraft2;
@@ -17,7 +17,7 @@ public abstract class AbstractLanguageProvider extends FabricLanguageProvider {
 
     private static final Logger LOGGER = Scrumcraft2.LOGGER;
 
-    public AbstractLanguageProvider(FabricDataOutput dataOutput, String languageCode, CompletableFuture<HolderLookup.Provider> registryLookup) {
+    public AbstractLanguageProvider(FabricPackOutput dataOutput, String languageCode, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, languageCode, registryLookup);
         this.langCode = languageCode;
     }
@@ -30,7 +30,7 @@ public abstract class AbstractLanguageProvider extends FabricLanguageProvider {
      */
     public void getExistingLangFile(TranslationBuilder builder) {
         try {
-            Optional<Path> path = dataOutput.getModContainer().findPath("assets/lantern/lang/" + langCode + ".existing.json");
+            Optional<Path> path = packOutput.getModContainer().findPath("assets/lantern/lang/" + langCode + ".existing.json");
             if (path.isPresent()) {
                 builder.add(path.get());
             }

@@ -1,7 +1,7 @@
 package nl.delphinity.scrumcraft2.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.color.item.ItemTintSource;
 import net.minecraft.client.color.item.ItemTintSources;
 import net.minecraft.client.data.models.BlockModelGenerators;
@@ -22,7 +22,7 @@ import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
 
 public class ModelProvider extends FabricModelProvider {
-    public ModelProvider(FabricDataOutput output) {
+    public ModelProvider(FabricPackOutput output) {
         super(output);
     }
 

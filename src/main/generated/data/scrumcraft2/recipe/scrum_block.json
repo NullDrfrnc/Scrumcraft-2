@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "#": "minecraft:gold_ingot",
     "B": "minecraft:gold_block",
@@ -12,7 +11,6 @@
     "#B#"
   ],
   "result": {
-    "count": 1,
     "id": "scrumcraft2:scrum_block"
   }
 }

@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EntitySpawnReason;
@@ -32,14 +33,12 @@ public class ChristmasTreeBlock extends Block {
     }
 
     @Override
-    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
+    public void playerDestroy(ServerLevel level, ServerPlayer player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
         // Generate a random number between 0.0 and 1.0
         // Adjust "0.5f" to change the chance (e.g., 0.1f = 10% chance for event, 90% for items)
-        if (level.random.nextFloat() < 0.5f) {
+        if (level.getRandom().nextFloat() < 0.5f) {
 
             //This is where I made it so it calls the event trigger thingy
-            if (level instanceof ServerLevel serverLevel) {
-            }
             player.awardStat(Stats.BLOCK_MINED.get(this));
         } else {
             //This just drops the loot table

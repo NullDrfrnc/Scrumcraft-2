@@ -1,6 +1,6 @@
 package nl.delphinity.scrumcraft2.datagen.lang;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.core.HolderLookup;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 import nl.delphinity.scrumcraft2.init.ModBlocks;
@@ -11,7 +11,7 @@ import java.util.concurrent.CompletableFuture;
 public class EnglishLanguageProvider extends AbstractLanguageProvider {
 
 
-    public EnglishLanguageProvider(FabricDataOutput dataOutput,CompletableFuture<HolderLookup.Provider> registryLookup) {
+    public EnglishLanguageProvider(FabricPackOutput dataOutput,CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, "en_us", registryLookup);
     }
 

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "G": "minecraft:gold_ingot",
     "S": "scrumcraft2:scrum_ball"
@@ -11,7 +10,6 @@
     "GGG"
   ],
   "result": {
-    "count": 1,
     "id": "scrumcraft2:rubber_ducky"
   }
 }

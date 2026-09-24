@@ -8,7 +8,6 @@
   "display": {
     "description": "Decieve a Zombie villager",
     "icon": {
-      "count": 1,
       "id": "scrumcraft2:weak_heart"
     },
     "title": "Deception"

@@ -13,7 +13,6 @@
   "display": {
     "description": "Become an Eclipse user",
     "icon": {
-      "count": 1,
       "id": "scrumcraft2:bowl_of_code"
     },
     "title": "you're too slow"

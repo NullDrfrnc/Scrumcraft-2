@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:scrum_block"
+        "recipes": "scrumcraft2:scrum_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

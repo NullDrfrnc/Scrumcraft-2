@@ -49,9 +49,9 @@ public class SquidRenderer<T extends Squid> extends AgeableMobRenderer<T, SquidR
 
     protected void setupRotations(SquidRenderState squidRenderState, PoseStack poseStack, float f, float g) {
         poseStack.translate(0.0F, squidRenderState.isBaby ? 0.25F : 0.5F, 0.0F);
-        poseStack.mulPose(Axis.YP.rotationDegrees(180.0F - f));
-        poseStack.mulPose(Axis.XP.rotationDegrees(squidRenderState.xBodyRot));
-        poseStack.mulPose(Axis.YP.rotationDegrees(squidRenderState.zBodyRot));
+        poseStack.rotateDegrees(Axis.YP, 180.0F - f);
+        poseStack.rotateDegrees(Axis.XP, squidRenderState.xBodyRot);
+        poseStack.rotateDegrees(Axis.YP, squidRenderState.zBodyRot);
         poseStack.translate(0.0F, squidRenderState.isBaby ? -0.6F : -1.2F, 0.0F);
     }
 }

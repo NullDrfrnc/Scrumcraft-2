@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "minecraft:minecart",
     "minecraft:minecart",
@@ -13,7 +12,6 @@
     "minecraft:minecart"
   ],
   "result": {
-    "count": 1,
     "id": "scrumcraft2:ns_train"
   }
 }

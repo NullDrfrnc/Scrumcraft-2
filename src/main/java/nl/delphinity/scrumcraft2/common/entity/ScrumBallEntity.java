@@ -60,7 +60,7 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
 
             // Apply knockback
             living.push(x * strength, y * strength, z * strength);
-            living.hurtMarked = true;
+            living.syncVelocity = true;
         }
 
         Level level = level();

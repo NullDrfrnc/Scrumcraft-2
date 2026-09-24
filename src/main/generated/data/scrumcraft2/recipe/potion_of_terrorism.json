@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "B": "minecraft:glass_bottle",
     "T": "minecraft:gunpowder"
@@ -11,7 +10,6 @@
     "TTT"
   ],
   "result": {
-    "count": 1,
     "id": "scrumcraft2:potion_of_terrorism"
   }
 }

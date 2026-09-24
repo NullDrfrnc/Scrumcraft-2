@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:scrum_master_ball"
+        "recipes": "scrumcraft2:scrum_master_ball"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

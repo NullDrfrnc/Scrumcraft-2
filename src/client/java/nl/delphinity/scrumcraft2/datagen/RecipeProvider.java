@@ -1,13 +1,14 @@
 package nl.delphinity.scrumcraft2.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.tags.BlockItemTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.Items;
 import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModItems;
@@ -16,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.concurrent.CompletableFuture;
 
 public class RecipeProvider extends FabricRecipeProvider {
-    public RecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    public RecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
     
@@ -24,16 +25,16 @@ public class RecipeProvider extends FabricRecipeProvider {
      * <a href="https://docs.fabricmc.net/develop/data-generation/recipes">documentation</a>
      *
      * @param registryLookup HolderLookup.Provider
-     * @param exporter RecipeOutput
+     * @param recipes recipe output
+     * @param advancements recipe advancement output
      * @return RecipeGenerator
      */
     @Override
-    protected net.minecraft.data.recipes.@NotNull RecipeProvider createRecipeProvider(HolderLookup.Provider registryLookup, RecipeOutput exporter) {
-        return new net.minecraft.data.recipes.RecipeProvider(registryLookup, exporter) {
+    protected net.minecraft.data.recipes.@NotNull RecipeProvider createRecipeProvider(HolderLookup.Provider registryLookup, BootstrapContext<Recipe<?>> recipes, BootstrapContext<Advancement> advancements) {
+        return new net.minecraft.data.recipes.RecipeProvider(recipes, advancements) {
             @Override
             public void buildRecipes() {
                 // Recipes go here
-                HolderLookup.RegistryLookup<Item> itemLookup = registries.lookupOrThrow(Registries.ITEM);
                 // shapeless rovo_recipe for scrum ball
                 shapeless(RecipeCategory.COMBAT, ModItems.SCRUM_BALL, 1)
                         .requires(Items.GOLD_INGOT)
@@ -41,7 +42,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(Items.REDSTONE)
                         .requires(Items.EMERALD)
                         .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(Items.GOLD_INGOT))
-                        .save(exporter, "scrum_ball");
+                        .save(output, "scrum_ball");
                 // rovo_recipe for ultimate scrum ball
                 shapeless(RecipeCategory.COMBAT, ModItems.ULTIMATE_SCRUM_BALL, 1)
                         .requires(ModItems.SCRUM_BALL)
@@ -54,7 +55,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(ModItems.SCRUM_BALL)
                         .requires(ModItems.SCRUM_BALL)
                         .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
-                        .save(exporter, "ultimate_scrum_ball");
+                        .save(output, "ultimate_scrum_ball");
                 shapeless(RecipeCategory.COMBAT, ModItems.SCRUM_MASTER_BALL, 1)
                         .requires(ModItems.ULTIMATE_SCRUM_BALL)
                         .requires(ModItems.ULTIMATE_SCRUM_BALL)
@@ -66,7 +67,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(ModItems.ULTIMATE_SCRUM_BALL)
                         .requires(ModItems.ULTIMATE_SCRUM_BALL)
                         .unlockedBy(getHasName(ModItems.ULTIMATE_SCRUM_BALL), this.has(ModItems.ULTIMATE_SCRUM_BALL))
-                        .save(exporter, "scrum_master_ball");
+                        .save(output, "scrum_master_ball");
                 shapeless(RecipeCategory.MISC, ModItems.CATAMARAN, 1)
                         .requires(ItemTags.BOATS)
                         .requires(ItemTags.BOATS)
@@ -78,7 +79,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(ItemTags.BOATS)
                         .requires(ItemTags.BOATS)
                         .unlockedBy("has_boats", this.has(ItemTags.BOATS))
-                        .save(exporter, "catamaran");
+                        .save(output, "catamaran");
                 shapeless(RecipeCategory.MISC, ModItems.NS_TRAIN, 1)
                         .requires(Items.MINECART)
                         .requires(Items.MINECART)
@@ -90,7 +91,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(Items.MINECART)
                         .requires(Items.MINECART)
                         .unlockedBy("has_minecarts", this.has(Items.MINECART))
-                        .save(exporter, "ns_train");
+                        .save(output, "ns_train");
                 shaped(RecipeCategory.MISC, ModItems.AGARTHA_POTION, 1)
                         .define('#', Items.GOLD_INGOT)
                         .define('D', Items.DIAMOND_BLOCK)
@@ -98,7 +99,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("#D#")
                         .pattern("###")
                         .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(Items.GOLD_INGOT))
-                        .save(exporter, "agarta_potion");
+                        .save(output, "agarta_potion");
                 shaped(RecipeCategory.MISC, ModItems.AYRAN, 1)
                         .define('#', Items.GLASS_BOTTLE)
                         .define('S', Items.SPIDER_EYE)
@@ -106,7 +107,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("S#S")
                         .pattern("SSS")
                         .unlockedBy(getHasName(Items.SPIDER_EYE), this.has(Items.SPIDER_EYE))
-                        .save(exporter, "ayran");
+                        .save(output, "ayran");
                 shaped(RecipeCategory.MISC, ModItems.POTION_OF_TERRORISM, 1)
                         .define('T', Items.GUNPOWDER)
                         .define('B', Items.GLASS_BOTTLE)
@@ -114,7 +115,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("TBT")
                         .pattern("TTT")
                         .unlockedBy(getHasName(Items.GUNPOWDER), this.has(Items.GUNPOWDER))
-                        .save(exporter, "potion_of_terrorism");
+                        .save(output, "potion_of_terrorism");
                 shaped(RecipeCategory.MISC, ModItems.WEAK_HEART, 1)
                         .define('G', Items.GOLDEN_APPLE)
                         .define('H', Items.HEART_OF_THE_SEA)
@@ -123,7 +124,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("SHS")
                         .pattern("SGS")
                         .unlockedBy(getHasName(Items.HEART_OF_THE_SEA), this.has(Items.HEART_OF_THE_SEA))
-                        .save(exporter, "weak_heart");
+                        .save(output, "weak_heart");
                 shaped(RecipeCategory.MISC, ModItems.GOLDEN_FISH, 1)
                         .define('F', ItemTags.FISHES)
                         .define('G', Items.GOLD_INGOT)
@@ -131,7 +132,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("GFG")
                         .pattern("GGG")
                         .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(ItemTags.FISHES))
-                        .save(exporter, "golden_fish");
+                        .save(output, "golden_fish");
 
                 shaped(RecipeCategory.MISC, ModItems.WORSTE_BOLUS, 1)
                         .define('M', ItemTags.MEAT)
@@ -140,7 +141,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("BMB")
                         .pattern("BBB")
                         .unlockedBy(getHasName(Items.BREAD), this.has(ItemTags.MEAT))
-                        .save(exporter, "worste_bolus");
+                        .save(output, "worste_bolus");
 
                 shaped(RecipeCategory.MISC, ModBlocks.SCRUM_BLOCK, 1)
                         .define('#', Items.GOLD_INGOT)
@@ -150,16 +151,16 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("BSB")
                         .pattern("#B#")
                         .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
-                        .save(exporter, "scrum_block");
+                        .save(output, "scrum_block");
 
                 shaped(RecipeCategory.MISC, ModItems.LINKED_IN, 1)
-                        .define('C', ItemTags.CHAINS)
+                        .define('C', BlockItemTags.CHAINS.item())
                         .define('L', Items.LAPIS_LAZULI)
                         .pattern("CCC")
                         .pattern("CLC")
                         .pattern("CCC")
-                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(ItemTags.CHAINS))
-                        .save(exporter, "linked_in");
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(BlockItemTags.CHAINS.item()))
+                        .save(output, "linked_in");
 
                 shaped(RecipeCategory.MISC, ModItems.AGARTHA_LINKED_IN, 1)
                         .define('C', Items.GOLD_INGOT)
@@ -167,8 +168,8 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("CCC")
                         .pattern("CLC")
                         .pattern("CCC")
-                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(ItemTags.CHAINS))
-                        .save(exporter, "agartha_linked_in");
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(BlockItemTags.CHAINS.item()))
+                        .save(output, "agartha_linked_in");
 
                 shaped(RecipeCategory.MISC, ModItems.EVIL_LINKED_IN, 1)
                         .define('C', Items.REDSTONE)
@@ -176,8 +177,8 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("CCC")
                         .pattern("CLC")
                         .pattern("CCC")
-                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(ItemTags.CHAINS))
-                        .save(exporter, "evil_linked_in");
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), this.has(BlockItemTags.CHAINS.item()))
+                        .save(output, "evil_linked_in");
 
                 shapeless(RecipeCategory.MISC, ModItems.VERY_WHITE_BREW, 1)
                         .requires(ModItems.AGARTHA_POTION)
@@ -190,7 +191,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .requires(ModItems.AGARTHA_POTION)
                         .requires(ModItems.AGARTHA_POTION)
                         .unlockedBy(getHasName(ModItems.AGARTHA_POTION), this.has(ModItems.AGARTHA_POTION))
-                        .save(exporter, "very_white_brew");
+                        .save(output, "very_white_brew");
 
                 shaped(RecipeCategory.MISC, ModItems.BOWL_OF_CODE, 1)
                         .define('G', Items.GOLD_INGOT)
@@ -198,7 +199,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("G")
                         .pattern("B")
                         .unlockedBy(getHasName(Items.GOLD_INGOT), this.has(Items.GOLD_INGOT))
-                        .save(exporter, "bowl_of_code");
+                        .save(output, "bowl_of_code");
 
                 shaped(RecipeCategory.MISC, ModItems.PULLREQUEST_DECLINED, 1)
                         .define('R', Items.REDSTONE)
@@ -207,7 +208,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("RVR")
                         .pattern("RRR")
                         .unlockedBy(getHasName(ModItems.VERY_WHITE_BREW), this.has(ModItems.VERY_WHITE_BREW))
-                        .save(exporter, "pullrequest_declined");
+                        .save(output, "pullrequest_declined");
 
                 shaped(RecipeCategory.MISC, ModItems.WEED_DUCKY, 1)
                         .define('D',ModItems.RUBBER_DUCKY)
@@ -216,7 +217,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("SDS")
                         .pattern("SSS")
                         .unlockedBy(getHasName(ModItems.RUBBER_DUCKY), this.has(ModItems.RUBBER_DUCKY))
-                        .save(exporter, "weed_ducky");
+                        .save(output, "weed_ducky");
 
                 shaped(RecipeCategory.MISC, ModItems.RUBBER_DUCKY, 1)
                         .define('G', Items.GOLD_INGOT)
@@ -225,7 +226,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .pattern("GSG")
                         .pattern("GGG")
                         .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
-                        .save(exporter, "rubber_ducky");
+                        .save(output, "rubber_ducky");
             };
         };
     }

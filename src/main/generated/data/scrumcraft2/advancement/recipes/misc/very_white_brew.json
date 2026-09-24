@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:very_white_brew"
+        "recipes": "scrumcraft2:very_white_brew"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

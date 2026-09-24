@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:golden_fish"
+        "recipes": "scrumcraft2:golden_fish"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -29,7 +29,7 @@ public class EvilSnowGolemEntity extends SnowGolem {
         double dx = target.getX() - this.getX();
         double dz = target.getZ() - this.getZ();
 
-        int choice = this.level().random.nextInt(3);
+        int choice = this.level().getRandom().nextInt(3);
 
         if (choice == 0) {
             EvilScrumball scrumBall = new EvilScrumball(ModEntityTypes.SCRUM_BALL_ENTITY, this.level());

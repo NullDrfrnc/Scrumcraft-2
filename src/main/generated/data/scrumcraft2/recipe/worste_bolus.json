@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "B": "minecraft:bread",
     "M": "#minecraft:meat"
@@ -11,7 +10,6 @@
     "BBB"
   ],
   "result": {
-    "count": 1,
     "id": "scrumcraft2:worste_bolus"
   }
 }

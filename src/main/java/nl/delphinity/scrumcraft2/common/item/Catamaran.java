@@ -3,6 +3,7 @@ package nl.delphinity.scrumcraft2.common.item;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.player.Player;
 
 import net.minecraft.world.entity.vehicle.boat.Boat;
@@ -47,15 +48,15 @@ public class Catamaran extends Item {
 
     private EntityType<? extends Boat> getRandomBoat() {
         EntityType<? extends Boat>[] types = new EntityType[]{
-                EntityType.OAK_BOAT,
-                EntityType.SPRUCE_BOAT,
-                EntityType.BIRCH_BOAT,
-                EntityType.JUNGLE_BOAT,
-                EntityType.ACACIA_BOAT,
-                EntityType.DARK_OAK_BOAT,
-                EntityType.MANGROVE_BOAT,
-                EntityType.CHERRY_BOAT,
-                EntityType.PALE_OAK_BOAT
+                EntityTypes.OAK_BOAT,
+                EntityTypes.SPRUCE_BOAT,
+                EntityTypes.BIRCH_BOAT,
+                EntityTypes.JUNGLE_BOAT,
+                EntityTypes.ACACIA_BOAT,
+                EntityTypes.DARK_OAK_BOAT,
+                EntityTypes.MANGROVE_BOAT,
+                EntityTypes.CHERRY_BOAT,
+                EntityTypes.PALE_OAK_BOAT
         };
 
         return types[RANDOM.nextInt(types.length)];

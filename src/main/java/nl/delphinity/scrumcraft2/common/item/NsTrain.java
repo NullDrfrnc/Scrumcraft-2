@@ -8,6 +8,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.minecart.Minecart;
 import net.minecraft.world.entity.vehicle.minecart.MinecartSpawner;
@@ -55,13 +56,13 @@ public class NsTrain extends Item {
 
     private EntityType<? extends Minecart> getRandomCart() {
         EntityType<? extends Minecart>[] types = new EntityType[]{
-                EntityType.MINECART,
-                EntityType.TNT_MINECART,
-                EntityType.HOPPER_MINECART,
-                EntityType.CHEST_MINECART,
-                EntityType.FURNACE_MINECART,
-                EntityType.COMMAND_BLOCK_MINECART,
-                EntityType.SPAWNER_MINECART
+                EntityTypes.MINECART,
+                EntityTypes.TNT_MINECART,
+                EntityTypes.HOPPER_MINECART,
+                EntityTypes.CHEST_MINECART,
+                EntityTypes.FURNACE_MINECART,
+                EntityTypes.COMMAND_BLOCK_MINECART,
+                EntityTypes.SPAWNER_MINECART
         };
 
         return types[RANDOM.nextInt(types.length)];

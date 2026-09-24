@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "C": "#minecraft:chains",
     "L": "minecraft:lapis_lazuli"
@@ -11,7 +10,6 @@
     "CCC"
   ],
   "result": {
-    "count": 1,
     "id": "scrumcraft2:linked_in"
   }
 }
