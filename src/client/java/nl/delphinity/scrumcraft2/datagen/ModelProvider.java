@@ -5,10 +5,32 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.world.item.Item;
 import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModItems;
 
+import java.util.List;
+
 public class ModelProvider extends FabricModelProvider {
+    // Items with a plain 2D texture (textures/item/<name>.png)
+    private static final List<Item> FLAT_ITEMS = List.of(
+            ModItems.ULTIMATE_SCRUM_BALL,
+            ModItems.SCRUM_MASTER_BALL,
+            ModItems.AYRAN,
+            ModItems.POTION_OF_TERRORISM,
+            ModItems.AGARTHA_POTION,
+            ModItems.NS_TRAIN,
+            ModItems.WEAK_HEART,
+            ModItems.GOLDEN_FISH,
+            ModItems.BOWL_OF_CODE,
+            ModItems.VERY_WHITE_BREW,
+            ModItems.WORSTE_BOLUS,
+            ModItems.EVIL_LINKED_IN,
+            ModItems.LINKED_IN,
+            ModItems.AGARTHA_LINKED_IN,
+            ModItems.PULLREQUEST_DECLINED
+    );
+
     public ModelProvider(FabricPackOutput output) {
         super(output);
     }
@@ -28,20 +50,6 @@ public class ModelProvider extends FabricModelProvider {
      */
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-        itemModelGenerators.createFlatItemModel(ModItems.ULTIMATE_SCRUM_BALL, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.SCRUM_MASTER_BALL, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.AYRAN, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.POTION_OF_TERRORISM, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.AGARTHA_POTION, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.NS_TRAIN, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.WEAK_HEART, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.GOLDEN_FISH, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.BOWL_OF_CODE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.VERY_WHITE_BREW, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.WORSTE_BOLUS, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.EVIL_LINKED_IN, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.LINKED_IN, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.AGARTHA_LINKED_IN, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.createFlatItemModel(ModItems.PULLREQUEST_DECLINED, ModelTemplates.FLAT_ITEM);
+        FLAT_ITEMS.forEach(item -> itemModelGenerators.generateFlatItem(item, ModelTemplates.FLAT_ITEM));
     }
 }
