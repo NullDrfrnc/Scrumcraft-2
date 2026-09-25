@@ -1,0 +1,28 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "exception": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:exception"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Get an Exception to throw",
+    "icon": {
+      "id": "scrumcraft2:exception"
+    },
+    "title": "throws Exception"
+  },
+  "requirements": [
+    [
+      "exception"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

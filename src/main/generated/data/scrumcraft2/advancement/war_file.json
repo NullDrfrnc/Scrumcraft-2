@@ -1,0 +1,28 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "war_file": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:war_file"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Get a WAR file for Tomcat",
+    "icon": {
+      "id": "scrumcraft2:war_file"
+    },
+    "title": "Deploy on friday"
+  },
+  "requirements": [
+    [
+      "war_file"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

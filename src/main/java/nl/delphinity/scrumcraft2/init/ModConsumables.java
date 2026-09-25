@@ -63,6 +63,21 @@ public class ModConsumables {
             new MobEffectInstance(MobEffects.GLOWING, 200, 9)
     );
 
+    public static final Consumable CUP_OF_JAVA = drink(
+            new MobEffectInstance(MobEffects.SPEED, 600, 1),
+            new MobEffectInstance(MobEffects.HASTE, 600, 1),
+            new MobEffectInstance(ModEffects.CAFFEINE, 600)
+    );
+
+    public static final Consumable HIBERNATE_SESSION = drink(
+            new MobEffectInstance(ModEffects.HIBERNATE, 200),
+            new MobEffectInstance(MobEffects.REGENERATION, 200, 2)
+    );
+
+    public static final Consumable LAZY_LOADED_SANDWICH = food(
+            new MobEffectInstance(ModEffects.LAZY_LOADING, 600)
+    );
+
     private static Consumable food(MobEffectInstance... effects) {
         return Consumable.builder()
                 .consumeSeconds(1.6F)

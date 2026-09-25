@@ -146,6 +146,55 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .define('X', ModItems.SCRUM_BALL)
                         .unlockedBy(getHasName(ModItems.SCRUM_BALL), this.has(ModItems.SCRUM_BALL))
                         .save(output, "rubber_ducky");
+
+                // Java
+                surrounded(ModItems.EXCEPTION)
+                        .define('#', Items.GUNPOWDER)
+                        .define('X', Items.PAPER)
+                        .unlockedBy(getHasName(Items.GUNPOWDER), this.has(Items.GUNPOWDER))
+                        .save(output, "exception");
+                surrounded(ModItems.CLASS_CAST_EXCEPTION)
+                        .define('#', Items.SLIME_BALL)
+                        .define('X', ModItems.EXCEPTION)
+                        .unlockedBy(getHasName(ModItems.EXCEPTION), this.has(ModItems.EXCEPTION))
+                        .save(output, "class_cast_exception");
+                surrounded(ModItems.CUP_OF_JAVA)
+                        .define('#', Items.COCOA_BEANS)
+                        .define('X', Items.GLASS_BOTTLE)
+                        .unlockedBy(getHasName(Items.COCOA_BEANS), this.has(Items.COCOA_BEANS))
+                        .save(output, "cup_of_java");
+                surrounded(ModItems.ABSTRACT_SINGLETON_PROXY_FACTORY_BEAN)
+                        .define('#', Items.BOOK)
+                        .define('X', Items.DIAMOND_SWORD)
+                        .unlockedBy(getHasName(Items.DIAMOND_SWORD), this.has(Items.DIAMOND_SWORD))
+                        .save(output, "abstract_singleton_proxy_factory_bean");
+
+                // Tomcat
+                surrounded(ModItems.WAR_FILE)
+                        .define('#', Items.PAPER)
+                        .define('X', Items.IRON_SWORD)
+                        .unlockedBy(getHasName(Items.IRON_SWORD), this.has(Items.IRON_SWORD))
+                        .save(output, "war_file");
+
+                // Hibernate
+                surrounded(ModItems.HIBERNATE_SESSION)
+                        .define('#', Items.SNOWBALL)
+                        .define('X', Items.GLASS_BOTTLE)
+                        .unlockedBy(getHasName(Items.SNOWBALL), this.has(Items.SNOWBALL))
+                        .save(output, "hibernate_session");
+                shapeless(RecipeCategory.FOOD, ModItems.LAZY_LOADED_SANDWICH, 1)
+                        .requires(Items.BREAD)
+                        .requires(Items.COOKED_PORKCHOP)
+                        .requires(Items.CLOCK)
+                        .unlockedBy(getHasName(Items.BREAD), this.has(Items.BREAD))
+                        .save(output, "lazy_loaded_sandwich");
+
+                // Struts, cobwebs because it's legacy
+                surrounded(ModItems.STRUTS)
+                        .define('#', Items.COBWEB)
+                        .define('X', Items.IRON_PICKAXE)
+                        .unlockedBy(getHasName(Items.IRON_PICKAXE), this.has(Items.IRON_PICKAXE))
+                        .save(output, "struts");
             }
 
             // 8 items (#) around 1 item (X) in the middle

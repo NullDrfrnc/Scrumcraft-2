@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "scrumcraft2:item/abstract_singleton_proxy_factory_bean"
+  }
+}

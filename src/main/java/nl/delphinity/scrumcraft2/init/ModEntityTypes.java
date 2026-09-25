@@ -39,9 +39,35 @@ public class ModEntityTypes {
             EntityType.Builder.of(EvilSquidEntity::new, MobCategory.CREATURE)
     );
 
+    public static final EntityType<ThrownExceptionEntity> THROWN_EXCEPTION = register(
+            "thrown_exception_entity",
+            EntityType.Builder.<ThrownExceptionEntity>of(ThrownExceptionEntity::new, MobCategory.MISC)
+                    .sized(0.25F, 0.25F)
+                    .clientTrackingRange(4)
+                    .updateInterval(10)
+    );
+
+    public static final EntityType<TomcatEntity> TOMCAT = register(
+            "tomcat_entity",
+            EntityType.Builder.of(TomcatEntity::new, MobCategory.CREATURE)
+                    .sized(0.6F, 0.7F)
+                    .eyeHeight(0.35F)
+                    .clientTrackingRange(8)
+    );
+
+    public static final EntityType<NPlusOneQueryEntity> N_PLUS_ONE_QUERY = register(
+            "n_plus_one_query_entity",
+            EntityType.Builder.of(NPlusOneQueryEntity::new, MobCategory.MONSTER)
+                    .sized(0.4F, 0.3F)
+                    .eyeHeight(0.13F)
+                    .clientTrackingRange(8)
+    );
+
     public static void init() {
         FabricDefaultAttributeRegistry.register(EVIL_SNOW_GOLEM, EvilSnowGolemEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(EVIL_SQUID, EvilSquidEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(TOMCAT, TomcatEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(N_PLUS_ONE_QUERY, NPlusOneQueryEntity.createAttributes());
     }
 
     private static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> builder) {

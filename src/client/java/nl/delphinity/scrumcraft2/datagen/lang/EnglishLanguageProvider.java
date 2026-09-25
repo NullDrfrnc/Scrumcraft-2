@@ -41,6 +41,20 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.LINKED_IN, "LinkedIn");
         translationBuilder.add(ModItems.AGARTHA_LINKED_IN, "Agartha LinkedIn");
         translationBuilder.add(ModItems.PULLREQUEST_DECLINED, "Pull Request, DECLINED");
+        translationBuilder.add(ModItems.EXCEPTION, "throw new Exception()");
+        translationBuilder.add(ModItems.CLASS_CAST_EXCEPTION, "ClassCastException");
+        translationBuilder.add(ModItems.CUP_OF_JAVA, "Cup of Java");
+        translationBuilder.add(ModItems.ABSTRACT_SINGLETON_PROXY_FACTORY_BEAN, "AbstractSingletonProxyFactoryBean");
+        translationBuilder.add(ModItems.WAR_FILE, "scrumcraft.war");
+        translationBuilder.add(ModItems.TOMCAT_SPAWN_EGG, "Tomcat Spawn Egg");
+        translationBuilder.add(ModItems.HIBERNATE_SESSION, "Hibernate Session");
+        translationBuilder.add(ModItems.LAZY_LOADED_SANDWICH, "Lazy Loaded Sandwich");
+        translationBuilder.add(ModItems.N_PLUS_ONE_QUERY_SPAWN_EGG, "N+1 Query Spawn Egg");
+        translationBuilder.add(ModItems.STRUTS, "Struts");
+        translationBuilder.add("item.scrumcraft2.struts.lore", "@Deprecated(since = \"2013\")");
+        translationBuilder.add(ModEntityTypes.THROWN_EXCEPTION, "Exception");
+        translationBuilder.add(ModEntityTypes.TOMCAT, "Tomcat");
+        translationBuilder.add(ModEntityTypes.N_PLUS_ONE_QUERY, "N+1 Query");
 
 
         // ItemGroups
@@ -56,12 +70,28 @@ public class EnglishLanguageProvider extends AbstractLanguageProvider {
 
         // death messages
         translationBuilder.add("death.attack.weak_heart", "%1$s died from deception...");
+        translationBuilder.add("death.attack.null_pointer", "%1$s dereferenced null");
 
         // effects
         translationBuilder.add("effect.scrumcraft2.eclipse_user", "Eclipse User");
+        translationBuilder.add("effect.scrumcraft2.caffeine", "Caffeine");
+        translationBuilder.add("effect.scrumcraft2.stop_the_world", "Stop-the-world");
+        translationBuilder.add("effect.scrumcraft2.hibernate", "Hibernating");
+        translationBuilder.add("effect.scrumcraft2.lazy_loading", "Lazy Loading");
+
+        // messages
+        translationBuilder.add("message.scrumcraft2.exception_caught", "catch (Exception e) { } // your exception got caught");
+        translationBuilder.add("message.scrumcraft2.class_cast_exception", "java.lang.ClassCastException: class %s cannot be cast to class %s");
+        translationBuilder.add("message.scrumcraft2.garbage_collector", "Garbage collector running... stop-the-world pause");
+        translationBuilder.add("message.scrumcraft2.lazy_initialization_exception", "org.hibernate.LazyInitializationException: could not initialize proxy - no Session");
+        translationBuilder.add("message.scrumcraft2.http_500", "HTTP Status 500 – Internal Server Error");
+        translationBuilder.add("message.scrumcraft2.http_404", "HTTP Status 404 – Not Found");
+        translationBuilder.add("message.scrumcraft2.war_deployed", "Deployment of web application archive [scrumcraft.war] has finished in [67] ms");
 
 
         translationBuilder.add("title.scrumcraft2.pullrequest", "Crafting recipe, ");
         translationBuilder.add("title.scrumcraft2.denied", "DENIED");
+        translationBuilder.add("title.scrumcraft2.data_breach", "Your data has been leaked");
+        translationBuilder.add("title.scrumcraft2.server_startup", "Server startup in [67] milliseconds");
     }
 }

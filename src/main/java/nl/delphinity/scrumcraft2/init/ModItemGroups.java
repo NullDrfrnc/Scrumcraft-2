@@ -36,6 +36,16 @@ public class ModItemGroups {
                         output.accept(ModItems.AGARTHA_LINKED_IN);
                         output.accept(ModItems.BOWL_OF_CODE);
                         output.accept(ModItems.PULLREQUEST_DECLINED);
+                        output.accept(ModItems.EXCEPTION);
+                        output.accept(ModItems.CLASS_CAST_EXCEPTION);
+                        output.accept(ModItems.CUP_OF_JAVA);
+                        output.accept(ModItems.ABSTRACT_SINGLETON_PROXY_FACTORY_BEAN);
+                        output.accept(ModItems.WAR_FILE);
+                        output.accept(ModItems.TOMCAT_SPAWN_EGG);
+                        output.accept(ModItems.HIBERNATE_SESSION);
+                        output.accept(ModItems.LAZY_LOADED_SANDWICH);
+                        output.accept(ModItems.N_PLUS_ONE_QUERY_SPAWN_EGG);
+                        output.accept(ModItems.STRUTS);
                     }).build());
 
     public static void init() {

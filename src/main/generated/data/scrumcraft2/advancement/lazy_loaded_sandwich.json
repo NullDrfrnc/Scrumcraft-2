@@ -1,0 +1,26 @@
+{
+  "parent": "scrumcraft2:hibernate_session",
+  "criteria": {
+    "lazy_loaded_sandwich": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:lazy_loaded_sandwich"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Eat a Lazy Loaded Sandwich",
+    "icon": {
+      "id": "scrumcraft2:lazy_loaded_sandwich"
+    },
+    "title": "Lazy loading"
+  },
+  "requirements": [
+    [
+      "lazy_loaded_sandwich"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

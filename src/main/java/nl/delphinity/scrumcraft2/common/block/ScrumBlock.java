@@ -20,8 +20,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
+import nl.delphinity.scrumcraft2.common.util.DataBreach;
 import nl.delphinity.scrumcraft2.common.util.Titles;
 import nl.delphinity.scrumcraft2.init.ModBlocks;
+import nl.delphinity.scrumcraft2.init.ModDamageTypes;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 import nl.delphinity.scrumcraft2.init.ModItems;
 import nl.delphinity.scrumcraft2.init.ModSounds;
@@ -42,8 +44,17 @@ public class ScrumBlock extends RandomEventBlock {
             ScrumBlock::sixSeven,
             ScrumBlock::evilSnowGolem,
             ScrumBlock::evilSquid,
-            ScrumBlock::christmasTree
+            ScrumBlock::christmasTree,
+            ScrumBlock::nullPointer,
+            ScrumBlock::stackOverflow,
+            ScrumBlock::strutsVulnerability,
+            ScrumBlock::tomcat,
+            ScrumBlock::nPlusOneQuery
     );
+
+    private static final int STACK_OVERFLOW_START = 8;
+    private static final int STACK_OVERFLOW_HEIGHT = 16;
+    private static final int LEAKED_ITEMS = 5;
 
     public ScrumBlock(Properties properties) {
         super(properties);
@@ -97,6 +108,37 @@ public class ScrumBlock extends RandomEventBlock {
 
     private static void christmasTree(ServerLevel level, BlockPos pos, ServerPlayer player) {
         level.setBlockAndUpdate(pos.above(), ModBlocks.CHRISTMASTREE.defaultBlockState());
+    }
+
+    private static void nullPointer(ServerLevel level, BlockPos pos, ServerPlayer player) {
+        Titles.show(player, Component.literal("NullPointerException").withStyle(ChatFormatting.RED));
+        player.hurtServer(level, player.damageSources().source(ModDamageTypes.NULL_POINTER), 8.0F);
+    }
+
+    // A tower of sand falls on your head, only in empty spots so it doesn't break anything
+    private static void stackOverflow(ServerLevel level, BlockPos pos, ServerPlayer player) {
+        Titles.show(player, Component.literal("StackOverflowError").withStyle(ChatFormatting.RED));
+        BlockPos bottom = player.blockPosition().above(STACK_OVERFLOW_START);
+        for (int i = 0; i < STACK_OVERFLOW_HEIGHT; i++) {
+            BlockPos stackPos = bottom.above(i);
+            if (level.isEmptyBlock(stackPos)) {
+                FallingBlockEntity.fall(level, stackPos, Blocks.SAND.defaultBlockState());
+            }
+        }
+    }
+
+    private static void strutsVulnerability(ServerLevel level, BlockPos pos, ServerPlayer player) {
+        DataBreach.leak(player, LEAKED_ITEMS);
+    }
+
+    // Catalina is the real name of Tomcat's servlet container
+    private static void tomcat(ServerLevel level, BlockPos pos, ServerPlayer player) {
+        Titles.show(player, Component.translatable("title.scrumcraft2.server_startup").withStyle(ChatFormatting.GOLD));
+        spawnNamed(level, ModEntityTypes.TOMCAT, pos, "Catalina");
+    }
+
+    private static void nPlusOneQuery(ServerLevel level, BlockPos pos, ServerPlayer player) {
+        spawnNamed(level, ModEntityTypes.N_PLUS_ONE_QUERY, pos, "SELECT * FROM scrum");
     }
 
     private static void spawnNamed(ServerLevel level, EntityType<?> type, BlockPos pos, String name) {

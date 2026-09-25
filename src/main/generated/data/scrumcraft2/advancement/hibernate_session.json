@@ -1,0 +1,26 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "hibernate_session": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:hibernate_session"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Drink a Hibernate Session",
+    "icon": {
+      "id": "scrumcraft2:hibernate_session"
+    },
+    "title": "Hibernate"
+  },
+  "requirements": [
+    [
+      "hibernate_session"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

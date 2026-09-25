@@ -28,7 +28,21 @@ public class ModelProvider extends FabricModelProvider {
             ModItems.EVIL_LINKED_IN,
             ModItems.LINKED_IN,
             ModItems.AGARTHA_LINKED_IN,
-            ModItems.PULLREQUEST_DECLINED
+            ModItems.PULLREQUEST_DECLINED,
+            ModItems.EXCEPTION,
+            ModItems.CLASS_CAST_EXCEPTION,
+            ModItems.CUP_OF_JAVA,
+            ModItems.WAR_FILE,
+            ModItems.TOMCAT_SPAWN_EGG,
+            ModItems.HIBERNATE_SESSION,
+            ModItems.LAZY_LOADED_SANDWICH,
+            ModItems.N_PLUS_ONE_QUERY_SPAWN_EGG
+    );
+
+    // Tools and weapons, held in hand like a sword
+    private static final List<Item> HANDHELD_ITEMS = List.of(
+            ModItems.ABSTRACT_SINGLETON_PROXY_FACTORY_BEAN,
+            ModItems.STRUTS
     );
 
     public ModelProvider(FabricPackOutput output) {
@@ -51,5 +65,6 @@ public class ModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         FLAT_ITEMS.forEach(item -> itemModelGenerators.generateFlatItem(item, ModelTemplates.FLAT_ITEM));
+        HANDHELD_ITEMS.forEach(item -> itemModelGenerators.generateFlatItem(item, ModelTemplates.FLAT_HANDHELD_ITEM));
     }
 }

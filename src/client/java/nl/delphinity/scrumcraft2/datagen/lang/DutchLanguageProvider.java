@@ -41,6 +41,20 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
         translationBuilder.add(ModItems.AGARTHA_LINKED_IN, "Agartha GekoppeldIn");
         translationBuilder.add(ModItems.BOWL_OF_CODE, "Kom van Code");
         translationBuilder.add(ModItems.PULLREQUEST_DECLINED, "Trekverzoek, Afgekeurd");
+        translationBuilder.add(ModItems.EXCEPTION, "gooi nieuwe Uitzondering()");
+        translationBuilder.add(ModItems.CLASS_CAST_EXCEPTION, "KlasseGietUitzondering");
+        translationBuilder.add(ModItems.CUP_OF_JAVA, "Kop Java");
+        translationBuilder.add(ModItems.ABSTRACT_SINGLETON_PROXY_FACTORY_BEAN, "AbstracteEenlingVolmachtFabriekBoon");
+        translationBuilder.add(ModItems.WAR_FILE, "scrumcraft.oorlog");
+        translationBuilder.add(ModItems.TOMCAT_SPAWN_EGG, "Kater Spawn-ei");
+        translationBuilder.add(ModItems.HIBERNATE_SESSION, "Winterslaap Sessie");
+        translationBuilder.add(ModItems.LAZY_LOADED_SANDWICH, "Lui Geladen Broodje");
+        translationBuilder.add(ModItems.N_PLUS_ONE_QUERY_SPAWN_EGG, "N+1 Query Spawn-ei");
+        translationBuilder.add(ModItems.STRUTS, "Stutten");
+        translationBuilder.add("item.scrumcraft2.struts.lore", "@Deprecated(since = \"2013\")");
+        translationBuilder.add(ModEntityTypes.THROWN_EXCEPTION, "Uitzondering");
+        translationBuilder.add(ModEntityTypes.TOMCAT, "Kater");
+        translationBuilder.add(ModEntityTypes.N_PLUS_ONE_QUERY, "N+1 Query");
 
         // ItemGroups
         // don't have to do anythink here :)
@@ -55,9 +69,27 @@ public class DutchLanguageProvider extends AbstractLanguageProvider {
 
         translationBuilder.add("title.scrumcraft2.pullrequest", "Bouwrecept, ");
         translationBuilder.add("title.scrumcraft2.denied", "AFGEWEZEN");
+        translationBuilder.add("title.scrumcraft2.data_breach", "Je data is gelekt");
+        translationBuilder.add("title.scrumcraft2.server_startup", "Server opgestart in [67] milliseconden");
+
+        // death messages
+        translationBuilder.add("death.attack.null_pointer", "%1$s verwees naar null");
 
         // effects
         translationBuilder.add("effect.scrumcraft2.eclipse_user", "Zonsverduistering Gebruiker");
+        translationBuilder.add("effect.scrumcraft2.caffeine", "Cafeïne");
+        translationBuilder.add("effect.scrumcraft2.stop_the_world", "Stop-de-wereld");
+        translationBuilder.add("effect.scrumcraft2.hibernate", "Winterslaap");
+        translationBuilder.add("effect.scrumcraft2.lazy_loading", "Lui Laden");
+
+        // messages
+        translationBuilder.add("message.scrumcraft2.exception_caught", "catch (Exception e) { } // jouw exception is gecatcht");
+        translationBuilder.add("message.scrumcraft2.class_cast_exception", "java.lang.ClassCastException: class %s cannot be cast to class %s");
+        translationBuilder.add("message.scrumcraft2.garbage_collector", "Garbage collector is bezig... stop-de-wereld pauze");
+        translationBuilder.add("message.scrumcraft2.lazy_initialization_exception", "org.hibernate.LazyInitializationException: could not initialize proxy - no Session");
+        translationBuilder.add("message.scrumcraft2.http_500", "HTTP Status 500 – Interne Serverfout");
+        translationBuilder.add("message.scrumcraft2.http_404", "HTTP Status 404 – Niet Gevonden");
+        translationBuilder.add("message.scrumcraft2.war_deployed", "Deployment van [scrumcraft.oorlog] klaar in [67] ms");
 
     }
 }
