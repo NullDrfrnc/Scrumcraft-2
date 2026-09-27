@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:worste_bolus"
+        "recipes": "scrumcraft2:worste_bolus"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

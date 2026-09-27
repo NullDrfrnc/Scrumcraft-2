@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
-    "F": "#minecraft:fishes",
-    "G": "minecraft:gold_ingot"
+    "#": "minecraft:gold_ingot",
+    "X": "#minecraft:fishes"
   },
   "pattern": [
-    "GGG",
-    "GFG",
-    "GGG"
+    "###",
+    "#X#",
+    "###"
   ],
   "result": {
-    "count": 1,
     "id": "scrumcraft2:golden_fish"
   }
 }

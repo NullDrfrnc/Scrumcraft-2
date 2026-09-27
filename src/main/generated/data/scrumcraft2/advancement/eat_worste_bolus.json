@@ -13,7 +13,6 @@
   "display": {
     "description": "Eat a Worste Bolus",
     "icon": {
-      "count": 1,
       "id": "scrumcraft2:worste_bolus"
     },
     "title": "ASCEND!"

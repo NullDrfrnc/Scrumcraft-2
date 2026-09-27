@@ -15,7 +15,6 @@
     "background": "scrumcraft2:gui/advancements/scrum_ground",
     "description": "Welcome to Scrumcraft2! NOW SCRUM!",
     "icon": {
-      "count": 1,
       "id": "scrumcraft2:scrum_ball"
     },
     "title": "Scrumcraft2"

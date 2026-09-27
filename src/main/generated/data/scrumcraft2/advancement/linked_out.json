@@ -15,7 +15,6 @@
   "display": {
     "description": "Get Evil linked in (haha get it?)",
     "icon": {
-      "count": 1,
       "id": "scrumcraft2:evil_linked_in"
     },
     "title": "Linked out"

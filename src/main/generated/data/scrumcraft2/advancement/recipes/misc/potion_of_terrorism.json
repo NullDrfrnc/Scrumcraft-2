@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:potion_of_terrorism"
+        "recipes": "scrumcraft2:potion_of_terrorism"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

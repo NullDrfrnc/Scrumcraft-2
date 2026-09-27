@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.item.ItemModelResolver;
-import net.minecraft.client.renderer.state.CameraRenderState;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -44,8 +44,8 @@ public abstract class DirectionalThrownItemRenderer<T extends Entity & ItemSuppl
         poseStack.pushPose();
         poseStack.scale(this.scale, this.scale, this.scale);
 
-        poseStack.mulPose(Axis.YP.rotationDegrees(directionalRendererState.yRot - 180.0F));
-        poseStack.mulPose(Axis.XP.rotationDegrees(directionalRendererState.xRot));
+        poseStack.rotateDegrees(Axis.YP, directionalRendererState.yRot - 180.0F);
+        poseStack.rotateDegrees(Axis.XP, directionalRendererState.xRot);
 
         directionalRendererState.item
                 .submit(poseStack, submitNodeCollector, directionalRendererState.lightCoords, OverlayTexture.NO_OVERLAY, directionalRendererState.outlineColor);

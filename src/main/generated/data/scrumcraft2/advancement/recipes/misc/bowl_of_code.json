@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:bowl_of_code"
+        "recipes": "scrumcraft2:bowl_of_code"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

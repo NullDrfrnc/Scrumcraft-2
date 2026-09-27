@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:catamaran"
+        "recipes": "scrumcraft2:catamaran"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

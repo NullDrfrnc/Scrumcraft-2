@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:ayran"
+        "recipes": "scrumcraft2:ayran"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

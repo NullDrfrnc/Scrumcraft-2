@@ -7,7 +7,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import nl.delphinity.scrumcraft2.common.entity.RubberDuckyEntity;
 import nl.delphinity.scrumcraft2.common.entity.WeedDuckyEntity;
 import org.jetbrains.annotations.NotNull;
 
@@ -17,16 +16,8 @@ public class WeedDucky extends RubberDucky {
     }
 
     @Override
-    public void throwDuck(ServerLevel level, Player player, ItemStack stack, float throwingPower, float divergence) {
-        Projectile.spawnProjectileFromRotation(
-                WeedDuckyEntity::new,
-                level,
-                stack,
-                player,
-                0.0F,
-                throwingPower,
-                divergence
-        );
+    protected void throwItem(ServerLevel level, Player player, ItemStack stack) {
+        Projectile.spawnProjectileFromRotation(WeedDuckyEntity::new, level, stack, player, 0.0F, 1F, 1F);
     }
 
     @Override

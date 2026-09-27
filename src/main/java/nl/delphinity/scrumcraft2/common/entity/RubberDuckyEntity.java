@@ -1,6 +1,5 @@
 package nl.delphinity.scrumcraft2.common.entity;
 
-import com.llamalad7.mixinextras.expression.impl.ast.expressions.ThisExpression;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;

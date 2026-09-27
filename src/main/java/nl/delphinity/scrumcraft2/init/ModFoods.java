@@ -3,40 +3,18 @@ package nl.delphinity.scrumcraft2.init;
 import net.minecraft.world.food.FoodProperties;
 
 public class ModFoods {
-    public static final net.minecraft.world.food.FoodProperties AYRAN = new FoodProperties.Builder()
-            .nutrition(4)
-            .saturationModifier(0.3F)
-            .alwaysEdible()
-            .build();
+    public static final FoodProperties AYRAN = food(4, 0.3F);
+    public static final FoodProperties POTION_OF_TERRORISM = food(4, 0.3F);
+    public static final FoodProperties AGARTHA_POTION = food(4, 0.3F);
+    public static final FoodProperties GOLDEN_FISH = food(4, 0.3F);
+    public static final FoodProperties BOWL_OF_CODE = food(3, 0.4F);
+    public static final FoodProperties WORSTE_BOLUS = food(4, 0.3F);
 
-    public static final net.minecraft.world.food.FoodProperties POTION_OF_TERRORISM = new FoodProperties.Builder()
-            .nutrition(4)
-            .saturationModifier(0.3F)
-            .alwaysEdible()
-            .build();
-
-    public static final net.minecraft.world.food.FoodProperties AGARTHA_POTION = new FoodProperties.Builder()
-            .nutrition(4)
-            .saturationModifier(0.3F)
-            .alwaysEdible()
-            .build();
-
-    public static final net.minecraft.world.food.FoodProperties GOLDEN_FISH = new FoodProperties.Builder()
-            .nutrition(4)
-            .saturationModifier(0.3F)
-            .alwaysEdible()
-            .build();
-
-    public static final net.minecraft.world.food.FoodProperties BOWL_OF_CODE = new FoodProperties.Builder()
-            .nutrition(3)
-            .saturationModifier(0.4F)
-            .alwaysEdible()
-            .build();
-
-    public static final net.minecraft.world.food.FoodProperties WORSTE_BOLUS = new FoodProperties.Builder()
-            .nutrition(4)
-            .saturationModifier(0.3F)
-            .alwaysEdible()
-            .build();
+    private static FoodProperties food(int nutrition, float saturation) {
+        return new FoodProperties.Builder()
+                .nutrition(nutrition)
+                .saturationModifier(saturation)
+                .alwaysEdible()
+                .build();
+    }
 }
-

@@ -15,7 +15,6 @@
   "display": {
     "description": "Be a certified Scrum Master",
     "icon": {
-      "count": 1,
       "id": "scrumcraft2:scrum_master_ball"
     },
     "title": "Scrum Master"

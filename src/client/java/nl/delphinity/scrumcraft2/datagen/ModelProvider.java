@@ -1,28 +1,15 @@
 package nl.delphinity.scrumcraft2.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.color.item.ItemTintSource;
-import net.minecraft.client.color.item.ItemTintSources;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.data.models.MultiVariant;
-import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TexturedModel;
 import nl.delphinity.scrumcraft2.init.ModBlocks;
 import nl.delphinity.scrumcraft2.init.ModItems;
-import org.intellij.lang.annotations.Identifier;
-
-import java.util.Optional;
-
-import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
-
-
 
 public class ModelProvider extends FabricModelProvider {
-    public ModelProvider(FabricDataOutput output) {
+    public ModelProvider(FabricPackOutput output) {
         super(output);
     }
 

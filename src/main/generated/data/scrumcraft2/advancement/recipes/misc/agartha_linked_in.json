@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:agartha_linked_in"
+        "recipes": "scrumcraft2:agartha_linked_in"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

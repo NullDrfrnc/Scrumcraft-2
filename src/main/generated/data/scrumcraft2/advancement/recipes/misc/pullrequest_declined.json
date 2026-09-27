@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "scrumcraft2:pullrequest_declined"
+        "recipes": "scrumcraft2:pullrequest_declined"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

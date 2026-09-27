@@ -9,6 +9,7 @@ import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableIt
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 import nl.delphinity.scrumcraft2.init.ModItems;
@@ -22,31 +23,21 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
         super(entityType, level);
     }
 
-    public ScrumBallEntity(ServerLevel level, LivingEntity livingEntity, ItemStack stack) {
-        super(ModEntityTypes.SCRUM_BALL_ENTITY, livingEntity, level, stack);
-    }
-
     public ScrumBallEntity(ServerLevel level, LivingEntity livingEntity, ItemStack stack, double knockback) {
         super(ModEntityTypes.SCRUM_BALL_ENTITY, livingEntity, level, stack);
-        setKnockback(knockback);
+        this.knockback = knockback;
     }
 
     public ScrumBallEntity(Level level, double d, double e, double f, ItemStack itemStack) {
         super(ModEntityTypes.SCRUM_BALL_ENTITY, d, e, f, level, itemStack);
     }
 
-    public void setKnockback(double knockback) {
-        this.knockback = knockback;
-    }
-
     @Override
-    protected void onHitEntity(net.minecraft.world.phys.EntityHitResult hitResult) {
+    protected void onHitEntity(EntityHitResult hitResult) {
         super.onHitEntity(hitResult);
 
         var target = hitResult.getEntity();
         if (target instanceof LivingEntity living) {
-            // knockback
-            double strength = knockback;
             double x = this.getDeltaMovement().x;
             double y = this.getDeltaMovement().y;
             double z = this.getDeltaMovement().z;
@@ -59,8 +50,8 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
             }
 
             // Apply knockback
-            living.push(x * strength, y * strength, z * strength);
-            living.hurtMarked = true;
+            living.push(x * knockback, y * knockback, z * knockback);
+            living.syncVelocity = true;
         }
 
         Level level = level();
@@ -72,6 +63,7 @@ public class ScrumBallEntity extends ThrowableItemProjectile {
         }
     }
 
+    @Override
     protected void onHit(HitResult hitResult) {
         super.onHit(hitResult);
         if (!this.level().isClientSide()) {
