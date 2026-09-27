@@ -56,6 +56,8 @@ public class ModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.SCRUM_BLOCK);
+        // Uses the hand made model in resources/models/block/christmastree.json
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CHRISTMASTREE);
     }
 
     /**
