@@ -1,0 +1,28 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "struts": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:struts"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Get Struts, it's deprecated since 2013",
+    "icon": {
+      "id": "scrumcraft2:struts"
+    },
+    "title": "Legacy code"
+  },
+  "requirements": [
+    [
+      "struts"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

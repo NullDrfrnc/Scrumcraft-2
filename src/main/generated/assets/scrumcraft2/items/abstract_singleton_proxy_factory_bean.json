@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "scrumcraft2:item/abstract_singleton_proxy_factory_bean"
+  }
+}

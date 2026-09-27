@@ -104,6 +104,38 @@ public class AdvancementProvider extends FabricAdvancementProvider {
         advancement(consumer, base, "pull_request_declined", ModItems.PULLREQUEST_DECLINED,
                 "Pull request declined", "Declie someone's pull request",
                 "pull_request_declined", ConsumeItemTrigger.TriggerInstance.usedItem(items, ModItems.PULLREQUEST_DECLINED));
+
+        // Java
+        AdvancementHolder exception = advancement(consumer, base, "exception", ModItems.EXCEPTION,
+                "throws Exception", "Get an Exception to throw",
+                "exception", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.EXCEPTION));
+        advancement(consumer, exception, "class_cast_exception", ModItems.CLASS_CAST_EXCEPTION,
+                "(Pig) cow", "Get a ClassCastException",
+                "class_cast_exception", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CLASS_CAST_EXCEPTION));
+        advancement(consumer, base, "cup_of_java", ModItems.CUP_OF_JAVA,
+                "Write once, run anywhere", "Drink a Cup of Java",
+                "cup_of_java", ConsumeItemTrigger.TriggerInstance.usedItem(items, ModItems.CUP_OF_JAVA));
+        advancement(consumer, base, "abstract_singleton_proxy_factory_bean", ModItems.ABSTRACT_SINGLETON_PROXY_FACTORY_BEAN,
+                "Enterprise ready", "Get the AbstractSingletonProxyFactoryBean",
+                "abstract_singleton_proxy_factory_bean", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ABSTRACT_SINGLETON_PROXY_FACTORY_BEAN));
+
+        // Tomcat
+        advancement(consumer, base, "war_file", ModItems.WAR_FILE,
+                "Deploy on friday", "Get a WAR file for Tomcat",
+                "war_file", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.WAR_FILE));
+
+        // Hibernate
+        AdvancementHolder hibernateSession = advancement(consumer, base, "hibernate_session", ModItems.HIBERNATE_SESSION,
+                "Hibernate", "Drink a Hibernate Session",
+                "hibernate_session", ConsumeItemTrigger.TriggerInstance.usedItem(items, ModItems.HIBERNATE_SESSION));
+        advancement(consumer, hibernateSession, "lazy_loaded_sandwich", ModItems.LAZY_LOADED_SANDWICH,
+                "Lazy loading", "Eat a Lazy Loaded Sandwich",
+                "lazy_loaded_sandwich", ConsumeItemTrigger.TriggerInstance.usedItem(items, ModItems.LAZY_LOADED_SANDWICH));
+
+        // Struts
+        advancement(consumer, base, "struts", ModItems.STRUTS,
+                "Legacy code", "Get Struts, it's deprecated since 2013",
+                "struts", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.STRUTS));
     }
 
     private AdvancementHolder advancement(Consumer<AdvancementHolder> consumer, AdvancementHolder parent, String id, Item icon,

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:bread",
+    "minecraft:cooked_porkchop",
+    "minecraft:clock"
+  ],
+  "result": {
+    "id": "scrumcraft2:lazy_loaded_sandwich"
+  }
+}

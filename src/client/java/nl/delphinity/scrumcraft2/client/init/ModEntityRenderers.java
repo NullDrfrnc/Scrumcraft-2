@@ -2,9 +2,11 @@ package nl.delphinity.scrumcraft2.client.init;
 
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+import nl.delphinity.scrumcraft2.client.renderer.NPlusOneQueryRenderer;
 import nl.delphinity.scrumcraft2.client.renderer.RubberDuckyThrownItemRenderer;
 import nl.delphinity.scrumcraft2.client.renderer.SnowGolemRenderer;
 import nl.delphinity.scrumcraft2.client.renderer.SquidRenderer;
+import nl.delphinity.scrumcraft2.client.renderer.TomcatRenderer;
 import nl.delphinity.scrumcraft2.init.ModEntityTypes;
 
 public class ModEntityRenderers {
@@ -14,5 +16,8 @@ public class ModEntityRenderers {
         EntityRenderers.register(ModEntityTypes.WEED_DUCKY_ENTITY, RubberDuckyThrownItemRenderer::new);
         EntityRenderers.register(ModEntityTypes.EVIL_SNOW_GOLEM, SnowGolemRenderer::new);
         EntityRenderers.register(ModEntityTypes.EVIL_SQUID, SquidRenderer::new);
+        EntityRenderers.register(ModEntityTypes.THROWN_EXCEPTION, ThrownItemRenderer::new);
+        EntityRenderers.register(ModEntityTypes.TOMCAT, TomcatRenderer::new);
+        EntityRenderers.register(ModEntityTypes.N_PLUS_ONE_QUERY, NPlusOneQueryRenderer::new);
     }
 }

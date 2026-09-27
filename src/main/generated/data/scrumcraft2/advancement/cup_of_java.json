@@ -1,0 +1,26 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "cup_of_java": {
+      "conditions": {
+        "item": {
+          "items": "scrumcraft2:cup_of_java"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": "Drink a Cup of Java",
+    "icon": {
+      "id": "scrumcraft2:cup_of_java"
+    },
+    "title": "Write once, run anywhere"
+  },
+  "requirements": [
+    [
+      "cup_of_java"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

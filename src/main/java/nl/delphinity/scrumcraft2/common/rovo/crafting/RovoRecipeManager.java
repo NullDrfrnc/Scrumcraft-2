@@ -6,8 +6,6 @@ import com.google.gson.JsonParser;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.game.ClientboundSetSubtitleTextPacket;
-import net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket;
 import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
@@ -16,6 +14,7 @@ import net.minecraft.server.packs.resources.SimplePreparableReloadListener;
 import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.item.crafting.Ingredient;
 import nl.delphinity.scrumcraft2.Scrumcraft2;
+import nl.delphinity.scrumcraft2.common.util.Titles;
 import nl.delphinity.scrumcraft2.init.ModRovo;
 import org.jetbrains.annotations.NotNull;
 
@@ -40,14 +39,12 @@ public class RovoRecipeManager extends SimplePreparableReloadListener<Map<Identi
     }
 
     public static void sendRovoMessage(ServerPlayer sp) {
-        sp.connection.send(new ClientboundSetTitleTextPacket(
-                Component.literal("[RovoAI] ").withColor(0x0052CC)
-        ));
-        sp.connection.send(new ClientboundSetSubtitleTextPacket(
+        Titles.show(sp,
+                Component.literal("[RovoAI] ").withColor(0x0052CC),
                 Component.translatable("title.scrumcraft2.pullrequest")
                         .withStyle(ChatFormatting.WHITE)
                         .append(Component.translatable("title.scrumcraft2.denied").withStyle(ChatFormatting.DARK_RED))
-        ));
+        );
     }
 
     @Override

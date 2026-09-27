@@ -8,4 +8,5 @@ import static nl.delphinity.scrumcraft2.Scrumcraft2.identifierOf;
 
 public class ModDamageTypes {
     public static final ResourceKey<DamageType> WEAK_HEART_OUCHIE = ResourceKey.create(Registries.DAMAGE_TYPE, identifierOf("weak_heart"));
+    public static final ResourceKey<DamageType> NULL_POINTER = ResourceKey.create(Registries.DAMAGE_TYPE, identifierOf("null_pointer"));
 }

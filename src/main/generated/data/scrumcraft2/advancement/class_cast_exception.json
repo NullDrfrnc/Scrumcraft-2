@@ -1,0 +1,28 @@
+{
+  "parent": "scrumcraft2:exception",
+  "criteria": {
+    "class_cast_exception": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:class_cast_exception"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Get a ClassCastException",
+    "icon": {
+      "id": "scrumcraft2:class_cast_exception"
+    },
+    "title": "(Pig) cow"
+  },
+  "requirements": [
+    [
+      "class_cast_exception"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

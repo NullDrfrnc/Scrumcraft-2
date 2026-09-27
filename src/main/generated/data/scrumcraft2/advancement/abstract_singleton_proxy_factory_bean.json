@@ -1,0 +1,28 @@
+{
+  "parent": "scrumcraft2:base",
+  "criteria": {
+    "abstract_singleton_proxy_factory_bean": {
+      "conditions": {
+        "items": [
+          {
+            "items": "scrumcraft2:abstract_singleton_proxy_factory_bean"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Get the AbstractSingletonProxyFactoryBean",
+    "icon": {
+      "id": "scrumcraft2:abstract_singleton_proxy_factory_bean"
+    },
+    "title": "Enterprise ready"
+  },
+  "requirements": [
+    [
+      "abstract_singleton_proxy_factory_bean"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
